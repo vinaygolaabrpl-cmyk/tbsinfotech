@@ -1,0 +1,36 @@
+@use '../../../styles/base/variables' as *;
+@use '../../../styles/base/mixins' as *;
+
+.page-hero {
+  padding-top: $space-6;
+
+  .wrap {
+    display: grid;
+    gap: $space-6;
+    align-items: center;
+
+    @include desktop-up {
+      grid-template-columns: 1.1fr 0.9fr;
+    }
+  }
+
+  .title {
+    margin-block: $space-3;
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    line-height: 1.15;
+  }
+
+  .desc {
+    color: var(--text-muted);
+    margin-bottom: $space-5;
+    max-width: 60ch;
+  }
+
+  .image {
+    width: 100%;
+    height: auto;
+    border-radius: $radius-lg;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+  }
+}

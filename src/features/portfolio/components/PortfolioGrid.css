@@ -1,0 +1,1 @@
+@import"https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap";.portfolio-grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:24px}@media(min-width: 576px){.portfolio-grid.two-up{grid-template-columns:repeat(2, 1fr);gap:32px}}/*# sourceMappingURL=PortfolioGrid.css.map */

@@ -1,0 +1,49 @@
+@use '../../../styles/base/variables' as *;
+@use '../../../styles/base/mixins' as *;
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: $radius-pill;
+  transition: $transition-base;
+  white-space: nowrap;
+  border: 1px solid transparent;
+
+  &.md { padding: 13px 26px; font-size: 0.95rem; }
+  &.sm { padding: 9px 18px; font-size: 0.85rem; }
+  &.lg { padding: 16px 34px; font-size: 1rem; }
+
+  &.primary {
+    background: linear-gradient(135deg, var(--primary), var(--primary-2));
+    color: var(--on-primary);
+
+    &:hover, &:focus-visible {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 30px -12px rgba(14, 165, 181, 0.55);
+    }
+  }
+
+  &.outline {
+    background: transparent;
+    border-color: var(--border);
+    color: var(--text);
+
+    &:hover, &:focus-visible {
+      border-color: var(--primary);
+      color: var(--primary);
+      transform: translateY(-3px);
+    }
+  }
+
+  &.ghost {
+    background: var(--primary-soft);
+    color: var(--primary);
+
+    &:hover, &:focus-visible {
+      background: var(--primary);
+      color: var(--on-primary);
+    }
+  }
+}

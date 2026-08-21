@@ -1,0 +1,42 @@
+[
+  { "label": "About Us", "path": "/about" },
+  {
+    "label": "Services",
+    "path": "/services",
+    "children": [
+      { "label": "Website Designing & Development", "path": "/services/web-development" },
+      { "label": "App Development", "path": "/services/app-development" },
+      { "label": "SEO + GEO Services", "path": "/services/seo-geo-services" },
+      { "label": "Social Media Optimization", "path": "/services/social-media" },
+      { "label": "Google Ads + Meta Ads", "path": "/services/google-ads-meta-ads" },
+      { "label": "High-Intent Content & Blogs", "path": "/services/content-blogs" }
+    ]
+  },
+  {
+    "label": "Our Work",
+    "path": "/portfolio",
+    "children": [
+      { "label": "Website/App Portfolio", "path": "/portfolio" },
+      { "label": "SEO Case Study", "path": "/seo-case-study" },
+      { "label": "Client Reviews", "path": "/client-reviews" }
+    ]
+  },
+  {
+    "label": "Packages",
+    "path": "/packages",
+    "children": [
+      { "label": "SEO Packages", "path": "/packages/seo-packages" },
+      { "label": "AEO SEO Packages", "path": "/packages/aeo-seo-packages" },
+      { "label": "One Time SEO Packages", "path": "/packages/one-time-seo-packages" },
+      { "label": "Local SEO Packages", "path": "/packages/local-seo-packages" },
+      { "label": "SMO Packages", "path": "/packages/smo-packages" },
+      { "label": "PPC Packages", "path": "/packages/ppc-packages" },
+      { "label": "Web Designing Packages", "path": "/packages/web-designing-packages" },
+      { "label": "Content Writing Packages", "path": "/packages/content-writing-packages" },
+      { "label": "Reputation Management Package", "path": "/packages/reputation-management-package" },
+      { "label": "Bad Link Removal Packages", "path": "/packages/bad-link-removal-packages" }
+    ]
+  },
+  { "label": "Blog", "path": "/blog" },
+  { "label": "Contact Us", "path": "/contact" }
+]

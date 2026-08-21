@@ -1,0 +1,22 @@
+:root[data-theme='light'] {
+  --bg: #f7f9fb;
+  --bg-alt: #ffffff;
+  --text: #101828;
+  --text-muted: #4b5768;
+  --card-bg: #ffffff;
+  --card-bg-2: #f4f7fa;
+  --border: #e6eaf0;
+  --border-strong: #d3dbe6;
+  --primary: #0ea5b5;
+  --primary-2: #7c3aed;
+  --primary-soft: rgba(14, 165, 181, 0.1);
+  --primary-line: rgba(14, 165, 181, 0.3);
+  --on-primary: #ffffff;
+  --header-bg: rgba(255, 255, 255, 0.85);
+  --shadow: 0 10px 30px -15px rgba(16, 24, 40, 0.15);
+  --glow-1: rgba(14, 165, 181, 0.08);
+  --glow-2: rgba(124, 58, 237, 0.06);
+  --star: #eaa900;
+  --glow-border: rgba(14, 165, 181, 0.5);
+  --glow-shadow: rgba(14, 165, 181, 0.22);
+}

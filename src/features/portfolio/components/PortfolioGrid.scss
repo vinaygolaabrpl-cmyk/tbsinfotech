@@ -1,0 +1,14 @@
+@use '../../../styles/base/variables' as *;
+@use '../../../styles/base/mixins' as *;
+
+.portfolio-grid {
+  @include grid-auto-fit(280px, $space-4);
+
+  // Homepage variant: two large showcase tiles per row.
+  &.two-up {
+    @include tablet-up {
+      grid-template-columns: repeat(2, 1fr);
+      gap: $space-5;
+    }
+  }
+}

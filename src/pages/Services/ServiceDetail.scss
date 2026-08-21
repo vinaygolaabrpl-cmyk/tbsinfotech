@@ -1,0 +1,47 @@
+@use '../../styles/base/variables' as *;
+@use '../../styles/base/mixins' as *;
+
+.service-detail-page {
+  .wrap {
+    display: grid;
+    gap: $space-6;
+    align-items: center;
+
+    @include desktop-up {
+      grid-template-columns: 1.1fr 0.9fr;
+    }
+  }
+
+  .title { margin-block: $space-3; }
+  .desc { margin-bottom: $space-4; }
+
+  .features {
+    display: flex;
+    flex-direction: column;
+    gap: $space-2;
+    margin-bottom: $space-5;
+
+    li {
+      padding-left: $space-4;
+      position: relative;
+      color: var(--text-muted);
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 10px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--primary);
+      }
+    }
+  }
+
+  .image {
+    width: 100%;
+    border-radius: $radius-lg;
+    border: 1px solid var(--border);
+  }
+}

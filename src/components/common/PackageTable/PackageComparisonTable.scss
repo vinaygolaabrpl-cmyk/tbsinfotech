@@ -1,0 +1,67 @@
+@use '../../../styles/base/variables' as *;
+@use '../../../styles/base/mixins' as *;
+
+.package-table {
+  width: 100%;
+
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    display: none;
+
+    @include desktop-up {
+      display: table;
+    }
+
+    th, td {
+      padding: $space-3;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+
+    th {
+      font-family: $font-heading;
+      color: var(--text);
+    }
+
+    .price {
+      display: block;
+      color: var(--primary);
+      font-weight: 800;
+    }
+
+    svg { color: var(--primary); }
+    .dash { color: var(--text-muted); }
+  }
+
+  .stacked {
+    display: grid;
+    gap: $space-4;
+
+    @include desktop-up {
+      display: none;
+    }
+  }
+
+  .stackCard {
+    @include card-surface;
+    padding: $space-4;
+
+    h4 {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: $space-3;
+      span { color: var(--primary); }
+    }
+
+    ul { display: flex; flex-direction: column; gap: $space-2; }
+
+    li {
+      display: flex;
+      gap: 8px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      svg { color: var(--primary); flex-shrink: 0; }
+    }
+  }
+}

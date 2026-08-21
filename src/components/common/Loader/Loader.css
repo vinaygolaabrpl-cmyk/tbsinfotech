@@ -1,0 +1,1 @@
+.loader{display:flex;flex-direction:column;align-items:center;gap:12px;padding:64px 0;color:var(--text-muted)}.loader .spinner{width:34px;height:34px;border-radius:50%;border:3px solid var(--border);border-top-color:var(--primary);animation:loaderSpin .8s linear infinite}@keyframes loaderSpin{to{transform:rotate(360deg)}}/*# sourceMappingURL=Loader.css.map */

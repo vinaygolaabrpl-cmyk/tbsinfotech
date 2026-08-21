@@ -1,0 +1,35 @@
+@use '../../styles/base/variables' as *;
+@use '../../styles/base/mixins' as *;
+
+.portfolio-page {
+  .filters {
+    @include flex(center, center, $space-2);
+    flex-wrap: wrap;
+    margin-bottom: $space-6;
+  }
+
+  .filter {
+    @include buttonReset;
+    padding: 8px 18px;
+    border-radius: $radius-pill;
+    border: 1px solid var(--border);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    transition: $transition-fast;
+
+    &:hover { border-color: var(--primary); color: var(--primary); }
+  }
+
+  .filterActive {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: var(--on-primary);
+  }
+
+  .portfolioMoreLink {
+    display: flex;
+    justify-content: center;
+    margin-top: $space-6;
+  }
+}

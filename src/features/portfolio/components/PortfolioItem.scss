@@ -1,0 +1,69 @@
+@use '../../../styles/base/variables' as *;
+@use '../../../styles/base/mixins' as *;
+
+.portfolio-item {
+  @include panel($radius-lg);
+  display: block;
+  overflow: hidden;
+  padding: 8px;
+  transition: $transition-base;
+
+  &:hover,
+  &:focus-visible {
+    border-color: var(--border-strong);
+    box-shadow: var(--shadow);
+  }
+
+  .thumb {
+    @include hoverZoom(1.05);
+    position: relative;
+    aspect-ratio: 16 / 10;
+    border-radius: $radius-md;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      border-radius: inherit;
+    }
+  }
+
+  .tag {
+    @include chip;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: rgba(5, 8, 15, 0.75);
+    backdrop-filter: blur(6px);
+    z-index: 2;
+  }
+
+  // Project detail is revealed on hover so the grid reads as pure screenshots,
+  // exactly as designed, without hiding the copy from assistive tech.
+  .overlay {
+    position: absolute;
+    inset: auto 0 0 0;
+    padding: $space-4;
+    border-radius: 0 0 $radius-md $radius-md;
+    background: linear-gradient(180deg, transparent, rgba(4, 7, 13, 0.94) 45%);
+    opacity: 0;
+    transform: translateY(12px);
+    transition: $transition-base;
+
+    h3 { font-size: 1.05rem; color: #fff; margin-bottom: $space-1; }
+    p { @include line-clamp(2); font-size: 0.83rem; color: rgba(255, 255, 255, 0.72); margin-bottom: $space-2; }
+  }
+
+  &:hover .overlay,
+  &:focus-visible .overlay {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .link {
+    font-weight: 700;
+    color: var(--primary);
+    font-size: 0.82rem;
+  }
+}

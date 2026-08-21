@@ -1,0 +1,43 @@
+@use '../../../styles/base/variables' as *;
+@use '../../../styles/base/mixins' as *;
+
+.site-header {padding: 14px 0; 
+  position: sticky;
+  top: 0;
+  z-index: $z-header;
+  background: var(--header-bg);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+
+  .inner {
+    @include flex(space-between, center);
+    height: 76px;
+  }
+
+  .brand {
+    @include flex(flex-start, center, 10px);
+    font-family: $font-heading;
+    font-weight: 800;
+    font-size: 1.05rem;
+    flex-shrink: 0;width: max(40%,100px);
+    @include wide-up { width: 200px; }
+    img {
+      object-fit: contain;
+    }
+  }
+
+  .actions {
+    @include flex(flex-end, center, $space-3);
+    a{display: none;@include wide-up { display: inline; }}
+    
+  }
+
+  .phone {
+    display: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--text);
+
+    @include wide-up { display: inline; }
+  }
+}

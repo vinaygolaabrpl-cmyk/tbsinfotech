@@ -1,0 +1,185 @@
+@use 'variables' as *;
+
+@mixin mobile { @media (max-width: #{$mobile - 1px}) { @content; } }
+@mixin tablet { @media (min-width: #{$mobile}) and (max-width: #{$tablet - 1px}) { @content; } }
+@mixin tablet-up { @media (min-width: #{$mobile}) { @content; } }
+@mixin desktop-up { @media (min-width: #{$tablet}) { @content; } }
+@mixin wide-up { @media (min-width: #{$desktop}) { @content; } }
+
+@mixin container {
+  width: 100%;
+  max-width: 1240px;
+  margin-inline: auto;
+  padding-inline: $space-4;
+
+  @include tablet-up {
+    padding-inline: $space-5;
+  }
+}
+
+@mixin flex($justify: flex-start, $align: stretch, $gap: 0, $direction: row) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+@mixin grid-auto-fit($min: 260px, $gap: $space-4) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($min, 1fr));
+  gap: $gap;
+}
+
+@mixin line-clamp($lines: 2) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+// Reusable hover interaction mixins
+@mixin hoverLift($lift: -6px, $scale: 1.02) {
+  transition: $transition-base;
+  will-change: transform;
+
+  &:hover,
+  &:focus-visible {
+    transform: translateY($lift) scale($scale);
+    box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.45);
+  }
+}
+
+@mixin hoverUnderline($color: var(--primary)) {
+  position: relative;
+  transition: color $transition-fast;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background: $color;
+    transition: width $transition-fast;
+  }
+
+  &:hover::after,
+  &:focus-visible::after,
+  &.active::after {
+    width: 100%;
+  }
+
+  &:hover,
+  &:focus-visible,
+  &.active {
+    color: $color;
+  }
+}
+
+@mixin hoverZoom($scale: 1.05) {
+  overflow: hidden;
+
+  img {
+    transition: transform 0.5s ease;
+  }
+
+  &:hover img,
+  &:focus-visible img {
+    transform: scale($scale);
+  }
+}
+
+@mixin buttonReset {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+  padding: 0;
+}
+
+@mixin card-surface {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: $radius-lg;
+}
+
+// The homepage card treatment: a faintly lit panel whose top edge catches
+// the accent colour, matching the "AI search" look across every section.
+@mixin panel($radius: $radius-md) {
+  position: relative;
+  background: linear-gradient(180deg, var(--card-bg-2), var(--card-bg));
+  border: 1px solid var(--border);
+  border-radius: $radius;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(180deg, var(--primary-line), transparent 55%);
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+}
+
+// Neon cyan border + soft outer bloom. `glow-static` for surfaces that
+// should always read as "lit" (the CTA panel); `glow-hover` for cards
+// that pick it up only on interaction (service/testimonial/insight/package).
+@mixin glow-static {
+  border-color: var(--glow-border);
+  box-shadow:
+    0 0 0 1px var(--glow-border),
+    0 0 40px var(--glow-shadow),
+    0 30px 60px -28px var(--glow-shadow);
+}
+
+@mixin glow-hover {
+  transition: box-shadow 0.35s ease, border-color 0.35s ease, transform 0.35s ease;
+
+  &:hover,
+  &:focus-visible {
+    border-color: var(--glow-border);
+    box-shadow:
+      0 0 0 1px var(--glow-border),
+      0 0 36px var(--glow-shadow),
+      0 26px 50px -26px var(--glow-shadow);
+  }
+}
+
+@mixin chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--primary);
+  background: var(--primary-soft);
+  border: 1px solid var(--primary-line);
+  padding: 5px 12px;
+  border-radius: $radius-pill;
+  white-space: nowrap;
+}
+
+// Horizontal snap rail used by the case-study row: full cards on desktop,
+// a peek of the next card on smaller screens so the row reads as scrollable.
+@mixin snap-rail($min: 260px, $gap: $space-4) {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax($min, 1fr);
+  gap: $gap;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: $space-3;
+  scrollbar-width: thin;
+
+  > * { scroll-snap-align: start; }
+}

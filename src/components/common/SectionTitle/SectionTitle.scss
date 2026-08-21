@@ -1,0 +1,37 @@
+@use '../../../styles/base/variables' as *;
+
+.section-title {
+  display: flex;
+  flex-direction: column;
+  gap: $space-2;
+  margin-bottom: $space-6;
+
+  &.center { align-items: center; text-align: center; margin-inline: auto; max-width: 720px; }
+  &.left { align-items: flex-start; text-align: left; }
+
+  .eyebrow { align-self: inherit; }
+
+  .title {
+    margin-top: $space-2;
+  }
+
+  .wordMask {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: top;
+  }
+
+  .word {
+    display: inline-block;
+  }
+
+  .subtitle {
+    color: var(--text-muted);
+    max-width: 620px;
+    font-size: 0.95rem;
+  }
+
+  .subtitlePill {
+    margin-top: $space-1;
+  }
+}

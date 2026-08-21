@@ -1,0 +1,34 @@
+@use '../../styles/base/variables' as *;
+@use '../../styles/base/mixins' as *;
+
+.blog-page {
+  .grid { margin-top: 0; }
+
+  .card {
+    @include card-surface;
+    @include hoverLift(-4px, 1.01);
+    overflow: hidden;
+
+    img { width: 100%; aspect-ratio: 16/10; object-fit: cover; }
+  }
+
+  .body {
+    padding: $space-4;
+
+    h3 { font-size: 1.05rem; margin-block: $space-2; }
+    p { @include line-clamp(3); font-size: 0.88rem; margin-bottom: $space-2; }
+  }
+
+  .meta {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--primary);
+    font-weight: 700;
+  }
+
+  .author {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+}

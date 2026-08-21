@@ -1,0 +1,34 @@
+@use '../../../styles/base/variables' as *;
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(4, 8, 16, 0.7);
+  display: grid;
+  place-items: center;
+  z-index: $z-modal;
+  padding: $space-4;
+
+  .modal {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: $radius-lg;
+    padding: $space-5;
+    max-width: 480px;
+    width: 100%;
+    position: relative;
+  }
+
+  .close {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--text-muted);
+    cursor: pointer;
+  }
+
+  .title { margin-bottom: $space-3; }
+}

@@ -1,0 +1,64 @@
+@use '../../../styles/base/variables' as *;
+@use '../../../styles/base/mixins' as *;
+
+.contact-form {
+  @include panel($radius-lg);
+  display: flex;
+  flex-direction: column;
+  gap: $space-3;
+  padding: $space-5;
+
+  input, select, textarea {
+    width: 100%;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: $radius-sm;
+    padding: 13px 14px;
+    color: var(--text);
+    font-size: 0.88rem;
+    transition: $transition-fast;
+
+    &::placeholder { color: var(--text-muted); }
+
+    &:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px var(--primary-soft);
+    }
+  }
+
+  select { color: var(--text-muted); }
+  textarea { resize: vertical; min-height: 110px; }
+
+  .eyebrow-plain {
+    align-self: flex-start;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--primary);
+  }
+
+  .title {
+    font-size: 1.15rem;
+    margin-bottom: $space-1;
+  }
+
+  .row {
+    display: grid;
+    gap: $space-3;
+    grid-template-columns: 1fr;
+
+    @include tablet-up { grid-template-columns: 1fr 1fr; }
+  }
+
+  .submit {
+    align-self: flex-start;
+    margin-top: $space-2;
+  }
+
+  .success {
+    font-size: 0.85rem;
+    color: var(--primary);
+  }
+}

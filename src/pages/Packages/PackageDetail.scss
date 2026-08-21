@@ -1,0 +1,46 @@
+@use '../../styles/base/variables' as *;
+
+.package-detail-page {
+  .wrap {
+    max-width: 640px;
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  .title { margin-block: $space-3; }
+  .tagline { color: var(--text-muted); margin-bottom: $space-4; }
+
+  .price {
+    font-family: $font-heading;
+    font-size: 2.6rem;
+    font-weight: 800;
+    margin-bottom: $space-5;
+
+    span { font-size: 1rem; color: var(--text-muted); font-weight: 500; }
+  }
+
+  .features {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: $space-2;
+    margin-bottom: $space-6;
+
+    li {
+      padding-left: $space-4;
+      position: relative;
+      color: var(--text-muted);
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 10px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--primary);
+      }
+    }
+  }
+}

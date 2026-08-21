@@ -1,0 +1,20 @@
+@use '../../styles/base/variables' as *;
+@use '../../styles/base/mixins' as *;
+
+.not-found-page {
+  @include flex(center, center, $space-3, column);
+  text-align: center;
+  min-height: 60vh;
+  padding-block: $space-8;
+
+  .code {
+    font-family: $font-heading;
+    font-size: 6rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--primary), var(--primary-2));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    line-height: 1;
+  }
+}

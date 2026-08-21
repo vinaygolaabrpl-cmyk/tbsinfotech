@@ -1,0 +1,36 @@
+@use '../../../styles/base/variables' as *;
+@use '../../../styles/base/mixins' as *;
+
+.testimonial-slider {
+  .track {
+    display: grid;
+    gap: $space-4;
+    grid-template-columns: 1fr;
+    align-items: stretch;
+
+    @include tablet-up { grid-template-columns: repeat(2, 1fr); }
+    @include desktop-up { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  .dots {
+    @include flex(center, center, 8px);
+    margin-top: $space-5;
+  }
+
+  .dot, .dotActive {
+    @include buttonReset;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--border-strong);
+    transition: $transition-fast;
+
+    &:hover { background: var(--primary); }
+  }
+
+  .dotActive {
+    width: 26px;
+    border-radius: $radius-pill;
+    background: var(--primary);
+  }
+}

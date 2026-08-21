@@ -1,0 +1,78 @@
+[
+  {
+    "slug": "bronze",
+    "name": "Bronze",
+    "tagline": "For Local Brands Establishing Search Visibility.",
+    "price": 300,
+    "currency": "USD",
+    "billing": "Per Month",
+    "highlighted": false,
+    "features": [
+      "25 Targeted Keywords",
+      "Complete On-Page SEO",
+      "Basic Technical Audit",
+      "Google My Business Optimization",
+      "Quality Backlinks",
+      "Bi-Weekly Performance & Ranking Reports"
+    ]
+  },
+  {
+    "slug": "silver",
+    "name": "Silver",
+    "tagline": "Our Most Popular AI SEO + GEO Program.",
+    "price": 600,
+    "currency": "USD",
+    "billing": "Per Month",
+    "highlighted": true,
+    "badge": "Most Popular",
+    "features": [
+      "50 Targeted Keywords",
+      "GEO & Advanced Schema Architecture",
+      "AI Citation Monitoring",
+      "Authority Content Assets",
+      "Niche Digital PR & Backlinks",
+      "Bi-Weekly Performance & Ranking Reports"
+    ]
+  },
+  {
+    "slug": "gold",
+    "name": "Gold",
+    "tagline": "Multi-Location And Multi-Market Programs.",
+    "price": 900,
+    "currency": "USD",
+    "billing": "Per Month",
+    "highlighted": false,
+    "features": [
+      "100+ Targeted Keywords",
+      "Enterprise Technical SEO",
+      "Complete AI Entity Optimization",
+      "High-Impact Content Assets",
+      "High-Authority Digital PR & Link Acquisition",
+      "Bi-Weekly Performance & Ranking Reports"
+    ]
+  },
+  {
+    "slug": "one-time-seo-package",
+    "name": "One Time SEO Package",
+    "tagline": "A single, complete technical and on-page SEO setup.",
+    "price": 200,
+    "currency": "USD",
+    "billing": "One Time",
+    "highlighted": false,
+    "features": [
+      "SEO Keyword Research",
+      "AI-Optimized Meta Tags (Title & Description)",
+      "Robots.txt Creation & Analysis",
+      "XML, HTML & ROR Sitemap Creation",
+      "LLMS Sitemap Creation (AI Optimization)",
+      "Google Analytics & Search Console Setup",
+      "Bing Webmaster Setup",
+      "Image, Anchor & Heading Tag Optimization",
+      "Schema Markup Generation & Implementation",
+      "301 Redirects & Custom 404 Page",
+      "SSL Certificate Setup (HTTPS)",
+      "Page Speed & Core Web Vitals Optimization",
+      "Monthly One Time Report"
+    ]
+  }
+]

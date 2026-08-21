@@ -1,0 +1,62 @@
+@use '../../../styles/base/variables' as *;
+@use '../../../styles/base/mixins' as *;
+
+.package-hero {
+  position: relative;
+  min-height: 240px;
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-alt);
+  background-size: cover;
+  background-position: center;
+  border-bottom: 1px solid var(--border);
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(5, 8, 15, 0.92), rgba(5, 8, 15, 0.55));
+  }
+
+  .inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: $space-4;
+    align-items: flex-start;
+    padding-block: $space-6;
+
+    @include tablet-up {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  h1 {
+    color: #fff;
+    font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+    margin-bottom: $space-2;
+  }
+
+  .breadcrumb {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+
+    a { color: rgba(255, 255, 255, 0.7); }
+    a:hover { color: var(--primary); }
+    span { color: var(--primary-2); }
+  }
+
+  .quoteBtn {
+    flex-shrink: 0;
+    border-color: #fff;
+    color: #fff;
+
+    &:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+  }
+}

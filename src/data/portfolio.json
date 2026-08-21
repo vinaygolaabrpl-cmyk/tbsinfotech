@@ -1,0 +1,162 @@
+[
+  {
+    "slug": "dragons-den-chinese-food",
+    "name": "Dragon's Den Chinese Food",
+    "url": "https://dragonsdenchinesefood.co.uk/",
+    "category": "Website",
+    "description": "Restaurant ordering website with menu and online ordering flow.",
+    "image": {
+      "src": "/dev/tbsinfotech/images/portfolio/Rectangle 386.png",
+      "alt": "Dragon's Den Chinese Food website",
+      "width": 800,
+      "height": 500
+    },
+    "featured": true
+  },
+  {
+    "slug": "beepvision",
+    "name": "BeepVision Security",
+    "url": "https://www.beepvision.com/",
+    "category": "Website",
+    "description": "Security systems and smart safety solutions brand site.",
+    "image": {
+      "src": "/dev/tbsinfotech/images/portfolio/Rectangle 383.png",
+      "alt": "BeepVision Security website",
+      "width": 800,
+      "height": 500
+    },
+    "featured": true
+  },
+  {
+    "slug": "northcharge",
+    "name": "North Charge",
+    "url": "https://northcharge.ca/",
+    "category": "Website",
+    "description": "EV charging equipment supplier site with product showcase and quote requests.",
+    "image": {
+      "src": "/dev/tbsinfotech/images/portfolio/Rectangle 384.png",
+      "alt": "North Charge EV charging website",
+      "width": 800,
+      "height": 500
+    },
+    "featured": true
+  },
+  {
+    "slug": "at-home-plumbers",
+    "name": "At Home Plumbers",
+    "url": "https://www.at-homeplumbers.co.uk/",
+    "category": "Website",
+    "description": "Boiler supply and installation service site with lead capture.",
+    "image": {
+      "src": "/dev/tbsinfotech/images/portfolio/Rectangle 385.png",
+      "alt": "At Home Plumbers website",
+      "width": 800,
+      "height": 500
+    },
+    "featured": true
+  },
+  {
+    "slug": "shaver-lake-village-hotel",
+    "name": "Shaver Lake Village Hotel",
+    "url": "https://www.shaverlakevillagehotel.com/",
+    "category": "Website",
+    "description": "Hospitality booking site for a mountain-view hotel in California.",
+    "image": {
+      "src": "https://placehold.co/800x500/111827/22d3ee?text=Shaver+Lake+Hotel",
+      "alt": "Shaver Lake Village Hotel website",
+      "width": 800,
+      "height": 500
+    }
+  },
+  {
+    "slug": "qazi-solicitors",
+    "name": "Qazi Solicitors",
+    "url": "https://qazisolicitors.com/",
+    "category": "Website",
+    "description": "UK legal services firm site with practice area pages.",
+    "image": {
+      "src": "https://placehold.co/800x500/111827/22d3ee?text=Qazi+Solicitors",
+      "alt": "Qazi Solicitors website",
+      "width": 800,
+      "height": 500
+    }
+  },
+  {
+    "slug": "prestige-experiences",
+    "name": "Prestige Experiences",
+    "url": "https://prestigexperiences.com/",
+    "category": "Ecommerce",
+    "description": "Luxury experience gifting ecommerce storefront.",
+    "image": {
+      "src": "https://placehold.co/800x500/111827/22d3ee?text=Prestige+Experiences",
+      "alt": "Prestige Experiences ecommerce website",
+      "width": 800,
+      "height": 500
+    }
+  },
+  {
+    "slug": "mill-valley-pt",
+    "name": "Mill Valley PT",
+    "url": "https://www.millvalleypt.com/",
+    "category": "Website",
+    "description": "Physical therapy clinic site with appointment booking.",
+    "image": {
+      "src": "https://placehold.co/800x500/111827/22d3ee?text=Mill+Valley+PT",
+      "alt": "Mill Valley PT website",
+      "width": 800,
+      "height": 500
+    }
+  },
+  {
+    "slug": "kitchen-nation",
+    "name": "Kitchen Nation",
+    "url": "https://www.kitchennation.ca/",
+    "category": "Ecommerce",
+    "description": "Kitchenware and home goods ecommerce store.",
+    "image": {
+      "src": "https://placehold.co/800x500/111827/22d3ee?text=Kitchen+Nation",
+      "alt": "Kitchen Nation ecommerce website",
+      "width": 800,
+      "height": 500
+    }
+  },
+  {
+    "slug": "jp-fine-jewelry",
+    "name": "JP Fine Jewelry",
+    "url": "https://jpfinejewelry.com/",
+    "category": "Ecommerce",
+    "description": "Fine jewelry ecommerce storefront with product catalog.",
+    "image": {
+      "src": "https://placehold.co/800x500/111827/22d3ee?text=JP+Fine+Jewelry",
+      "alt": "JP Fine Jewelry ecommerce website",
+      "width": 800,
+      "height": 500
+    }
+  },
+  {
+    "slug": "sedora-spa",
+    "name": "Sedora Spa",
+    "url": "https://www.sedoraspa.com/",
+    "category": "Website",
+    "description": "Spa and wellness center booking website.",
+    "image": {
+      "src": "https://placehold.co/800x500/111827/22d3ee?text=Sedora+Spa",
+      "alt": "Sedora Spa website",
+      "width": 800,
+      "height": 500
+    }
+  },
+  {
+    "slug": "royal-auto-llc",
+    "name": "Royal Auto LLC",
+    "url": "https://www.royalautollc.com/",
+    "category": "Website",
+    "description": "Auto dealership and services web application.",
+    "image": {
+      "src": "https://placehold.co/800x500/111827/22d3ee?text=Royal+Auto+LLC",
+      "alt": "Royal Auto LLC website",
+      "width": 800,
+      "height": 500
+    }
+  }
+]

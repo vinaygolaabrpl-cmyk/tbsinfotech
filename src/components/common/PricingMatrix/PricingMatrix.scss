@@ -1,0 +1,141 @@
+@use '../../../styles/base/variables' as *;
+@use '../../../styles/base/mixins' as *;
+
+.pricing-matrix {
+  margin-block: $space-5;
+
+  .scrollWrap {
+    overflow-x: auto;
+    @include card-surface;
+    scrollbar-width: thin;
+  }
+
+  .matrixTable {
+    width: 100%;
+    min-width: 780px;
+    border-collapse: collapse;
+
+    th,
+    td {
+      padding: $space-3 $space-4;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.86rem;
+      vertical-align: middle;
+      white-space: nowrap;
+    }
+
+    .labelCol {
+      text-align: left;
+      white-space: normal;
+      min-width: 220px;
+      color: var(--text);
+      position: sticky;
+      left: 0;
+      background: var(--card-bg);
+      z-index: 1;
+    }
+
+    thead th {
+      background: var(--card-bg-2);
+      padding-block: $space-4;
+      vertical-align: top;
+
+      &.labelCol { background: var(--card-bg-2); }
+
+      &.popular {
+        background: var(--primary-soft);
+        border-top: 2px solid var(--primary);
+      }
+
+      .popularTag {
+        display: block;
+        font-size: 0.65rem;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--primary);
+        margin-bottom: $space-1;
+      }
+
+      .planName {
+        display: block;
+        font-size: 1rem;
+        font-weight: 700;
+        color: var(--text);
+        margin-bottom: 4px;
+      }
+
+      .planPrice {
+        display: block;
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: var(--primary);
+        white-space: nowrap;
+
+        .billing {
+          font-size: 0.7rem;
+          font-weight: 500;
+          color: var(--text-muted);
+        }
+      }
+
+      .planNote {
+        display: block;
+        font-size: 0.72rem;
+        color: var(--text-muted);
+        margin-top: 4px;
+      }
+    }
+
+    .groupHeader td {
+      background: #8182ca;
+      text-align: center;
+      font-weight: 700;
+      font-size: 1.78rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #fff;
+      white-space: normal;
+      position: static;
+      background: linear-gradient(135deg, var(--primary), var(--primary-2));
+    }
+
+    tbody tr:not(.groupHeader):hover td {
+      background: var(--card-bg-2);
+    }
+
+    td.popular {
+      background: rgba(34, 211, 238, 0.04);
+    }
+
+    tfoot td {
+      border-bottom: none;
+      padding-block: $space-4;
+    }
+
+    .ctaBtn {
+      @include buttonReset;
+      display: inline-block;
+      padding: 8px 20px;
+      border-radius: $radius-pill;
+      background: var(--primary);
+      color: var(--on-primary);
+      font-weight: 700;
+      font-size: 0.82rem;
+      white-space: nowrap;
+      transition: $transition-fast;
+
+      &:hover { filter: brightness(1.1); }
+    }
+  }
+
+  .scrollHint {
+    display: block;
+    text-align: center;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    margin-top: $space-2;
+
+    @include desktop-up { display: none; }
+  }
+}

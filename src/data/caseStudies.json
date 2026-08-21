@@ -1,0 +1,44 @@
+[
+  {
+    "slug": "hookah-filters",
+    "name": "Hookah Filters",
+    "rank": "#1",
+    "metric": "48 Keywords Ranked",
+    "summary": "Discover Our Revolutionary Hookah Filters",
+    "url": "/seo-case-study",
+    "image": {
+      "src": "src/assets/images/Rectangle 342.png",
+      "alt": "Shair hookah filters store ranking #1 on Google",
+      "width": 348,
+      "height": 398
+    }
+  },
+  {
+    "slug": "banger-rally",
+    "name": "Banger Rally",
+    "rank": "#1",
+    "metric": "42 Keywords Ranked",
+    "summary": "The Best European Banger Rally Challenge",
+    "url": "/seo-case-study",
+    "image": {
+      "src": "src/assets/images/Rectangle 348.png",
+      "alt": "Banger Rally motorsport site ranking #1 on Google",
+      "width": 348,
+      "height": 398
+    }
+  },
+  {
+    "slug": "white-rabbit-skincare",
+    "name": "White Rabbit Natural Skincare",
+    "rank": "#1",
+    "metric": "46 Keywords Ranked",
+    "summary": "Natural Skincare Built On Clean Ingredients",
+    "url": "/seo-case-study",
+    "image": {
+      "src": "src/assets/images/Rectangle 353.png",
+      "alt": "White Rabbit natural skincare store ranking #1 on Google",
+      "width": 348,
+      "height": 398
+    }
+  }
+]

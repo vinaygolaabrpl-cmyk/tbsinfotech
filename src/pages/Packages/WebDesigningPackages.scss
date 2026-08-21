@@ -1,0 +1,36 @@
+@use '../../styles/base/variables' as *;
+@use '../../styles/base/mixins' as *;
+
+.web-designing-packages-page {
+  .introRow {
+    display: flex;
+    flex-direction: column;
+    gap: $space-4;
+    align-items: flex-start;
+    margin-bottom: $space-6;
+
+    @include tablet-up {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    h2 { margin-bottom: $space-2; }
+    .lead { font-weight: 600; margin-bottom: $space-2; }
+    p { color: var(--text-muted); max-width: 70ch; }
+  }
+
+  .webPkgCard {
+    display: flex;
+    flex-direction: column;
+    gap: $space-3;
+
+    .priceTag {
+      @include chip;
+      align-self: flex-start;
+    }
+
+    h3 { margin: 0; }
+    p { color: var(--text-muted); flex-grow: 1; }
+  }
+}

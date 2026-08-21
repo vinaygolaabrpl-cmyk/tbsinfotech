@@ -1,0 +1,73 @@
+@use '../../styles/base/variables' as *;
+@use '../../styles/base/mixins' as *;
+
+.bad-link-removal-page {
+  .linkRemovalGrid {
+    display: grid;
+    gap: $space-6;
+    grid-template-columns: 1fr;
+    align-items: start;
+
+    @include desktop-up {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .copy {
+    h3 { margin-bottom: $space-3; }
+    p { color: var(--text-muted); margin-bottom: $space-4; line-height: 1.7; }
+  }
+
+  .pricingPanel {
+    padding: 0;
+    overflow: hidden;
+
+    .panelHeader {
+      background: var(--primary);
+      color: var(--on-primary);
+      font-weight: 700;
+      padding: $space-3 $space-4;
+    }
+
+    .priceRow {
+      display: flex;
+      justify-content: space-between;
+      padding: $space-2 $space-4;
+      border-bottom: 1px solid var(--border);
+      background: var(--card-bg-2);
+      font-size: 0.95rem;
+    }
+
+    .processList {
+      padding: $space-4 $space-4 $space-4 $space-6;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: $space-2;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+
+      li { padding-block: $space-1; }
+    }
+
+    .subList {
+      margin-top: $space-2;
+      padding-left: $space-5;
+      display: flex;
+      flex-direction: column;
+      gap: $space-1;
+    }
+
+    .reportingBox {
+      display: flex;
+      flex-wrap: wrap;
+      gap: $space-3;
+      align-items: center;
+      background: var(--card-bg-2);
+      padding: $space-3 $space-4;
+      font-size: 0.88rem;
+
+      strong { color: var(--primary); }
+    }
+  }
+}

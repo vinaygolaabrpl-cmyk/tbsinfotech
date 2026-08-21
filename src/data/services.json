@@ -1,0 +1,122 @@
+[
+  {
+    "slug": "ai-seo-geo-services",
+    "title": "AI SEO & GEO Optimization",
+    "shortDescription": "Engineered entity graphs, citation-ready content and schema so ChatGPT, Perplexity and Gemini quote your brand as the answer.",
+    "description": "AI SEO at TBS Infotech involves leveraging advanced machine learning models and data-driven automation to decode search engine behavior. We move beyond static optimization, using AI to predict keyword trends and automate technical fixes, ensuring your website stays ahead of the competition. We utilize Generative Engine Optimization (GEO) to ensure your brand is the primary reference for AI tools like ChatGPT, Google Gemini, and Perplexity, structuring your data with advanced schema markups and authority-driven, answer-ready content.",
+    "category": "Search & GEO",
+    "icon": "brain",
+    "features": ["LLM Citation Tracking", "Answer Engine Content", "Entity & Schema Design"],
+    "image": { "src": "https://placehold.co/600x400/0ea5b5/ffffff?text=AI+SEO+%26+GEO", "alt": "AI SEO and Generative Engine Optimization", "width": 600, "height": 400 }
+  },
+  {
+    "slug": "search-engine-optimization",
+    "title": "Traditional & Local SEO",
+    "shortDescription": "Technical foundations, topical authority and Google Maps dominance that compound month after month.",
+    "description": "Boost your business revenue with our digital marketing expertise, designed to drive quality leads and enhance customer interaction for lasting success. We specialize in local SEO tailored for the Indian landscape and beyond, optimizing for near-me queries, managing local map citations, and ensuring your brand is the first choice in specific regional hubs.",
+    "category": "Search & GEO",
+    "icon": "seo",
+    "features": ["Google Business Profile", "Nationwide Keyword Maps", "Digital PR & Links"],
+    "image": { "src": "https://placehold.co/600x400/0ea5b5/ffffff?text=Local+SEO", "alt": "Traditional and Local SEO services", "width": 600, "height": 400 }
+  },
+  {
+    "slug": "ppc-advertising-service-india",
+    "title": "Google Ads & Meta Paid Media",
+    "shortDescription": "High-ROAS campaign management with creative testing, offer engineering and full-funnel attribution.",
+    "description": "Increase your website traffic with our innovative advertising solutions designed to attract visitors and transform them into valuable sales opportunities. From Search and Performance Max to Shopping and creative sprints, our paid media team builds full-funnel campaigns backed by transparent ROAS dashboards.",
+    "category": "Ads & PPC",
+    "icon": "google",
+    "features": ["Search, PMax & Shopping", "Meta Creative Sprints", "ROAS Dashboards"],
+    "image": { "src": "https://placehold.co/600x400/0ea5b5/ffffff?text=Google+Ads+%26+Meta", "alt": "Google Ads and Meta paid media management", "width": 600, "height": 400 }
+  },
+  {
+    "slug": "web-development",
+    "title": "Web & App Development",
+    "shortDescription": "Fast, high-converting React and Next.js builds, from marketing sites to custom SaaS dashboards.",
+    "description": "Our web development team crafts cutting-edge sites that combine stunning design with seamless performance, all offered at exceptional value. We utilize the power of mobile innovation with our top-tier app development solutions tailored for iOS, Android, and cross-platform business needs.",
+    "category": "Web & App",
+    "icon": "code",
+    "features": ["React / Next.js", "Headless Commerce", "Custom Web Apps"],
+    "image": { "src": "https://placehold.co/600x400/0ea5b5/ffffff?text=Web+%26+App+Dev", "alt": "Web and app development services", "width": 600, "height": 400 }
+  },
+  {
+    "slug": "branding",
+    "title": "Brand Identity & Creative",
+    "shortDescription": "Positioning, identity systems and conversion-first creative that make your brand memorable.",
+    "description": "Expand your business through our branding expertise, crafted to differentiate you from competitors, reach ideal customers, and communicate your value clearly. We revitalize your brand's visual appeal with inventive solutions from our skilled creative team.",
+    "category": "Branding",
+    "icon": "palette",
+    "features": ["Logo & Identity", "Design Systems", "Ad Creative Studio"],
+    "image": { "src": "https://placehold.co/600x400/0ea5b5/ffffff?text=Brand+Identity", "alt": "Brand identity and creative design", "width": 600, "height": 400 }
+  },
+  {
+    "slug": "hosting-maintenance",
+    "title": "Maintenance, Hosting & Reputation",
+    "shortDescription": "Managed hosting, uptime monitoring, security patching and review generation for lasting trust.",
+    "description": "Rely on our seasoned web specialists for customized hosting and maintenance solutions designed to meet your unique business requirements with precision and care, backed by 99.9% uptime SLAs and proactive security hardening.",
+    "category": "Web & App",
+    "icon": "shield",
+    "features": ["99.9% Uptime SLA", "Security Hardening", "Review Management"],
+    "image": { "src": "https://placehold.co/600x400/0ea5b5/ffffff?text=Hosting+%26+Maintenance", "alt": "Hosting maintenance and reputation management", "width": 600, "height": 400 }
+  },
+  {
+    "slug": "social-media",
+    "title": "Social Media Optimization",
+    "shortDescription": "Position your brand at the forefront of your industry with content that builds reputation and reach.",
+    "description": "Position your brand at the forefront of your industry with guidance from our skilled, insightful professionals dedicated to heightening your business reputation across every major platform.",
+    "category": "Ads & PPC",
+    "icon": "optimization",
+    "features": ["Content Calendars", "Community Management", "Influencer Outreach"],
+    "image": { "src": "https://placehold.co/600x400/0ea5b5/ffffff?text=Social+Media", "alt": "Social media optimization services", "width": 600, "height": 400 }
+  },
+  {
+    "slug": "product-development",
+    "title": "Product Development",
+    "shortDescription": "Revitalize your brand's visual appeal with inventive solutions from our skilled creative team.",
+    "description": "Whether you're a startup or an enterprise, our design solutions focus on user-centric products that drive conversions and enhance overall digital engagement, ensuring your business leaves a lasting, memorable impression.",
+    "category": "Web & App",
+    "icon": "layers",
+    "features": ["Product Strategy", "UX Prototyping", "MVP Delivery"],
+    "image": { "src": "https://placehold.co/600x400/0ea5b5/ffffff?text=Product+Development", "alt": "Product development services", "width": 600, "height": 400 }
+  },
+  {
+    "slug": "app-development",
+    "title": "Mobile App Development",
+    "shortDescription": "Native iOS/Android and cross-platform apps engineered for speed, security and global store distribution.",
+    "description": "Think Biz Solution designs, builds, and deploys high-performance mobile applications for iOS and Android. Combining user-centered UX design, native API integrations, and secure cloud backends, we deliver scalable mobile applications engineered for global store distribution.",
+    "category": "Web & App",
+    "icon": "smartphone",
+    "features": ["Native iOS & Android", "React Native & Flutter", "Store Submission Support"],
+    "image": { "src": "https://placehold.co/600x400/0ea5b5/ffffff?text=App+Development", "alt": "Mobile app development services", "width": 600, "height": 400 }
+  },
+  {
+    "slug": "seo-geo-services",
+    "title": "SEO + GEO Services",
+    "shortDescription": "Unified Search Engine Optimization and Generative Engine Optimization that wins Google rankings and AI citations.",
+    "description": "Think Biz Solution delivers unified Search Engine Optimization (SEO) and Generative Engine Optimization (GEO) services engineered to achieve top rankings on traditional search engines while securing authoritative brand citations inside AI platforms like ChatGPT, Gemini, and Perplexity.",
+    "category": "Search & GEO",
+    "icon": "seoGeo",
+    "features": ["Traditional + AI Search", "Technical Schemas", "Monthly Growth Packages"],
+    "image": { "src": "https://placehold.co/600x400/0ea5b5/ffffff?text=SEO+%2B+GEO", "alt": "SEO and Generative Engine Optimization services", "width": 600, "height": 400 }
+  },
+  {
+    "slug": "google-ads-meta-ads",
+    "title": "Google Ads + Meta Ads",
+    "shortDescription": "Targeted acquisition campaigns across Google Search, Shopping, PMax and Meta that lower CAC and scale ROAS.",
+    "description": "Think Biz Solution designs and manages paid advertising campaigns that drive scalable revenue. Operating across Google Search, Shopping, Performance Max, and Meta platforms (Facebook/Instagram), we focus on lowering Customer Acquisition Costs (CAC) while maximizing Return on Ad Spend (ROAS).",
+    "category": "Ads & PPC",
+    "icon": "metaAds",
+    "features": ["Google Search & PMax", "Meta Creative Testing", "GA4 Conversion Tracking"],
+    "image": { "src": "https://placehold.co/600x400/0ea5b5/ffffff?text=Google+Ads+%2B+Meta+Ads", "alt": "Google Ads and Meta Ads paid media management", "width": 600, "height": 400 }
+  },
+  {
+    "slug": "content-blogs",
+    "title": "High-Intent Authority Content & Blogs",
+    "shortDescription": "E-E-A-T blog posts, articles and press releases engineered for human readers and AI crawlers alike.",
+    "description": "Think Biz Solution produces targeted blog posts, informational articles, and press releases designed to meet Google's E-E-A-T (Experience, Expertise, Authoritativeness, and Trustworthiness) standards. Built for both human readers and AI crawlers, our content converts targeted informational searches into qualified enterprise leads.",
+    "category": "Search & GEO",
+    "icon": "contentBlog",
+    "features": ["High-Intent Blog Posts", "Informational Authority Articles", "Press Release Syndication"],
+    "image": { "src": "https://placehold.co/600x400/0ea5b5/ffffff?text=Content+%26+Blogs", "alt": "High-intent authority content and blog services", "width": 600, "height": 400 }
+  }
+]

@@ -1,0 +1,36 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+body {
+  font-family: $font-primary;
+  color: var(--text);
+  background: var(--bg);
+  font-size: 16px;
+}
+
+h1, h2, h3, h4, .heading {
+  font-family: $font-heading;
+  font-weight: 500;
+  line-height: 1.15;
+  color: var(--text);
+  letter-spacing: -0.02em;
+}
+
+h1 { font-size: clamp(2.1rem, 4vw, 3.4rem); }
+h2 { font-size: clamp(1.7rem, 3vw, 2.5rem); }
+h3 { font-size: clamp(1.25rem, 2vw, 1.6rem); }
+h4 { font-size: 1.1rem; }
+
+p { color: var(--text-muted); }
+
+.eyebrow {
+  @include chip;
+}
+
+// Reusable accent wash for the two-tone headlines used across the page.
+.gradient-text {
+  background: linear-gradient(100deg, var(--primary), var(--primary-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+}

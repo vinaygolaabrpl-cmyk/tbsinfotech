@@ -1,0 +1,23 @@
+@use '../../../styles/base/variables' as *;
+@use '../../../styles/base/mixins' as *;
+
+.bluf-callout {
+  padding-block: 0 $space-6;
+
+  .panel {
+    @include panel($radius-md);
+    padding: $space-5;
+    border-left: 3px solid var(--primary);
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: $space-2;
+    }
+
+    p {
+      font-size: 1.05rem;
+      line-height: 1.6;
+      margin: 0;
+    }
+  }
+}

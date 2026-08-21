@@ -1,0 +1,12 @@
+@use '../../styles/base/variables' as *;
+
+.about-page {
+  .lead {
+    max-width: 780px;
+    margin-inline: auto;
+    text-align: center;
+    font-size: 1.05rem;
+  }
+
+  .grid { margin-top: $space-2; }
+}

@@ -1,0 +1,359 @@
+@use '../../styles/base/variables' as *;
+@use '../../styles/base/mixins' as *;
+
+// Keyframe names are always global in CSS regardless of nesting, so these
+// stay outside `.home-page` rather than nested inside it.
+@keyframes heroDrift {
+  from { transform: translate(0, 0); }
+  to { transform: translate(-54px, -54px); }
+}
+
+@keyframes heroPulse {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 1; }
+}
+
+// Plain (non-module) stylesheet — every rule below is nested under this
+// single scope class so the fairly generic names (.tab, .stats, .gradient…)
+// can't leak out and collide with classes on other pages.
+.home-page {
+  // ===== HERO ============================================================
+  // Pulled up by the header's own height so the video sits *behind* the
+  // sticky header instead of starting below it — the header's translucent
+  // blur then shows a frosted glimpse of the video through the nav bar.
+  .heroSection {
+    position: relative;
+    // margin-top: -#{$header-height};
+    // padding-top: $header-height;
+    overflow: hidden;
+  }
+
+  .heroMedia {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    background: var(--bg);
+  }
+
+  .heroVideo {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    // Hidden until it actually has playable data — keeps the animated
+    // pattern as the visible layer when no /videos/hero-banner.mp4 exists.
+    opacity: 0;
+    transition: opacity 0.6s ease;
+
+    &.heroVideoReady { opacity: 1; }
+  }
+
+  // Self-contained animated backdrop so the hero still feels "alive" with
+  // no video file present, and stays as a base layer under real footage.
+  .heroPattern {
+    position: absolute;
+    inset: -10%;
+    background-image:
+      linear-gradient(var(--border-strong) 1px, transparent 1px),
+      linear-gradient(90deg, var(--border-strong) 1px, transparent 1px);
+    background-size: 54px 54px;
+    opacity: 0.35;
+    animation: heroDrift 26s linear infinite;
+  }
+
+  .heroGlow {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(46rem 30rem at 18% 20%, var(--glow-1), transparent 60%),
+      radial-gradient(40rem 28rem at 85% 70%, var(--glow-2), transparent 60%);
+    animation: heroPulse 10s ease-in-out infinite;
+  }
+
+  .heroOverlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(4, 7, 13, 0.55), rgba(4, 7, 13, 0.88));
+  }
+
+  .heroInner {
+    position: relative;
+    z-index: 1;
+    padding-block: $space-8 $space-7;
+    min-height: 560px;
+    display: flex;
+    align-items: center;
+
+    @include desktop-up { min-height: 640px; }
+  }
+
+  .heroContent {
+    max-width: 790px;
+    margin-inline: auto;
+    text-align: center;
+
+    h1 { color: #fff; margin-bottom: $space-3; }
+  }
+
+  .heroEyebrow {
+    margin-bottom: $space-4;
+    background: rgba(8, 14, 26, 0.6);
+    backdrop-filter: blur(6px);
+    // Longer than a typical eyebrow chip label — let it wrap instead of
+    // inheriting the base `.eyebrow` utility's `white-space: nowrap`,
+    // which was pushing it past the viewport edge on narrow screens.
+    white-space: normal;
+    text-align: left;
+    max-width: 100%;
+
+    svg { flex-shrink: 0; }
+  }
+
+  .heroStat {
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 0.95rem;
+    max-width: 620px;
+    margin-inline: auto;
+    margin-bottom: $space-5;
+
+    strong { color: #fff; font-weight: 700; }
+  }
+
+
+
+  .heroCtas {
+    @include flex(center, center, $space-3);
+    flex-wrap: wrap;
+
+    svg { flex-shrink: 0; }
+  }
+
+  // ===== SERVICE TABS =====================================================
+  .tabs {
+    @include flex(center, center, $space-2);
+    flex-wrap: wrap;
+    margin-bottom: $space-6;
+  }
+
+  .tab {
+    @include buttonReset;
+    padding: 9px 20px;
+    border-radius: $radius-pill;
+    border: 1px solid var(--border);
+    background: var(--card-bg);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    transition: $transition-fast;
+
+    &:hover { border-color: var(--primary); color: var(--primary); }
+  }
+
+  .tabActive {
+    border-color: var(--primary);
+    color: var(--primary);
+  }
+
+  .servicesGrid { margin-top: 0; }
+
+  .centerCta {
+    @include flex(center, center);
+    margin-top: $space-6;
+  }
+
+  // ===== PACKAGES =========================================================
+  .billingPill {
+    display: flex;
+    justify-content: center;
+    margin-bottom: $space-5;
+  }
+
+  .packagesGrid {
+    margin-top: 0;
+    align-items: start;
+
+    @include desktop-up { padding-block: $space-3; }
+  }
+
+  // ===== STATS =============================================================
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $space-3;
+    padding-block: $space-6;
+
+    @include tablet-up { grid-template-columns: repeat(4, 1fr); }
+  }
+
+  .statBlock {
+    @include panel;
+    @include flex(center, center, $space-2, column);
+    text-align: center;
+    padding: $space-5 $space-3;
+
+    &.highlighted { @include glow-static; }
+
+    strong {
+      display: block;
+      font-family: $font-heading;
+      font-size: clamp(1.9rem, 3.6vw, 2.5rem);
+      font-weight: 800;
+      color: var(--primary);
+      line-height: 1;
+
+      // Scopes the number's color to just this element rather than a bare
+      // `span` selector, which would otherwise also catch AnimatedNumber's
+      // own wrapper span (also a `.statBlock` descendant) and mute it.
+      span { color: inherit; }
+    }
+
+    .statLabel {
+      font-size: 0.72rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+  }
+
+  // ===== BLOG ==============================================================
+  .blogGrid {
+    display: grid;
+    gap: $space-4;
+    grid-template-columns: 1fr;
+
+    @include tablet-up { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  .blogCard {
+    @include panel;
+    @include hoverLift(-4px, 1);
+    @include glow-hover;
+    display: flex;
+    flex-direction: column;
+    padding: $space-4 $space-4 $space-3;
+
+    h3 {
+      font-size: 1.05rem;
+      line-height: 1.35;
+      margin-bottom: $space-2;
+    }
+
+    p {
+      @include line-clamp(3);
+      font-size: 0.85rem;
+      line-height: 1.6;
+      text-transform: capitalize;
+      margin-bottom: $space-3;
+      flex: 1;
+    }
+  }
+
+  .blogMeta {
+    @include flex(flex-start, center, 10px);
+    margin-bottom: $space-3;
+    flex-wrap: wrap;
+  }
+
+  .blogCategory {
+    @include chip;
+    font-size: 0.65rem;
+    padding: 4px 12px;
+  }
+
+  .blogReadTime {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+  }
+
+  .blogFooter {
+    @include flex(space-between, center, $space-2);
+    padding-top: $space-3;
+    border-top: 1px solid var(--border);
+
+    @include mobile {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  .blogAuthor {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+
+  .blogLink {
+    @include hoverUnderline;
+    display: inline-flex;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--primary-2);
+    white-space: nowrap;
+  }
+
+  // ===== CTA ================================================================
+  .ctaSection {
+    padding-block: $space-8;
+  }
+
+  // Always-lit glow panel wrapping the whole CTA — copy on one side, the
+  // contact form nested inside on the other.
+  .ctaPanel {
+    @include panel($radius-lg);
+    @include glow-static;
+    padding: $space-6 $space-4;
+
+    @include desktop-up { padding: $space-7 $space-6; }
+  }
+
+  .ctaGrid {
+    display: grid;
+    gap: $space-6;
+    align-items: center;
+
+    @include desktop-up {
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: $space-7;
+    }
+  }
+
+  .ctaCopy {
+    h2 { margin-bottom: $space-3; }
+    p { max-width: 480px; margin-bottom: $space-4; }
+  }
+
+  .ctaContact {
+    display: flex;
+    flex-direction: column;
+    gap: $space-3;
+    font-weight: 700;
+    font-size: 0.92rem;
+    color: var(--text);
+
+    li {
+      @include flex(flex-start, center, 12px);
+    }
+
+    a {
+      @include flex(flex-start, center, 12px);
+      transition: color $transition-fast;
+
+      &:hover, &:focus-visible { color: var(--primary); }
+    }
+  }
+
+  .ctaIcon {
+    @include flex(center, center);
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: var(--primary-soft);
+    border: 1px solid var(--primary-line);
+    color: var(--primary);
+    flex-shrink: 0;
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,25 @@
+@use '../../styles/base/variables' as *;
+@use '../../styles/base/mixins' as *;
+
+.contact-page {
+  .wrap {
+    display: grid;
+    gap: $space-5;
+
+    @include desktop-up {
+      grid-template-columns: 0.8fr 1.2fr;
+    }
+  }
+
+  .info {
+    @include panel($radius-lg);
+    padding: $space-5;
+    display: flex;
+    flex-direction: column;
+    gap: $space-3;
+    height: fit-content;
+
+    a { @include hoverUnderline; font-weight: 700; width: fit-content; }
+    p { font-size: 0.9rem; }
+  }
+}

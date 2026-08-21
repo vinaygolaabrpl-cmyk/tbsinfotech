@@ -1,0 +1,11 @@
+@use '../../../styles/base/variables' as *;
+@use '../../../styles/base/mixins' as *;
+
+.ui-card {
+  @include card-surface;
+  padding: $space-4;
+
+  &.hover {
+    @include hoverLift;
+  }
+}
