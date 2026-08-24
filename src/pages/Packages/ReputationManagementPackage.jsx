@@ -1,13 +1,14 @@
 import PackageHero from '../../components/common/PackageHero';
 import SEO from '../../components/common/SEO';
 import PricingMatrix from '../../components/common/PricingMatrix';
+import { openPaypalLink } from '../../utils/openPaypalLink';
 import './PackagesShared.scss';
 
 const PLANS = [
-  { name: 'Starter', price: '$150' },
-  { name: 'Value', price: '$200' },
-  { name: 'Premium', price: '$350', popular: true },
-  { name: 'Strategic', price: '$550' }
+  { name: 'Starter', price: '$150', paypalLink: '' },
+  { name: 'Value', price: '$200', paypalLink: '' },
+  { name: 'Premium', price: '$350', popular: true, paypalLink: '' },
+  { name: 'Strategic', price: '$550', paypalLink: '' }
 ];
 
 const GROUPS = [
@@ -81,7 +82,12 @@ export default function ReputationManagementPackage() {
       <section className="section">
         <div className="container">
           <h2 className="pickTitle" data-aos="fade-up">Reputation <span className="gradient">Management</span> Package</h2>
-          <PricingMatrix plans={PLANS} groups={GROUPS} ctaLabel="Order Now!" />
+          <PricingMatrix
+            plans={PLANS}
+            groups={GROUPS}
+            ctaLabel="Order Now!"
+            onCta={(plan) => openPaypalLink(plan.paypalLink)}
+          />
         </div>
       </section>
     </div>

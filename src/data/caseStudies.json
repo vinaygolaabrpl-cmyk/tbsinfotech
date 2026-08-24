@@ -5,13 +5,54 @@
     "rank": "#1",
     "metric": "48 Keywords Ranked",
     "summary": "Discover Our Revolutionary Hookah Filters",
-    "url": "/seo-case-study",
+    "url": "/case-studies/hookah-filters",
     "image": {
       "src": "src/assets/images/Rectangle 342.png",
       "alt": "Shair hookah filters store ranking #1 on Google",
       "width": 348,
       "height": 398
-    }
+    },
+    "industry": "E-Commerce / Lifestyle Accessories",
+    "engagement": "Ongoing SEO Partnership",
+    "focusArea": "Technical SEO & International Keyword Targeting",
+    "projectOverview": "Shair Filters sells premium hookah and shisha filter accessories to an international customer base, with pricing already localized across EUR, USD, CHF, AED and SAR. The brand needed its product and category pages to be found by the right shoppers across every one of those markets, not just its home region.",
+    "challenge": "As a niche accessories brand, Shair Filters was competing against much larger general smoke-shop retailers for visibility. Its product pages were not structured for the specific, high-intent terms shoppers were actually searching for around hookah filters and Shair filter technology, and its multi-currency storefront wasn't being reflected properly in how search engines understood the site's regional relevance.",
+    "strategy": [
+      "Ran a full technical and on-page SEO audit of the product catalogue and category structure.",
+      "Mapped a keyword set built around the brand's specific niche terms \u2014 hookah filter tips, shisha filter technology, and related accessory searches \u2014 rather than broad, high-competition smoke-shop terms.",
+      "Aligned on-page content, metadata and internal linking with the mapped keyword set across every priority product and category page."
+    ],
+    "solutions": [
+      "Rewrote and restructured product and category page content around the target keyword set.",
+      "Improved internal linking between related filter products and accessory categories to strengthen topical relevance.",
+      "Cleaned up on-page technical SEO fundamentals (titles, meta descriptions, heading structure) sitewide."
+    ],
+    "seoWork": [
+      "Niche keyword research focused on hookah and shisha filter terminology.",
+      "On-page content and metadata optimization across product and category pages.",
+      "Ongoing rank tracking to confirm sustained visibility as new terms were targeted."
+    ],
+    "stats": [
+      { "value": "#1", "label": "Google Position For Priority Keywords" },
+      { "value": "48", "label": "Keywords Ranked" }
+    ],
+    "achievements": [
+      "Reached the #1 Google position across the brand's priority keyword set.",
+      "Grew ranked keyword coverage to 48 terms tied directly to the brand's product niche."
+    ],
+    "conclusion": "By focusing on the specific language hookah and shisha accessory shoppers actually use \u2014 rather than competing head-on with broad smoke-shop terms \u2014 Shair Filters built durable, defensible search visibility in a crowded niche.",
+    "faqs": [
+      {
+        "id": "hf-faq-1",
+        "question": "Why focus on niche keywords instead of broader smoke-shop terms?",
+        "answer": "Broad terms are dominated by large general retailers with far bigger budgets. Niche, product-specific terms have real search intent behind them and are realistically winnable, which is where we focused Shair Filters' SEO effort."
+      },
+      {
+        "id": "hf-faq-2",
+        "question": "Does a multi-currency storefront affect SEO?",
+        "answer": "It can, if the underlying page structure and content don't clearly signal relevance for each target market. We made sure the on-page SEO fundamentals were solid across the catalogue so the site could rank well regardless of the shopper's currency or region."
+      }
+    ]
   },
   {
     "slug": "banger-rally",
@@ -19,13 +60,54 @@
     "rank": "#1",
     "metric": "42 Keywords Ranked",
     "summary": "The Best European Banger Rally Challenge",
-    "url": "/seo-case-study",
+    "url": "/case-studies/banger-rally",
     "image": {
       "src": "src/assets/images/Rectangle 348.png",
       "alt": "Banger Rally motorsport site ranking #1 on Google",
       "width": 348,
       "height": 398
-    }
+    },
+    "industry": "Travel & Motorsport Events",
+    "engagement": "Ongoing SEO Partnership",
+    "focusArea": "Content SEO & Event-Intent Keyword Targeting",
+    "projectOverview": "Rusty Rex Banger Rallies runs European banger rally challenges \u2014 budget-car road trip adventures across Europe. The site needed to rank for the specific, adventure-and-event-driven searches people run when they're deciding which banger rally to sign up for.",
+    "challenge": "Banger rallies are a passion-driven, community-heavy niche where search intent is highly specific (route, region, challenge name), but the existing site content wasn't structured to capture that intent or to stand out against other rally organisers competing for the same audience.",
+    "strategy": [
+      "Researched the specific event, route and challenge-related terms prospective participants search for before booking.",
+      "Audited existing site content against that keyword set to find coverage gaps.",
+      "Prioritised the pages and content updates most likely to move the needle for high-intent, ready-to-book searches."
+    ],
+    "solutions": [
+      "Optimized existing rally and challenge pages around the mapped keyword set.",
+      "Improved on-page structure and metadata so search engines could clearly understand each rally's route, region and format.",
+      "Strengthened internal linking between related rally challenges to consolidate topical authority."
+    ],
+    "seoWork": [
+      "Event and adventure-travel keyword research.",
+      "On-page SEO for rally and challenge landing pages.",
+      "Continuous rank monitoring across the target keyword set."
+    ],
+    "stats": [
+      { "value": "#1", "label": "Google Position For Priority Keywords" },
+      { "value": "42", "label": "Keywords Ranked" }
+    ],
+    "achievements": [
+      "Achieved the #1 Google position for the brand's priority rally-related keywords.",
+      "Built ranked visibility across 42 keywords tied to specific rally challenges and routes."
+    ],
+    "conclusion": "By targeting the exact language rally-goers use when researching their next challenge, Rusty Rex Banger Rallies built strong, intent-matched organic visibility in a passionate, niche travel community.",
+    "faqs": [
+      {
+        "id": "br-faq-1",
+        "question": "How do you approach SEO for a passion-driven, niche event brand?",
+        "answer": "We start with the language the community itself uses \u2014 route names, challenge formats, regions \u2014 rather than generic travel terms, since that's what people actually search when they're close to booking."
+      },
+      {
+        "id": "br-faq-2",
+        "question": "Is content optimization enough for an events site, or is more needed?",
+        "answer": "For Banger Rally, sharpening the existing content and internal linking around the right keyword set was the highest-impact starting point. Every engagement is scoped to what the site actually needs rather than a one-size-fits-all package."
+      }
+    ]
   },
   {
     "slug": "white-rabbit-skincare",
@@ -33,12 +115,53 @@
     "rank": "#1",
     "metric": "46 Keywords Ranked",
     "summary": "Natural Skincare Built On Clean Ingredients",
-    "url": "/seo-case-study",
+    "url": "/case-studies/white-rabbit-skincare",
     "image": {
       "src": "src/assets/images/Rectangle 353.png",
       "alt": "White Rabbit natural skincare store ranking #1 on Google",
       "width": 348,
       "height": 398
-    }
+    },
+    "industry": "E-Commerce / Natural Skincare",
+    "engagement": "Ongoing SEO Partnership",
+    "focusArea": "Product & Ingredient-Led SEO",
+    "projectOverview": "White Rabbit Natural Skincare sells clean-ingredient skincare products and needed its product pages to rank for the specific ingredient- and benefit-led searches its target customers use when choosing natural skincare online.",
+    "challenge": "The clean-beauty and natural skincare space is crowded with both boutique brands and large retailers, and White Rabbit's product pages needed to clearly communicate ingredient quality and product benefits in a way search engines \u2014 and shoppers \u2014 could easily understand and trust.",
+    "strategy": [
+      "Mapped keyword opportunities around specific ingredients, product benefits and natural-skincare search intent.",
+      "Audited product and category pages for on-page SEO gaps against that keyword set.",
+      "Prioritised content and metadata updates for the products with the strongest ranking opportunity."
+    ],
+    "solutions": [
+      "Rewrote product and category page content to lead with ingredients and benefits shoppers search for.",
+      "Improved on-page metadata and heading structure across the catalogue.",
+      "Strengthened internal linking between related products to build topical authority around natural skincare."
+    ],
+    "seoWork": [
+      "Ingredient- and benefit-led keyword research.",
+      "On-page content and metadata optimization across product pages.",
+      "Ongoing rank tracking as new product pages were optimized."
+    ],
+    "stats": [
+      { "value": "#1", "label": "Google Position For Priority Keywords" },
+      { "value": "46", "label": "Keywords Ranked" }
+    ],
+    "achievements": [
+      "Reached the #1 Google position for the brand's priority keyword set.",
+      "Grew ranked keyword coverage to 46 terms tied to ingredients and product benefits."
+    ],
+    "conclusion": "By leading with the ingredients and benefits customers actually search for, White Rabbit Natural Skincare built organic visibility that speaks directly to a clean-beauty audience ready to buy.",
+    "faqs": [
+      {
+        "id": "wr-faq-1",
+        "question": "Why focus SEO around ingredients rather than just product names?",
+        "answer": "Shoppers researching natural skincare often search by ingredient or benefit before they know a specific product name. Structuring pages around that language helps White Rabbit get discovered earlier in the decision process."
+      },
+      {
+        "id": "wr-faq-2",
+        "question": "How do you keep product-page SEO consistent as a catalogue grows?",
+        "answer": "We work from a repeatable on-page template \u2014 covering titles, metadata and heading structure \u2014 so every new product page launches with the same SEO foundation instead of needing rework later."
+      }
+    ]
   }
 ]

@@ -7,6 +7,7 @@
     "currency": "USD",
     "billing": "Per Month",
     "highlighted": false,
+    "paypalLink": "",
     "features": [
       "25 Targeted Keywords",
       "Complete On-Page SEO",
@@ -25,6 +26,7 @@
     "billing": "Per Month",
     "highlighted": true,
     "badge": "Most Popular",
+    "paypalLink": "",
     "features": [
       "50 Targeted Keywords",
       "GEO & Advanced Schema Architecture",
@@ -59,6 +61,7 @@
     "currency": "USD",
     "billing": "One Time",
     "highlighted": false,
+    "paypalLink": "",
     "features": [
       "SEO Keyword Research",
       "AI-Optimized Meta Tags (Title & Description)",

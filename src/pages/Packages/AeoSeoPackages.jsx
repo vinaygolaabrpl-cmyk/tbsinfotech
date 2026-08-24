@@ -1,14 +1,15 @@
 import PackageHero from '../../components/common/PackageHero';
 import SEO from '../../components/common/SEO';
 import PricingMatrix from '../../components/common/PricingMatrix';
+import { openPaypalLink } from '../../utils/openPaypalLink';
 import './PackagesShared.scss';
 
 const PLANS = [
-  { name: 'Value', price: '$125', billing: 'Per Month', note: 'Up To 10 Keywords' },
-  { name: 'Bronze', price: '$225', billing: 'Per Month', note: 'Up To 25 Keywords' },
-  { name: 'Silver', price: '$400', billing: 'Per Month', note: 'Up To 50 Keywords', popular: true },
-  { name: 'Gold', price: '$700', billing: 'Per Month', note: 'Up To 100 Keywords' },
-  { name: 'Platinum', price: '$1050', billing: 'Per Month', note: 'Up To 150 Keywords' }
+  { name: 'Value', price: '$125', billing: 'Per Month', note: 'Up To 10 Keywords', paypalLink: '' },
+  { name: 'Bronze', price: '$225', billing: 'Per Month', note: 'Up To 25 Keywords', paypalLink: '' },
+  { name: 'Silver', price: '$400', billing: 'Per Month', note: 'Up To 50 Keywords', popular: true, paypalLink: '' },
+  { name: 'Gold', price: '$700', billing: 'Per Month', note: 'Up To 100 Keywords', paypalLink: '' },
+  { name: 'Platinum', price: '$1050', billing: 'Per Month', note: 'Up To 150 Keywords', paypalLink: '' }
 ];
 
 const GROUPS = [
@@ -146,7 +147,12 @@ export default function AeoSeoPackages() {
       <section className="section">
         <div className="container">
           <h2 className="pickTitle" data-aos="fade-up">Pick <span className="gradient">Your</span> Package</h2>
-          <PricingMatrix planColumnLabel="Pick Your Package Keywords Plan Activities" plans={PLANS} groups={GROUPS} />
+          <PricingMatrix
+            planColumnLabel="Pick Your Package Keywords Plan Activities"
+            plans={PLANS}
+            groups={GROUPS}
+            onCta={(plan) => openPaypalLink(plan.paypalLink)}
+          />
 
           <ul className="noteList" data-aos="fade-up">
             {NOTES.map((n) => (

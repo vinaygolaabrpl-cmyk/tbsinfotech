@@ -30,7 +30,13 @@ a.btn.outline.lg:hover{border: 1px solid var(--primary);}
 .ui-card.hover h3{margin-bottom: 1rem;line-height: 1.4;}
 .ui-card.hover p{line-height: 1.8;}
 .faq-accordion .answer{    line-height: 24px;}
-.package-card .features li svg,.package-table .table svg {color: lime;}
+svg.lucide.lucide-check-icon.lucide-check {color: lime;    width: 18px;height: auto;}
+
+
+
+
+
+
 @media (max-width: 767px) {
     .home-page .heroEyebrow{font-size: 10px;}
     .home-page .heroInner {padding-block: 56px 64px;}

@@ -15,6 +15,8 @@ import PackageDetail from '../pages/Packages/PackageDetail';
 import Portfolio from '../pages/Portfolio/Portfolio';
 import PaidAdvertisingPortfolio from '../pages/Portfolio/PaidAdvertisingPortfolio';
 import SeoCaseStudy from '../pages/SeoCaseStudy/SeoCaseStudy';
+import CaseStudyDetail from '../pages/CaseStudies/CaseStudyDetail';
+import Faq from '../pages/Faq/Faq';
 import ClientReviews from '../pages/ClientReviews/ClientReviews';
 import Contact from '../pages/Contact/Contact';
 import Career from '../pages/Career/Career';
@@ -60,7 +62,7 @@ export default function AppRoutes() {
 
         {/* Dedicated package category pages — before the generic
             "/packages/:slug" catch-all below. */}
-        {/* <Route path="/packages/seo-packages" element={<SeoPackages />} />
+        <Route path="/packages/seo-packages" element={<SeoPackages />} />
         <Route path="/packages/aeo-seo-packages" element={<AeoSeoPackages />} />
         <Route path="/packages/one-time-seo-packages" element={<OneTimeSeoPackages />} />
         <Route path="/packages/local-seo-packages" element={<LocalSeoPackages />} />
@@ -71,16 +73,18 @@ export default function AppRoutes() {
         <Route path="/packages/reputation-management-package" element={<ReputationManagementPackage />} />
         <Route path="/packages/bad-link-removal-packages" element={<BadLinkRemovalPackages />} />
 
-        <Route path="/packages/:slug" element={<PackageDetail />} /> */}
+        <Route path="/packages/:slug" element={<PackageDetail />} />
 
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/paid-advertising-portfolio" element={<PaidAdvertisingPortfolio />} />
 
         <Route path="/seo-case-study" element={<SeoCaseStudy />} />
+        <Route path="/case-studies/:slug" element={<CaseStudyDetail />} />
         <Route path="/client-reviews" element={<ClientReviews />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/career" element={<Career />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/faq" element={<Faq />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-of-use" element={<TermsOfUse />} />
         <Route path="/sitemap" element={<Sitemap />} />

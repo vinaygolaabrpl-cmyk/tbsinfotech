@@ -1,8 +1,14 @@
 import PackageHero from '../../components/common/PackageHero';
 import SEO from '../../components/common/SEO';
 import PricingMatrix from '../../components/common/PricingMatrix';
+import { openPaypalLink } from '../../utils/openPaypalLink';
+import packages from '../../data/packages.json';
 
-const PLANS = [{ name: 'One Time SEO Package', price: '$200 USD' }];
+// This page's single plan is the same product as the "One Time SEO
+// Package" entry in packages.json (same name, same $200 price) — reuse
+// its manually configured paypalLink rather than duplicating the field.
+const onePkg = packages.find((p) => p.slug === 'one-time-seo-package');
+const PLANS = [{ name: 'One Time SEO Package', price: '$200 USD', paypalLink: onePkg?.paypalLink ?? '' }];
 
 const GROUPS = [
   {
@@ -64,7 +70,13 @@ export default function OneTimeSeoPackages() {
 
       <section className="section">
         <div className="container">
-          <PricingMatrix planColumnLabel="On-Page Optimization" plans={PLANS} groups={GROUPS} ctaLabel="Request A Quote" />
+          <PricingMatrix
+            planColumnLabel="On-Page Optimization"
+            plans={PLANS}
+            groups={GROUPS}
+            ctaLabel="Request A Quote"
+            onCta={(plan) => openPaypalLink(plan.paypalLink)}
+          />
         </div>
       </section>
     </div>

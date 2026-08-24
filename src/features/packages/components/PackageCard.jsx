@@ -30,6 +30,16 @@ export default function PackageCard({ pkg, index = 0 }) {
       <Link to={`/packages/${pkg.slug}`} className="cta">
         {pkg.slug === 'gold' ? 'Custom Enterprise Quote' : 'Choose Package'}
       </Link>
+
+      {/* Package-specific, manually configured link — read straight from
+          this package's own data, never generated or shared across
+          packages. Omitted/empty on a package (e.g. Gold's custom-quote
+          flow) simply means no button renders. */}
+      {pkg.paypalLink && (
+        <a href={pkg.paypalLink} target="_blank" rel="noopener noreferrer" className="cta paypalCta">
+          Pay With PayPal
+        </a>
+      )}
     </article>
   );
 }

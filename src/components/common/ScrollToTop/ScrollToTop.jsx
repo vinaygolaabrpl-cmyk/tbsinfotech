@@ -1,6 +1,40 @@
 import { useEffect, useLayoutEffect, useRef } from 'react';
 import { useLocation, useNavigationType } from 'react-router-dom';
 
+// Client-side (pushState) navigation never triggers the browser's native
+// "scroll to the element matching this hash" behaviour the way a real page
+// load does — and even on a real load, the target element may not exist in
+// the DOM yet (it's rendered by React, not present in the initial HTML). So
+// hash links (e.g. the footer's "FAQ" -> "/#faq") need to be scrolled to
+// manually. This polls for a couple of frames in case the target page's
+// content (and therefore the element) hasn't finished rendering yet, then
+// scrolls to it with an offset for the sticky header so the section isn't
+// tucked underneath it.
+function scrollToHashTarget(hash) {
+  const id = hash.replace('#', '');
+  if (!id) return;
+
+  let attempts = 0;
+
+  const tryScroll = () => {
+    const el = document.getElementById(id);
+
+    if (el) {
+      const headerOffset = document.querySelector('.site-header')?.offsetHeight ?? 0;
+      const top = el.getBoundingClientRect().top + window.scrollY - headerOffset - 16;
+      window.scrollTo({ top, behavior: 'smooth' });
+      return;
+    }
+
+    attempts += 1;
+    if (attempts < 30) {
+      requestAnimationFrame(tryScroll);
+    }
+  };
+
+  requestAnimationFrame(tryScroll);
+}
+
 /**
  * Global scroll-restoration fix, mounted once inside <BrowserRouter>.
  *
@@ -9,9 +43,10 @@ import { useLocation, useNavigationType } from 'react-router-dom';
  *   opens scrolled to the top.
  * - On browser Back/Forward (POP navigation) the browser's native scroll
  *   position restoration is left alone, so users land back where they were.
- * - If the URL includes a hash (e.g. "/#faq"), we let the browser/anchor
- *   scroll to that element instead of forcing the top — existing hash
- *   links (like the Home FAQ jump) keep working exactly as before.
+ * - If the URL includes a hash (e.g. "/#faq"), we scroll to that element
+ *   ourselves (see scrollToHashTarget above) — existing hash links (like
+ *   the Home FAQ jump and the footer FAQ link) actually land on the
+ *   section instead of leaving the scroll position untouched.
  *
  * This replaces the need for any per-page window.scrollTo() calls.
  */
@@ -34,8 +69,16 @@ export default function ScrollToTop() {
   }, []);
 
   useLayoutEffect(() => {
-    // Skip the very first mount so the page doesn't jump on initial load
-    // if the URL was opened with a hash (e.g. a shared "/#faq" link).
+    // A hash is present (in-page anchor link, e.g. "/#faq"): scroll to it
+    // ourselves, whether this is the first render (a shared "/#faq" link
+    // opened directly) or a later in-app navigation (the footer FAQ link).
+    if (hash) {
+      firstRender.current = false;
+      scrollToHashTarget(hash);
+      return;
+    }
+
+    // Skip the very first mount so the page doesn't jump on initial load.
     if (firstRender.current) {
       firstRender.current = false;
       return;
@@ -43,9 +86,6 @@ export default function ScrollToTop() {
 
     // Back/forward: don't fight the browser's own scroll restoration.
     if (navigationType === 'POP') return;
-
-    // A hash is present (in-page anchor link): let the browser handle it.
-    if (hash) return;
 
     window.scrollTo(0, 0);
   }, [pathname, hash, navigationType]);

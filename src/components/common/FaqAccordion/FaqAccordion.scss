@@ -41,15 +41,12 @@
   .item[data-open='true'] .chevron { transform: rotate(180deg); }
 
   .answerWrap {
-    display: grid;
-    grid-template-rows: 0fr;
-    transition: grid-template-rows 0.3s ease;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
   }
 
-  .item[data-open='true'] .answerWrap { grid-template-rows: 1fr; }
-
   .answer {
-    overflow: hidden;
     padding: 0 $space-4;
     color: var(--text-muted);
     font-size: 0.92rem;

@@ -33,7 +33,17 @@ export default function PackageDetail() {
             <li key={f}>{f}</li>
           ))}
         </ul>
-        <Button to="/contact" size="lg">Get Started</Button>
+        <div className="actions">
+          <Button to="/contact" size="lg">Get Started</Button>
+          {/* Package-specific, manually configured link — read straight
+              from this package's own data, never generated or shared
+              across packages. Omitted/empty simply hides the button. */}
+          {pkg.paypalLink && (
+            <Button href={pkg.paypalLink} target="_blank" rel="noopener noreferrer" variant="outline" size="lg">
+              Pay With PayPal
+            </Button>
+          )}
+        </div>
       </div>
     </section>
   );

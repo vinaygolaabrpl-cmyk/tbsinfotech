@@ -1,12 +1,13 @@
 import PackageHero from '../../components/common/PackageHero';
 import SEO from '../../components/common/SEO';
 import PricingMatrix from '../../components/common/PricingMatrix';
+import { openPaypalLink } from '../../utils/openPaypalLink';
 import './PackagesShared.scss';
 
 const PLANS = [
-  { name: 'Bronze', price: '$150', billing: 'Per Month' },
-  { name: 'Silver', price: '$225', billing: 'Per Month', popular: true },
-  { name: 'Gold', price: '$350', billing: 'Per Month' }
+  { name: 'Bronze', price: '$150', billing: 'Per Month', paypalLink: '' },
+  { name: 'Silver', price: '$225', billing: 'Per Month', popular: true, paypalLink: '' },
+  { name: 'Gold', price: '$350', billing: 'Per Month', paypalLink: '' }
 ];
 
 const GROUPS = [
@@ -114,7 +115,13 @@ export default function LocalSeoPackages() {
       <section className="section">
         <div className="container">
           <h2 className="pickTitle" data-aos="fade-up">Local SEO <span className="gradient">Optimization</span> Package</h2>
-          <PricingMatrix planColumnLabel="Pick Monthly Package" plans={PLANS} groups={GROUPS} ctaLabel="Order Now!" />
+          <PricingMatrix
+            planColumnLabel="Pick Monthly Package"
+            plans={PLANS}
+            groups={GROUPS}
+            ctaLabel="Order Now!"
+            onCta={(plan) => openPaypalLink(plan.paypalLink)}
+          />
         </div>
       </section>
     </div>

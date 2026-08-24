@@ -108,4 +108,20 @@
       box-shadow: 0 16px 30px -14px rgba(34, 211, 238, 0.6);
     }
   }
+
+  // Secondary "Pay With PayPal" link, stacked under the main CTA — same
+  // pill shape/sizing as .cta, styled distinctly (PayPal blue) so it
+  // never reads as the primary action.
+  .paypalCta {
+    margin-top: $space-2;
+    background: #ffc439;
+    border-color: transparent;
+    color: #0b1220;
+
+    &:hover,
+    &:focus-visible {
+      background: #f5b800;
+      color: #0b1220;
+    }
+  }
 }

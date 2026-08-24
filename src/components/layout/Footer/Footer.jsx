@@ -21,7 +21,7 @@ const companyLinks = [
   { label: 'Portfolio', to: '/portfolio' },
   { label: 'ROI Calculator', to: '/contact' },
   { label: 'Blog', to: '/blog' },
-  { label: 'FAQ', to: '/#faq' }
+  { label: 'FAQ', to: '/faq' }
 ];
 
 const socialIcons = [
@@ -90,7 +90,7 @@ function FooterColumn({ title, links }) {
       <ul>
         {links.map((l) => (
           <li key={l.label}>
-            {l.to.startsWith('/#') ? <a href={l.to}>{l.label}</a> : <Link to={l.to}>{l.label}</Link>}
+            <Link to={l.to}>{l.label}</Link>
           </li>
         ))}
       </ul>
