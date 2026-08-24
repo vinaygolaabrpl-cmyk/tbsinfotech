@@ -45,7 +45,7 @@ export default function ContactForm({ title = 'What Do You Need Help With?', eye
       <textarea name="message" rows={4} placeholder="Tell Us About Your Project" aria-label="Project details" />
 
       <Button type="submit" size="lg" className="submit">
-        Submit <span aria-hidden="true">&rarr;</span>
+        Submit <span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-move-right-icon lucide-move-right"><path d="M18 8L22 12L18 16"/><path d="M2 12H22"/></svg></span>
       </Button>
 
       {submitted && (
