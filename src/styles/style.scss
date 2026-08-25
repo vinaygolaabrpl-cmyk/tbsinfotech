@@ -8,7 +8,7 @@ a.btn.outline.lg:hover{border: 1px solid var(--primary);}
 .link:hover{color:  var(--primary);}
 .link:hover::after {width: 100%;}
 .site-header .phone{border-color: var(--primary-2);font-weight: 400;}
-.eyebrow {color: var(--primary-2);background: var(--primary-soft);border: 1px solid var(--primary-2);}
+.eyebrow {color: var(--primary-2);background: transparent;border: 1px solid var(--primary-2);}
 .package-card .billing{color: var(--primary-2); font-weight: 700;;}
 .package-card .features li svg,.case-study-card .metric svg{color: #00ff00;}
 .case-study-card {padding: 0;border: 5px solid #000;background: #fff;overflow: hidden;border-radius: 30px;}

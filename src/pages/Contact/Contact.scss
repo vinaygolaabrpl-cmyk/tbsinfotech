@@ -19,7 +19,7 @@
     gap: $space-3;
     height: fit-content;
 
-    a { @include hoverUnderline; font-weight: 700; width: fit-content; }
+    a { @include hoverUnderline;  ; width: fit-content; }
     p { font-size: 0.9rem; }
   }
 }

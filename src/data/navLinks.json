@@ -23,7 +23,7 @@
   },
   {
     "label": "Packages",
-    "path": "/packages",
+    "path": "/packages/seo-packages",
     "children": [
       { "label": "SEO Packages", "path": "/packages/seo-packages" },
       { "label": "AEO SEO Packages", "path": "/packages/aeo-seo-packages" },
@@ -38,5 +38,11 @@
     ]
   },
   { "label": "Blog", "path": "/blog" },
-  { "label": "Contact Us", "path": "/contact" }
+  {
+    "label": "Contact Us",
+    "path": "/contact",
+    "children": [
+      { "label": "Career", "path": "/career" }
+    ]
+  }
 ]

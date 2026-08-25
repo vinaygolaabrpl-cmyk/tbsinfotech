@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import './Modal.scss';
 
-export default function Modal({ open, onClose, title, children }) {
+export default function Modal({ open, onClose, title, children, size = 'md' }) {
   useEffect(() => {
     if (!open) return;
     const onKey = (e) => e.key === 'Escape' && onClose?.();
@@ -17,7 +17,7 @@ export default function Modal({ open, onClose, title, children }) {
 
   return (
     <div className="modal-backdrop" onClick={onClose}>
-      <div className="modal" onClick={(e) => e.stopPropagation()} role="dialog" aria-modal="true" aria-label={title}>
+      <div className={`modal ${size}`} onClick={(e) => e.stopPropagation()} role="dialog" aria-modal="true" aria-label={title}>
         <button className="close" onClick={onClose} aria-label="Close">×</button>
         {title && <h3 className="title">{title}</h3>}
         <div>{children}</div>

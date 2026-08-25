@@ -16,7 +16,11 @@
     padding: $space-5;
     max-width: 480px;
     width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
     position: relative;
+
+    &.lg { max-width: 760px; }
   }
 
   .close {

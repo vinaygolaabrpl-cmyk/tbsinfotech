@@ -110,7 +110,8 @@
 // the accent colour, matching the "AI search" look across every section.
 @mixin panel($radius: $radius-md) {
   position: relative;
-  background: linear-gradient(180deg, var(--card-bg-2), var(--card-bg));
+  // background: linear-gradient(180deg, var(--card-bg-2), var(--card-bg));
+  background: var(--card-bg);
   border: 1px solid var(--border);
   border-radius: $radius;
 

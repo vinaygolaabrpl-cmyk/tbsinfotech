@@ -14,12 +14,13 @@ const PLANS = [
 
 const GROUPS = [
   {
-    title: 'Initial Review And Analysis (First Month SEO Task)',
+    title: 'Initial Review & Analysis (SEO + AEO)',
     rows: [
-      { label: 'Preliminary SEO Check', values: [true, true, true, true, true] },
-      { label: 'Detailed SEO Strategy & Plan', values: [true, true, true, true, true] },
-      { label: 'Keywords Research & Analysis', values: [true, true, true, true, true] },
-      { label: 'Competitor Analysis', values: [true, true, true, true, true] },
+      { label: 'Foundation Setup (SEO + AEO)', values: [true, true, true, true, true] },
+      { label: 'AI-Driven SEO Strategy Development', values: [true, true, true, true, true] },
+      { label: 'AI-Driven Competitor Analysis', values: [false, true, true, true, true] },
+      { label: 'SEO Research & Analysis', values: ['Up To 5', 'Up To 10', 'Up To 20', 'Up To 25', 'Up To 30'] },
+      { label: 'SEO Keyword Research', values: ['Up To 10', 'Up To 25', 'Up To 50', 'Up To 100', 'Up To 150'] },
       { label: 'Initial Backlinks Analysis', values: [true, true, true, true, true] },
       { label: 'Google Penalty Check', values: [true, true, true, true, true] },
       { label: 'Cross Browser Compatibility', values: [true, true, true, true, true] },
@@ -31,60 +32,82 @@ const GROUPS = [
     ]
   },
   {
-    title: 'On-Page Optimization (First Month SEO Task)',
+    title: 'On-Page Optimization & AI Implementation',
     rows: [
-      { label: 'Meta Tags Optimization (Title & Description)', values: ['10 Web Page (Max)', '20 Web Page (Max)', '40 Web Page (Max)', '75 Web Page (Max)', '100 Web Page (Max)'] },
+      { label: 'AI-Optimized Meta Tags (Title & Description)', values: ['10 Web Page (Max)', '20 Web Page (Max)', '40 Web Page (Max)', '75 Web Page (Max)', '100 Web Page (Max)'] },
+      { label: 'Automated Header Structure Optimization', values: [true, true, true, true, true] },
+      { label: 'Internal Linking Suggestions', values: [true, true, true, true, true] },
+      { label: 'Image Optimization (Alt & Title Tags)', values: [true, true, true, true, true] },
+      { label: 'Schema Markup Generation & Implementation', values: [true, true, true, true, true] },
+      { label: 'AEO AI-Driven Web Content Optimization', values: [false, true, true, true, true] },
       { label: 'Robots.txt Creation & Analysis', values: [true, true, true, true, true] },
-      { label: 'Creation & Implementation Of XML Sitemap', values: [true, true, true, true, true] },
-      { label: 'Creation & Implementation Of HTML Sitemap', values: [true, true, true, true, true] },
-      { label: 'Working With HTML Source Code', values: [true, true, true, true, true] },
-      { label: 'Google Analytics Setup & Conversion Tracking', values: [true, true, true, true, true] },
-      { label: 'Google Search Console Account Setup', values: [false, true, true, true, true] },
-      { label: 'Bing Webmaster Tool Setup', values: [false, true, true, true, true] },
-      { label: 'Image Optimization (Alt & Title Tags)', values: [false, true, true, true, true] },
+      { label: 'Creation & Implementation Of XML Sitemap', values: [false, true, true, true, true] },
+      { label: 'Creation & Implementation Of HTML Sitemap', values: [false, true, true, true, true] },
+      { label: 'Google Analytics Setup & Conversion Tracking', values: [false, true, true, true, true] },
+      { label: 'Google Search Console Account Setup', values: [true, true, true, true, true] },
+      { label: 'Bing Webmaster Tool Setup', values: [true, true, true, true, true] },
       { label: 'Anchor Tag Optimization', values: [true, true, true, true, true] },
       { label: 'Heading Tag Optimization', values: [true, true, true, true, true] },
-      { label: 'Existing Web Content Optimization', values: [true, true, true, true, true] },
-      { label: 'URL Mapping', values: [true, true, true, true, true] },
-      { label: 'Geo-Tagging', values: [false, true, true, true, true] },
-      { label: 'Author Tag', values: [false, true, true, true, true] },
+      { label: 'URL Mapping', values: [false, true, true, true, true] },
+      { label: 'Geo-Tagging', values: [true, true, true, true, true] },
       { label: 'Canonical Tag', values: [true, true, true, true, true] }
     ]
   },
   {
-    title: 'Content Marketing (Every Month)',
+    title: 'AEO AI-Driven Content Marketing',
     rows: [
-      { label: 'Article Writing', values: [1, 2, 4, 8, 12] },
-      { label: 'Press Releases Writing', values: [false, 1, 2, 4, 6] },
-      { label: 'Blog Content Writing', values: [1, 2, 4, 8, 12] },
-      { label: 'Classified Ad Writing', values: [1, 2, 4, 8, 12] },
-      { label: 'Infographics Content Writing', values: [false, true, true, true, true] }
+      { label: 'Informational Article Writing', values: [1, 2, 3, 5, 7] },
+      { label: 'Press Releases Writing', values: [false, 1, 1, 2, 3] },
+      { label: 'Premium Press Releases Writing', values: [false, false, 1, 1, 1] },
+      { label: 'Guest Blog Writing', values: [false, false, 1, 2, 5] },
+      { label: 'Infographic Content Writing', values: [false, true, true, true, true] },
+      { label: 'Classified Ad Writing', values: [1, 2, 3, 4, 5] },
+      { label: 'Blog Content Writing', values: [1, 2, 3, 5, 7] }
     ]
   },
   {
-    title: 'Local SEO Optimization (Every Month)',
+    title: 'Local SEO Optimization',
     rows: [
       { label: 'Local Listings (Google My Business & Bing)', values: [false, true, true, true, true] },
+      { label: 'Google Business Page Posting', values: [false, 8, 12, 16, 20] },
+      { label: 'GMB Listing Promotions', values: [false, true, true, true, true] },
+      { label: 'Business Listings', values: [false, true, true, true, true] },
+      { label: 'Quora Answers', values: [false, true, true, true, true] },
       { label: 'Classified Submission', values: [7, 15, 30, 60, 90] },
-      { label: 'Search Engine Submission', values: [false, true, true, true, true] }
+      { label: 'NAP & Brand Consistency Across The Web', values: [true, true, true, true, true] },
+      { label: 'Search Engine Submission (One Time)', values: [false, true, true, true, true] }
     ]
   },
   {
-    title: 'Off-Page Optimization And Link Strategy Factors (Every Month)',
+    title: 'Off-Page Optimization',
     rows: [
-      { label: 'Quality Social Bookmarking', values: [5, 10, 20, 40, 60] },
-      { label: 'Article Submission', values: [1, 2, 4, 8, 12] },
-      { label: 'Article Link Promotion', values: [5, 10, 20, 40, 60] },
-      { label: 'Press Release Submission', values: [false, 5, 10, 20, 30] },
+      { label: 'Quality Social Bookmarking', values: [5, 10, 15, 20, 30] },
+      { label: 'Premium Press Release Submission', values: [false, false, 1, 1, 1] },
+      { label: 'Premium PR Distribution', values: [false, false, 5, 5, 5] },
+      { label: 'Guest Blog Posting', values: [false, false, 1, 2, 5] },
+      { label: 'Guest Blog Posting Promotions', values: [false, false, 5, 10, 15] },
+      { label: 'Article Submission', values: [1, 2, 3, 5, 7] },
+      { label: 'Article Link Promotion', values: [5, 10, 15, 20, 30] },
+      { label: 'Press Release Submission', values: [false, 3, 5, 10, 15] },
       { label: 'Press Release Promotion', values: [false, 5, 10, 20, 30] },
       { label: 'InfoGraphic Creation', values: [false, true, true, true, true] },
-      { label: 'Infographic Distribution', values: [false, 3, 6, 12, 18] },
-      { label: 'Link Syndication', values: [2, 5, 10, 20, 30] },
-      { label: '"No Follow" Links Check', values: [false, true, true, true, true] },
+      { label: 'Infographic Distribution', values: [false, 3, 5, 10, 15] },
       { label: 'Blog Setup', values: [true, true, true, true, true] },
       { label: 'Blog Optimization', values: [true, true, true, true, true] },
-      { label: 'Blog Submission', values: [1, 2, 4, 8, 12] },
-      { label: 'Blog Promotion', values: [5, 10, 20, 40, 60] }
+      { label: 'Blog Submission', values: [1, 2, 3, 5, 7] },
+      { label: 'Blog Promotion', values: [5, 10, 15, 20, 30] }
+    ]
+  },
+  {
+    title: 'AI Technical Website Analysis',
+    rows: [
+      { label: 'New Web Blog Suggestions (AI Based)', values: Array(5).fill('One Time Additional Cost') },
+      { label: 'Page Speed & Core Web Vitals Optimization', values: Array(5).fill('One Time Additional Cost') },
+      { label: 'Mobile-First Optimization', values: Array(5).fill('One Time Additional Cost') },
+      { label: 'FAQs With Direct Answers', values: Array(5).fill('One Time Additional Cost') },
+      { label: 'FAQ Schema', values: Array(5).fill('One Time Additional Cost') },
+      { label: 'AI-Friendly Web Pages Suggestions', values: Array(5).fill('One Time Additional Cost') },
+      { label: 'Broken Link Fix', values: Array(5).fill('One Time Additional Cost') }
     ]
   },
   {
@@ -92,12 +115,10 @@ const GROUPS = [
     rows: [
       { label: 'Bi-Weekly Search Engine Rank Report', values: [true, true, true, true, true] },
       { label: 'Bi-Weekly SEO Activity Reports', values: [true, true, true, true, true] },
-      { label: 'Monthly Google Analytics Report', values: [true, true, true, true, true] }
+      { label: 'Monthly AI Visibility Report', values: [false, true, true, true, true] },
+      { label: 'Monthly Google Analytics Report', values: [false, true, true, true, true] },
+      { label: 'Email, Chat, Phone Support', values: [true, true, true, true, true] }
     ]
-  },
-  {
-    title: 'Customer Support',
-    rows: [{ label: 'Email, Chat, Phone', values: [true, true, true, true, true] }]
   }
 ];
 

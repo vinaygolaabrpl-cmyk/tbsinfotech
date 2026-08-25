@@ -1,9 +1,9 @@
-import { FiGlobe } from 'react-icons/fi';
+import { FiGlobe, FiMapPin } from 'react-icons/fi';
 import SEO from '../../components/common/SEO';
 import SectionTitle from '../../components/common/SectionTitle';
 import PageHero from '../../components/common/PageHero';
 import BlufCallout from '../../components/common/BlufCallout';
-import SystemDiagram from '../../components/common/SystemDiagram';
+import GlobalReachGrid from '../../components/common/GlobalReachGrid';
 import Card from '../../components/common/Card';
 import DataTable from '../../components/common/DataTable';
 import FaqAccordion from '../../components/common/FaqAccordion';
@@ -20,13 +20,19 @@ const WHY_US = [
 ];
 
 const FOOTPRINT_REGIONS = [
-  { icon: <FiGlobe />, title: 'USA' },
-  { icon: <FiGlobe />, title: 'Canada' },
-  { icon: <FiGlobe />, title: 'UK' },
+  { icon: <FiMapPin />, title: 'USA' },
+  { icon: <FiMapPin />, title: 'Canada' },
+  { icon: <FiMapPin />, title: 'UK' },
   { icon: <FiGlobe />, title: 'Europe' },
   { icon: <FiGlobe />, title: 'Middle East' },
   { icon: <FiGlobe />, title: 'Asia & Australia' }
 ];
+
+const FOOTPRINT_LEAD = {
+  icon: <FiGlobe />,
+  title: 'One Coordinated Team, Every Time Zone',
+  desc: 'Dedicated account teams and round-the-clock communication keep delivery consistent no matter where our clients are based.'
+};
 
 const PARTNER_REASONS = [
   {
@@ -91,7 +97,7 @@ export default function About() {
       <section className="section">
         <div className="container">
           <SectionTitle eyebrow="Global Reach" title="International Operational Footprint" />
-          <SystemDiagram hub="Global Service Footprint" branches={FOOTPRINT_REGIONS} />
+          <GlobalReachGrid lead={FOOTPRINT_LEAD} regions={FOOTPRINT_REGIONS} />
         </div>
       </section>
 

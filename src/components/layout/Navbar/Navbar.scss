@@ -171,8 +171,8 @@
     }
 
     @include desktop-up {
-      &:hover .submenu,
-      &:focus-within .submenu {
+      &:hover .submenu{
+        // ,&:focus-within .submenu 
         opacity: 1;
         visibility: visible;
         transform: translateY(0);
