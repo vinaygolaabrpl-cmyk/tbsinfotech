@@ -21,6 +21,8 @@ import ClientReviews from '../pages/ClientReviews/ClientReviews';
 import Contact from '../pages/Contact/Contact';
 import Career from '../pages/Career/Career';
 import Blog from '../pages/Blog/Blog';
+import BlogDetail from '../pages/Blog/BlogDetail';
+import FreeSeoAudit from '../pages/FreeSeoAudit/FreeSeoAudit';
 import SeoPackages from '../pages/Packages/SeoPackages';
 import AeoSeoPackages from '../pages/Packages/AeoSeoPackages';
 import OneTimeSeoPackages from '../pages/Packages/OneTimeSeoPackages';
@@ -84,6 +86,8 @@ export default function AppRoutes() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/career" element={<Career />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:slug" element={<BlogDetail />} />
+        <Route path="/free-seo-audit" element={<FreeSeoAudit />} />
         <Route path="/faq" element={<Faq />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-of-use" element={<TermsOfUse />} />

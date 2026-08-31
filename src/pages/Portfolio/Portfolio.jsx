@@ -128,7 +128,7 @@ export default function Portfolio() {
           {loading ? <Loader label="Loading portfolio…" /> : <PortfolioGrid items={filtered} />}
 
           <div className="portfolioMoreLink" data-aos="fade-up">
-            <Button to="/paid-advertising-portfolio" variant="outline">See Our Paid Advertising Portfolio ↗</Button>
+            <Button to="/seo-case-study" variant="outline">See Our SEO Case Studies ↗</Button>
           </div>
         </div>
       </section>

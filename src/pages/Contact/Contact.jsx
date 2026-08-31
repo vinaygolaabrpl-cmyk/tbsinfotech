@@ -18,9 +18,10 @@ export default function Contact() {
         <div className="wrap">
           <div className="info" data-aos="fade-right">
             <h3>Get In Touch</h3>
-            {siteConfig.phones.map((p) => (
+            {/* {siteConfig.phones.map((p) => (
               <a key={p} href={`tel:${p.replace(/\s/g, '')}`}>{p}</a>
-            ))}
+            ))} */}
+            <a  href={`tel:${siteConfig.phones[1].replace(/\s/g, '')}`}>{siteConfig.phones[1]}</a>
             <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>
             <p>{siteConfig.address}</p>
           </div>

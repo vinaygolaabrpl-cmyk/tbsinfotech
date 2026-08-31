@@ -67,7 +67,7 @@ export default function Career() {
             </p>
             <div className="career-page__introMeta">
               <span><FiMail aria-hidden="true" /> {siteConfig.email}</span>
-              <span><FiPhone aria-hidden="true" /> {siteConfig.phones[1]}</span>
+              <span><FiPhone aria-hidden="true" /> {siteConfig.phones[2]}</span>
             </div>
           </div>
 

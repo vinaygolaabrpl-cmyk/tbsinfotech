@@ -1,0 +1,15 @@
+@use '../../../styles/base/variables' as *;
+@use '../../../styles/base/mixins' as *;
+
+.blog-rail {
+  @include snap-rail(260px, $space-4);
+
+  // Leaves room for the hover lift so cards are not clipped by the scroller.
+  padding-top: 10px;
+
+  @include wide-up {
+    grid-auto-flow: row;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    overflow-x: visible;
+  }
+}

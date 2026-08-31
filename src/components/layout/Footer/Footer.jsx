@@ -11,15 +11,17 @@ const serviceLinks = [
   { label: 'Google & Meta Ads', to: '/services/ppc-advertising-service-india' },
   { label: 'Web Development', to: '/services/web-development' },
   { label: 'App Development', to: '/services/web-development' },
-  { label: 'Brand Design', to: '/services/branding' }
+  { label: 'Brand Design', to: '/services/branding' },
+  { label: 'Case Studies', to: '/seo-case-study' }
 ];
 
 const companyLinks = [
   { label: 'Services', to: '/services' },
-  { label: 'Case Studies', to: '/seo-case-study' },
+  { label: "Career", to: "/career" },
   { label: 'Packages', to: '/packages' },
   { label: 'Portfolio', to: '/portfolio' },
   { label: 'ROI Calculator', to: '/contact' },
+  { label: 'Free SEO Audit', to: '/free-seo-audit' },
   { label: 'Blog', to: '/blog' },
   { label: 'FAQ', to: '/faq' }
 ];

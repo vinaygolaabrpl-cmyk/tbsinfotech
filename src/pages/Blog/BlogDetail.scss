@@ -1,0 +1,58 @@
+@use '../../styles/base/variables' as *;
+@use '../../styles/base/mixins' as *;
+
+.blog-detail-page {
+  .post-meta-grid {
+    @include grid-auto-fit(180px, $space-4);
+  }
+
+  .infoTile {
+    @include card-surface;
+    padding: $space-4;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    .label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--primary);
+    }
+
+    .value {
+      font-weight: 600;
+      color: var(--text);
+    }
+  }
+
+  .article-body {
+    max-width: 780px;
+    margin-inline: auto;
+
+    p {
+      color: var(--text-muted);
+      line-height: 1.8;
+      font-size: 0.98rem;
+      margin-bottom: $space-4;
+
+      &:last-child { margin-bottom: 0; }
+    }
+  }
+
+  .tags-row {
+    max-width: 780px;
+    margin: $space-4 auto 0;
+    @include flex(flex-start, center, $space-2);
+    flex-wrap: wrap;
+  }
+
+  .tag {
+    @include chip;
+  }
+
+  .final-cta {
+    padding-block: $space-7;
+  }
+}

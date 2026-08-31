@@ -6,6 +6,7 @@ a.btn.outline.lg:hover{border: 1px solid var(--primary);}
 .link::after {content: "";position: absolute;left: 0;bottom: -4px;width: 0;height: 2px;background: var(--primary);transition: width 0.18s ease;}
 .link { position: relative;transition: color 0.18s ease;}
 .link:hover{color:  var(--primary);}
+
 .link:hover::after {width: 100%;}
 .site-header .phone{border-color: var(--primary-2);font-weight: 400;}
 .eyebrow {color: var(--primary-2);background: transparent;border: 1px solid var(--primary-2);}
@@ -37,6 +38,9 @@ svg.lucide.lucide-check-icon.lucide-check {color: lime;    width: 18px;height: a
 
 
 
+@media (min-width: 1200px) {
+.site-header .actions a {display: inline-flex;}
+}
 @media (max-width: 767px) {
     .home-page .heroEyebrow{font-size: 10px;}
     .home-page .heroInner {padding-block: 56px 64px;}

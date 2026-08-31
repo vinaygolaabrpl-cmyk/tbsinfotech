@@ -1,8 +1,9 @@
 import SEO from '../../components/common/SEO';
 import SectionTitle from '../../components/common/SectionTitle';
 import Loader from '../../components/common/Loader';
+import Button from '../../components/common/Button';
+import BlogCard from '../../features/blog/components/BlogCard';
 import { useBlogPosts } from '../../features/blog/hooks/useBlog';
-import { formatDate } from '../../utils/formatDate';
 import './Blog.scss';
 
 export default function Blog() {
@@ -22,18 +23,15 @@ export default function Blog() {
         ) : (
           <div className="grid-auto grid">
             {posts?.map((post, i) => (
-              <article key={post.slug} className="card" data-aos="fade-up" data-aos-delay={i * 60}>
-                <img src={post.image.src} alt={post.image.alt} width={post.image.width} height={post.image.height} loading="lazy" />
-                <div className="body">
-                  <span className="meta">{post.readTime} · {formatDate(post.date)}</span>
-                  <h3>{post.title}</h3>
-                  <p>{post.excerpt}</p>
-                  <span className="author">By {post.author}</span>
-                </div>
-              </article>
+              <BlogCard key={post.slug} post={post} index={i} />
             ))}
           </div>
         )}
+
+        <div className="blog-audit-cta" data-aos="fade-up">
+          <SectionTitle title="Want A Custom Action Plan For Your Site?" />
+          <Button to="/free-seo-audit" size="lg">Get My Free SEO Audit</Button>
+        </div>
       </div>
     </section>
   );

@@ -1,6 +1,110 @@
 [
-  { "slug": "generative-engine-optimization-2026", "title": "Generative Engine Optimization In 2026: The New Front Page Of The Internet", "excerpt": "Why citation share inside ChatGPT, Gemini and Perplexity is becoming a bigger growth lever than blue-link rankings.", "author": "Ankit Sharma", "category": "GEO", "readTime": "9 Min Read", "date": "2026-06-02", "image": { "src": "https://placehold.co/600x600/0ea5b5/ffffff?text=GEO+2026", "alt": "Generative Engine Optimization 2026 article cover", "width": 600, "height": 250 } },
-  { "slug": "entity-first-content-models", "title": "Entity-First Content Models: Structuring Pages LLMs Can Actually Quote", "excerpt": "A practical framework for schema, author entities and answer blocks that makes your content machine-citable.", "author": "Ritika Bansal", "category": "AI SEO", "readTime": "7 Min Read", "date": "2026-05-21", "image": { "src": "https://placehold.co/600x600/0ea5b5/ffffff?text=Entity-First", "alt": "Entity-first content models article cover", "width": 600, "height": 250 } },
-  { "slug": "beyond-roas-incrementality", "title": "Beyond ROAS: Measuring Incrementality On Google And Meta", "excerpt": "How to run geo-holdout tests that prove which part of your paid spend is genuinely creating new demand.", "author": "Mohit Verma", "category": "Paid Media", "readTime": "6 Min Read", "date": "2026-04-30", "image": { "src": "https://placehold.co/600x600/0ea5b5/ffffff?text=Beyond+ROAS", "alt": "Beyond ROAS measuring incrementality article cover", "width": 600, "height": 250 } },
-  { "slug": "core-web-vitals-for-react-apps", "title": "Core Web Vitals For React Apps: Shipping Sub-1s LCP In Production", "excerpt": "Streaming SSR, image strategy and font loading patterns we use on every high-traffic build.", "author": "Sahil Gupta", "category": "Web Tech", "readTime": "11 Min Read", "date": "2026-04-12", "image": { "src": "https://placehold.co/600x600/0ea5b5/ffffff?text=Web+Vitals", "alt": "Core Web Vitals for React apps article cover", "width": 600, "height": 250 } }
+  {
+    "slug": "generative-engine-optimization-2026",
+    "title": "Generative Engine Optimization In 2026: The New Front Page Of The Internet",
+    "excerpt": "Why citation share inside ChatGPT, Gemini and Perplexity is becoming a bigger growth lever than blue-link rankings.",
+    "author": "Ankit Sharma",
+    "category": "GEO",
+    "readTime": "9 Min Read",
+    "date": "2026-06-02",
+    "image": {
+      "src": "https://placehold.co/600x600/0ea5b5/ffffff?text=GEO+2026",
+      "alt": "Generative Engine Optimization 2026 article cover",
+      "width": 600,
+      "height": 250
+    },
+    "tags": [
+      "GEO",
+      "AI Search",
+      "Strategy"
+    ],
+    "content": [
+      "Search behaviour has quietly split in two. A growing share of research-stage queries now start and end inside an AI answer engine, and the brands winning that surface are not always the ones sitting at position one on Google. Citation share inside tools like ChatGPT, Gemini and Perplexity has become a distribution channel of its own, and it plays by a different set of rules.",
+      "Traditional SEO optimizes for a ranked list of ten blue links. Generative Engine Optimization optimizes for being the one source an AI model chooses to synthesize into a single answer. That means the unit of competition shifts from a page to a passage, and the winning signal shifts from backlinks alone to how clearly a page states a verifiable fact, a number, or a definition an LLM can lift with confidence.",
+      "In practice, this changes how we brief content. Every important page needs a tight, quotable answer block near the top, explicit entities marked up with schema, and author credentials that establish why the claim should be trusted. None of this replaces classic technical and on-page SEO — it sits on top of it, because AI crawlers still need a fast, crawlable, well-structured site to work from in the first place.",
+      "The brands treating this as a 2026 priority are running a dual measurement model: rank tracking for classic search, alongside citation tracking across AI answer engines for the same query set. The gap between the two tells you exactly where your content is technically visible but not yet trusted enough to be quoted.",
+      "Our take: GEO is not a replacement discipline, it is SEO's next chapter. The agencies and in-house teams that adapt their content operations now — entity-first structure, transparent sourcing, faster indexation — will own a disproportionate share of AI-driven demand before the rest of the market catches up."
+    ]
+  },
+  {
+    "slug": "entity-first-content-models",
+    "title": "Entity-First Content Models: Structuring Pages LLMs Can Actually Quote",
+    "excerpt": "A practical framework for schema, author entities and answer blocks that makes your content machine-citable.",
+    "author": "Ritika Bansal",
+    "category": "AI SEO",
+    "readTime": "7 Min Read",
+    "date": "2026-05-21",
+    "image": {
+      "src": "https://placehold.co/600x600/0ea5b5/ffffff?text=Entity-First",
+      "alt": "Entity-first content models article cover",
+      "width": 600,
+      "height": 250
+    },
+    "tags": [
+      "AI SEO",
+      "Content Strategy",
+      "Schema"
+    ],
+    "content": [
+      "Most content teams still write pages the way they did in 2015: a keyword-led H1, a few subheadings, and a wall of prose in between. That structure worked when the reader was a person scanning a results page. It works far less well when the reader is a language model trying to extract a discrete, citable fact.",
+      "An entity-first content model starts from a different question: what are the specific things — products, people, places, concepts — this page is authoritative about, and how clearly can a machine identify them without ambiguity? That means naming entities explicitly rather than relying on pronouns, linking them to structured data, and giving each one a dedicated, self-contained answer block.",
+      "Schema does the heavy lifting here. Article, Organization, Person and FAQPage markup, applied consistently, tells a crawler exactly who is making a claim and what that claim is about. Paired with a named author entity that has a real bio and a consistent presence across the site, it builds the kind of trust signal that both traditional rankings and AI citations reward.",
+      "The practical framework we use has three layers: an entity map for the page (what this content is fundamentally about), an answer layer (a 40-60 word block that could stand alone as a citation), and a supporting layer (the deeper explanation, examples and nuance for a human reader who wants more). Writing in that order — rather than bolting schema on at the end — produces noticeably more citable pages.",
+      "This is not about writing for robots instead of people. Done well, entity-first structure makes pages easier for humans to scan too — the answer is upfront, the supporting detail is organized, and nothing is left implicit. Machine-citable and genuinely useful turn out to be the same target."
+    ]
+  },
+  {
+    "slug": "beyond-roas-incrementality",
+    "title": "Beyond ROAS: Measuring Incrementality On Google And Meta",
+    "excerpt": "How to run geo-holdout tests that prove which part of your paid spend is genuinely creating new demand.",
+    "author": "Mohit Verma",
+    "category": "Paid Media",
+    "readTime": "6 Min Read",
+    "date": "2026-04-30",
+    "image": {
+      "src": "https://placehold.co/600x600/0ea5b5/ffffff?text=Beyond+ROAS",
+      "alt": "Beyond ROAS measuring incrementality article cover",
+      "width": 600,
+      "height": 250
+    },
+    "tags": [
+      "Paid Media",
+      "Measurement",
+      "PPC"
+    ],
+    "content": [
+      "Return on ad spend tells you what a campaign reported, not what it actually created. Platform attribution models are built to take credit for conversions that would very plausibly have happened anyway — branded search from an already-loyal customer, a retargeting hit on someone who was already about to buy. ROAS can look excellent while the incremental lift from that spend is close to zero.",
+      "Incrementality testing answers a sharper question: if this campaign had never run, how many fewer conversions would we have seen? The cleanest way to find out on Google and Meta is a geo-holdout test — running spend in a set of matched regions while holding a comparable set back, then comparing the lift in conversions between the two once the test has run long enough to reach statistical confidence.",
+      "Setting one up well matters more than running one at all. Regions need to be matched on population, seasonality and historical conversion volume, not just picked at random. The test window needs to be long enough to smooth out day-to-day noise, and the read-out needs to isolate the specific campaign or channel being tested rather than blending in effects from everything else running at the same time.",
+      "What we typically find: brand-heavy search and broad retargeting overstate their true contribution the most, because they are catching demand that largely already existed. Prospecting campaigns on genuinely new audiences, and mid-funnel content that introduces a brand to someone who has never interacted with it before, tend to under-report their value in last-click and platform-attributed models.",
+      "The payoff is a media plan built on what actually moves revenue rather than what a dashboard is willing to take credit for. Clients who adopt geo-holdout testing as a quarterly habit — not a one-off audit — consistently reallocate budget toward the channels their platform reporting had been undervaluing."
+    ]
+  },
+  {
+    "slug": "core-web-vitals-for-react-apps",
+    "title": "Core Web Vitals For React Apps: Shipping Sub-1s LCP In Production",
+    "excerpt": "Streaming SSR, image strategy and font loading patterns we use on every high-traffic build.",
+    "author": "Sahil Gupta",
+    "category": "Web Tech",
+    "readTime": "11 Min Read",
+    "date": "2026-04-12",
+    "image": {
+      "src": "https://placehold.co/600x600/0ea5b5/ffffff?text=Web+Vitals",
+      "alt": "Core Web Vitals for React apps article cover",
+      "width": 600,
+      "height": 250
+    },
+    "tags": [
+      "Web Tech",
+      "Performance",
+      "React"
+    ],
+    "content": [
+      "A React single-page app that feels instant to a developer on a fast machine can still post a Largest Contentful Paint north of three seconds for a real visitor on a mid-range phone. Client-side rendering means the browser has to download, parse and execute JavaScript before it can paint anything meaningful — and every extra dependency in that critical path adds to the wait.",
+      "Streaming server-side rendering is the single biggest lever we reach for first. Sending HTML that already contains the hero content, rather than an empty shell waiting on a JS bundle, routinely cuts LCP in half. It doesn't have to mean a full rewrite — even hybrid setups that pre-render the above-the-fold route and hydrate the rest lazily get most of the benefit.",
+      "Image strategy is the second-biggest win, because hero and product images are almost always the LCP element itself. Serving modern formats, sizing images exactly to their rendered dimensions, and marking the hero image as a high-priority fetch rather than lazy-loading it are small changes with an outsized effect on the score.",
+      "Font loading is the quiet contributor to layout shift. Swapping in a web font after the page has already rendered with a system font pushes text around the moment it loads, which is exactly what Cumulative Layout Shift penalizes. Preloading the font file and defining accurate fallback metrics keeps the layout stable from the first paint.",
+      "None of these are exotic techniques — they are disciplined defaults applied consistently across every build. The teams that ship sub-1s LCP in production are not doing anything magical; they are simply treating Core Web Vitals as a build requirement rather than a post-launch fix, and re-checking the budget on every release."
+    ]
+  }
 ]

@@ -77,7 +77,7 @@ export default function Home() {
             <p className="heroStat" data-aos="fade-up" data-aos-delay="120">Data-driven digital growth with <strong>{siteConfig.stats.experience}</strong> years of expertise, {' '}
               <strong>{siteConfig.stats.projects}</strong> delivered projects, and 85+ in-house growth specialists.</p>
             <div className="heroCtas" data-aos="fade-up" data-aos-delay="180">
-              <Button to="/contact" size="lg"><SparkIcon /> Get Free Audit &amp; Proposal</Button>
+              <Button to="/free-seo-audit" size="lg"><SparkIcon /> Get Free Audit &amp; Proposal</Button>
               <Button to="/seo-case-study" variant="outline" size="lg">Explore Our Case Studies</Button>
             </div>
           </div>

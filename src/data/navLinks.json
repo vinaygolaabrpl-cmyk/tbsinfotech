@@ -40,9 +40,6 @@
   { "label": "Blog", "path": "/blog" },
   {
     "label": "Contact Us",
-    "path": "/contact",
-    "children": [
-      { "label": "Career", "path": "/career" }
-    ]
+    "path": "/contact"
   }
 ]

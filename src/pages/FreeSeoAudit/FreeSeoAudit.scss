@@ -1,0 +1,41 @@
+@use '../../styles/base/variables' as *;
+@use '../../styles/base/mixins' as *;
+
+.free-seo-audit-page {
+  .wrap {
+    display: grid;
+    gap: $space-5;
+
+    @include desktop-up {
+      grid-template-columns: 0.8fr 1.2fr;
+    }
+  }
+
+  .info {
+    @include panel($radius-lg);
+    padding: $space-5;
+    display: flex;
+    flex-direction: column;
+    gap: $space-3;
+    height: fit-content;
+
+    a { @include hoverUnderline; width: fit-content; }
+    p { font-size: 0.9rem; }
+  }
+
+  .benefits {
+    display: flex;
+    flex-direction: column;
+    gap: $space-2;
+    margin-bottom: $space-2;
+
+    li {
+      @include flex(flex-start, flex-start, 10px);
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: var(--text-muted);
+
+      svg { flex-shrink: 0; margin-top: 3px; color: var(--primary); }
+    }
+  }
+}
