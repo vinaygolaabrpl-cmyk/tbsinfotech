@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import { FiPhone, FiMail, FiMapPin } from 'react-icons/fi';
 import SEO from '../../components/common/SEO';
 import Button from '../../components/common/Button';
@@ -121,7 +121,7 @@ export default function Home() {
       <section className="section">
         <div className="container">
           <SectionTitle eyebrow="Case Studies" title="Results We Can Put A Number On" />
-          {caseStudiesLoading ? <Loader /> : <CaseStudyRail items={caseStudies ?? []} />}
+          {caseStudiesLoading ? <Loader /> : <CaseStudyRail items={caseStudies?.slice(0, 3) ?? []} />}
         </div>
       </section>
 
@@ -195,7 +195,13 @@ export default function Home() {
           ) : (
             <div className="blogGrid">
               {posts?.map((post, i) => (
-                <article key={post.slug} className="blogCard" data-aos="fade-up" data-aos-delay={i * 60}>
+                <Link
+                  to={`/blog/${post.slug}`}
+                  key={post.slug}
+                  className="blogCard"
+                  data-aos="fade-up"
+                  data-aos-delay={i * 60}
+                >
                   <div className="blogMeta">
                     <span className="blogCategory">{post.category}</span>
                     <span className="blogReadTime">{post.readTime}</span>
@@ -206,7 +212,7 @@ export default function Home() {
                     <span className="blogAuthor">By {post.author}</span>
                     <span className="blogLink">Read Article ↗</span>
                   </div>
-                </article>
+                </Link>
               ))}
             </div>
           )}

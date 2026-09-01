@@ -3,6 +3,7 @@ import SEO from '../../components/common/SEO';
 import SectionTitle from '../../components/common/SectionTitle';
 import TierCards from '../../components/common/TierCards';
 import './PackagesShared.scss';
+import ppcBanner from '../../assets/images/services/service_3_banner_img.jpg.jpeg';
 
 const TIERS = [
   {

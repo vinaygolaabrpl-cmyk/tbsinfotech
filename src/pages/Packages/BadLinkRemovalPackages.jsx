@@ -2,6 +2,7 @@ import PackageHero from '../../components/common/PackageHero';
 import SEO from '../../components/common/SEO';
 import Card from '../../components/common/Card';
 import './BadLinkRemovalPackages.scss';
+import badLinkBanner from '../../assets/images/services/service_6_banner_img.jpg.jpeg';
 
 const PRICE_ROWS = [
   { label: 'Up to 500 links', price: '$200' },

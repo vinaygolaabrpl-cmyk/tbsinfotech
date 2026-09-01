@@ -6,6 +6,7 @@ import BlufCallout from '../../components/common/BlufCallout';
 import DataTable from '../../components/common/DataTable';
 import NumberedFeatureGrid from '../../components/common/NumberedFeatureGrid';
 import FaqAccordion from '../../components/common/FaqAccordion';
+import paidAdsBanner from '../../assets/images/services/service_3_banner_img.jpg.jpeg';
 
 const CAMPAIGN_TABLE = {
   headers: ['Client Sector', 'Paid Media Platform', 'Core Strategy Executed', 'Business Results Delivered'],
@@ -48,7 +49,7 @@ export default function PaidAdvertisingPortfolio() {
         eyebrow="Portfolio / Paid Advertising Portfolio"
         title="Paid Media Performance Portfolio: Scalable Customer Acquisition"
         description="Review verified performance outcomes from Google Ads and Meta campaigns managed by Think Biz Solution Private Limited. We engineer data-driven paid advertising funnels that control ad costs, improve ad engagement, and generate predictable business revenue."
-        image="https://placehold.co/700x460/0b1220/22d3ee?text=Paid+Media+Performance"
+        image={paidAdsBanner}
         imageAlt="Paid media campaign performance portfolio"
       />
 

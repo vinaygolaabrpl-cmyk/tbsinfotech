@@ -7,6 +7,7 @@ import SystemDiagram from '../../components/common/SystemDiagram';
 import NumberedFeatureGrid from '../../components/common/NumberedFeatureGrid';
 import DataTable from '../../components/common/DataTable';
 import FaqAccordion from '../../components/common/FaqAccordion';
+import googleAdsBanner from '../../assets/images/services/service_5_banner_img.jpg.jpeg';
 
 const ARCHITECTURE_BRANCHES = [
   { icon: <FiTarget />, title: 'Google Ads Engine', items: ['High-Intent Search Ads', 'Shopping & Product Feeds', 'Performance Max (PMax)'] },
@@ -65,7 +66,7 @@ export default function GoogleAdsMetaAds() {
         eyebrow="Services / Google Ads + Meta Ads"
         title="Paid Media Engineering: Targeted Acquisition across Google & Meta"
         description="Think Biz Solution Private Limited designs and manages paid advertising campaigns that drive scalable revenue. Operating across Google Search, Shopping, Performance Max, and Meta platforms (Facebook/Instagram), we focus on lowering Customer Acquisition Costs (CAC) while maximizing Return on Ad Spend (ROAS)."
-        image="https://placehold.co/700x460/0b1220/22d3ee?text=Paid+Media+Architecture"
+        image={googleAdsBanner}
         imageAlt="Paid media campaign architecture across Google and Meta"
       />
 

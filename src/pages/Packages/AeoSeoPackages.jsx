@@ -3,6 +3,7 @@ import SEO from '../../components/common/SEO';
 import PricingMatrix from '../../components/common/PricingMatrix';
 import { openPaypalLink } from '../../utils/openPaypalLink';
 import './PackagesShared.scss';
+import aeoSeoBanner from '../../assets/images/services/service_2_banner_img.jpg.jpeg';
 
 const PLANS = [
   { name: 'Bronze', price: '$300', billing: 'Per Month', note: 'Up To 25 Keywords', paypalLink: '' },

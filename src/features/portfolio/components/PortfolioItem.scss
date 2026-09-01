@@ -61,9 +61,7 @@
     transform: translateY(0);
   }
 
-  .link {
-    font-weight: 700;
-    color: var(--primary);
-    font-size: 0.82rem;
+  .link {font-weight: 700;color: var(--primary);font-size: 0.82rem;display: inline-flex;align-items: center;;
+    svg{display: inline-block;margin-left: 6px;}
   }
 }

@@ -1,4 +1,10 @@
-import portfolio from '../data/portfolio.json';
+import portfolioData from '../data/portfolio.json';
+import { portfolioImages } from '../data/portfolioImages';
+
+const portfolio = portfolioData.map((p) => ({
+  ...p,
+  image: { ...p.image, src: portfolioImages[p.slug] ?? p.image.src }
+}));
 
 export function getAllPortfolio() {
   return Promise.resolve(portfolio);

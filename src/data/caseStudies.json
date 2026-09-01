@@ -1,115 +1,5 @@
 [
   {
-    "slug": "hookah-filters",
-    "name": "Hookah Filters",
-    "rank": "#1",
-    "metric": "48 Keywords Ranked",
-    "summary": "Discover Our Revolutionary Hookah Filters",
-    "url": "/case-studies/hookah-filters",
-    "image": {
-      "src": "src/assets/images/Rectangle 342.png",
-      "alt": "Shair hookah filters store ranking #1 on Google",
-      "width": 348,
-      "height": 398
-    },
-    "industry": "E-Commerce / Lifestyle Accessories",
-    "engagement": "Ongoing SEO Partnership",
-    "focusArea": "Technical SEO & International Keyword Targeting",
-    "projectOverview": "Shair Filters sells premium hookah and shisha filter accessories to an international customer base, with pricing already localized across EUR, USD, CHF, AED and SAR. The brand needed its product and category pages to be found by the right shoppers across every one of those markets, not just its home region.",
-    "challenge": "As a niche accessories brand, Shair Filters was competing against much larger general smoke-shop retailers for visibility. Its product pages were not structured for the specific, high-intent terms shoppers were actually searching for around hookah filters and Shair filter technology, and its multi-currency storefront wasn't being reflected properly in how search engines understood the site's regional relevance.",
-    "strategy": [
-      "Ran a full technical and on-page SEO audit of the product catalogue and category structure.",
-      "Mapped a keyword set built around the brand's specific niche terms \u2014 hookah filter tips, shisha filter technology, and related accessory searches \u2014 rather than broad, high-competition smoke-shop terms.",
-      "Aligned on-page content, metadata and internal linking with the mapped keyword set across every priority product and category page."
-    ],
-    "solutions": [
-      "Rewrote and restructured product and category page content around the target keyword set.",
-      "Improved internal linking between related filter products and accessory categories to strengthen topical relevance.",
-      "Cleaned up on-page technical SEO fundamentals (titles, meta descriptions, heading structure) sitewide."
-    ],
-    "seoWork": [
-      "Niche keyword research focused on hookah and shisha filter terminology.",
-      "On-page content and metadata optimization across product and category pages.",
-      "Ongoing rank tracking to confirm sustained visibility as new terms were targeted."
-    ],
-    "stats": [
-      { "value": "#1", "label": "Google Position For Priority Keywords" },
-      { "value": "48", "label": "Keywords Ranked" }
-    ],
-    "achievements": [
-      "Reached the #1 Google position across the brand's priority keyword set.",
-      "Grew ranked keyword coverage to 48 terms tied directly to the brand's product niche."
-    ],
-    "conclusion": "By focusing on the specific language hookah and shisha accessory shoppers actually use \u2014 rather than competing head-on with broad smoke-shop terms \u2014 Shair Filters built durable, defensible search visibility in a crowded niche.",
-    "faqs": [
-      {
-        "id": "hf-faq-1",
-        "question": "Why focus on niche keywords instead of broader smoke-shop terms?",
-        "answer": "Broad terms are dominated by large general retailers with far bigger budgets. Niche, product-specific terms have real search intent behind them and are realistically winnable, which is where we focused Shair Filters' SEO effort."
-      },
-      {
-        "id": "hf-faq-2",
-        "question": "Does a multi-currency storefront affect SEO?",
-        "answer": "It can, if the underlying page structure and content don't clearly signal relevance for each target market. We made sure the on-page SEO fundamentals were solid across the catalogue so the site could rank well regardless of the shopper's currency or region."
-      }
-    ]
-  },
-  {
-    "slug": "banger-rally",
-    "name": "Banger Rally",
-    "rank": "#1",
-    "metric": "42 Keywords Ranked",
-    "summary": "The Best European Banger Rally Challenge",
-    "url": "/case-studies/banger-rally",
-    "image": {
-      "src": "src/assets/images/Rectangle 348.png",
-      "alt": "Banger Rally motorsport site ranking #1 on Google",
-      "width": 348,
-      "height": 398
-    },
-    "industry": "Travel & Motorsport Events",
-    "engagement": "Ongoing SEO Partnership",
-    "focusArea": "Content SEO & Event-Intent Keyword Targeting",
-    "projectOverview": "Rusty Rex Banger Rallies runs European banger rally challenges \u2014 budget-car road trip adventures across Europe. The site needed to rank for the specific, adventure-and-event-driven searches people run when they're deciding which banger rally to sign up for.",
-    "challenge": "Banger rallies are a passion-driven, community-heavy niche where search intent is highly specific (route, region, challenge name), but the existing site content wasn't structured to capture that intent or to stand out against other rally organisers competing for the same audience.",
-    "strategy": [
-      "Researched the specific event, route and challenge-related terms prospective participants search for before booking.",
-      "Audited existing site content against that keyword set to find coverage gaps.",
-      "Prioritised the pages and content updates most likely to move the needle for high-intent, ready-to-book searches."
-    ],
-    "solutions": [
-      "Optimized existing rally and challenge pages around the mapped keyword set.",
-      "Improved on-page structure and metadata so search engines could clearly understand each rally's route, region and format.",
-      "Strengthened internal linking between related rally challenges to consolidate topical authority."
-    ],
-    "seoWork": [
-      "Event and adventure-travel keyword research.",
-      "On-page SEO for rally and challenge landing pages.",
-      "Continuous rank monitoring across the target keyword set."
-    ],
-    "stats": [
-      { "value": "#1", "label": "Google Position For Priority Keywords" },
-      { "value": "42", "label": "Keywords Ranked" }
-    ],
-    "achievements": [
-      "Achieved the #1 Google position for the brand's priority rally-related keywords.",
-      "Built ranked visibility across 42 keywords tied to specific rally challenges and routes."
-    ],
-    "conclusion": "By targeting the exact language rally-goers use when researching their next challenge, Rusty Rex Banger Rallies built strong, intent-matched organic visibility in a passionate, niche travel community.",
-    "faqs": [
-      {
-        "id": "br-faq-1",
-        "question": "How do you approach SEO for a passion-driven, niche event brand?",
-        "answer": "We start with the language the community itself uses \u2014 route names, challenge formats, regions \u2014 rather than generic travel terms, since that's what people actually search when they're close to booking."
-      },
-      {
-        "id": "br-faq-2",
-        "question": "Is content optimization enough for an events site, or is more needed?",
-        "answer": "For Banger Rally, sharpening the existing content and internal linking around the right keyword set was the highest-impact starting point. Every engagement is scoped to what the site actually needs rather than a one-size-fits-all package."
-      }
-    ]
-  },
-  {
     "slug": "white-rabbit-skincare",
     "name": "White Rabbit Natural Skincare",
     "rank": "#1",
@@ -117,7 +7,7 @@
     "summary": "Natural Skincare Built On Clean Ingredients",
     "url": "/case-studies/white-rabbit-skincare",
     "image": {
-      "src": "src/assets/images/Rectangle 353.png",
+      "src": "(resolved via caseStudyImages.js)",
       "alt": "White Rabbit natural skincare store ranking #1 on Google",
       "width": 348,
       "height": 398
@@ -126,7 +16,7 @@
     "engagement": "Ongoing SEO Partnership",
     "focusArea": "Product & Ingredient-Led SEO",
     "projectOverview": "White Rabbit Natural Skincare sells clean-ingredient skincare products and needed its product pages to rank for the specific ingredient- and benefit-led searches its target customers use when choosing natural skincare online.",
-    "challenge": "The clean-beauty and natural skincare space is crowded with both boutique brands and large retailers, and White Rabbit's product pages needed to clearly communicate ingredient quality and product benefits in a way search engines \u2014 and shoppers \u2014 could easily understand and trust.",
+    "challenge": "The clean-beauty and natural skincare space is crowded with both boutique brands and large retailers, and White Rabbit's product pages needed to clearly communicate ingredient quality and product benefits in a way search engines — and shoppers — could easily understand and trust.",
     "strategy": [
       "Mapped keyword opportunities around specific ingredients, product benefits and natural-skincare search intent.",
       "Audited product and category pages for on-page SEO gaps against that keyword set.",
@@ -143,8 +33,14 @@
       "Ongoing rank tracking as new product pages were optimized."
     ],
     "stats": [
-      { "value": "#1", "label": "Google Position For Priority Keywords" },
-      { "value": "46", "label": "Keywords Ranked" }
+      {
+        "value": "#1",
+        "label": "Google Position For Priority Keywords"
+      },
+      {
+        "value": "46",
+        "label": "Keywords Ranked"
+      }
     ],
     "achievements": [
       "Reached the #1 Google position for the brand's priority keyword set.",
@@ -160,7 +56,551 @@
       {
         "id": "wr-faq-2",
         "question": "How do you keep product-page SEO consistent as a catalogue grows?",
-        "answer": "We work from a repeatable on-page template \u2014 covering titles, metadata and heading structure \u2014 so every new product page launches with the same SEO foundation instead of needing rework later."
+        "answer": "We work from a repeatable on-page template — covering titles, metadata and heading structure — so every new product page launches with the same SEO foundation instead of needing rework later."
+      }
+    ]
+  },
+  {
+    "slug": "adopsstaffing",
+    "name": "AdOps Staffing",
+    "rank": "40+",
+    "metric": "Years Combined AdOps & RTB Experience",
+    "summary": "Specialist Staffing For Programmatic & Paid Social Teams",
+    "url": "/case-studies/adopsstaffing",
+    "websiteUrl": "https://adopsstaffing.com/",
+    "image": {
+      "src": "(resolved via caseStudyImages.js)",
+      "alt": "AdOps Staffing website",
+      "width": 348,
+      "height": 398
+    },
+    "industry": "Staffing & Recruitment / AdTech",
+    "engagement": "Website Design & Conversion Copywriting",
+    "focusArea": "B2B Messaging & Lead Capture For A Niche Staffing Agency",
+    "projectOverview": "AdOps Staffing connects agencies with pre-vetted programmatic trading and paid social specialists, helping ad agencies scale their operations teams with pre-screened, experienced talent instead of running a lengthy in-house search.",
+    "challenge": "As a niche recruiter, AdOps Staffing was competing for attention against generalist staffing firms. The site needed to prove deep AdTech expertise fast and give agency hiring managers a clear, low-friction path from 'browsing' to 'booking a call' rather than a generic contact form.",
+    "strategy": [
+      "Structured the homepage around the questions agency hiring managers actually ask first: what talent is available, how fast it can be deployed, and what guarantees back the placement.",
+      "Broke the offering into four distinct, self-contained service pages (workforce integration, managed hiring, pre-screened talent, ad operations support) so visitors can self-select the right fit.",
+      "Kept every section funnelling toward a single conversion action instead of splitting attention across multiple competing CTAs."
+    ],
+    "solutions": [
+      "Built a benefits-led homepage leading with cost-effective staffing, fast deployment, and a 10-day talent-fit guarantee.",
+      "Added an 'Our Expertise' section referencing the team's combined AdOps and RTB industry experience to build credibility with agency buyers.",
+      "Wired a direct scheduling link into the primary CTAs so qualified leads can book a call without an extra contact-form step."
+    ],
+    "seoWork": [
+      "Aligned page titles, headings and body copy around the specific programmatic and paid social staffing terms agency hiring managers search for.",
+      "Structured each of the four solution pages as its own crawlable landing page rather than one long homepage block.",
+      "Used testimonial content from real client roles (Director of Ad Operations, VP of Ad Operations) to reinforce topical relevance and trust signals on-page."
+    ],
+    "stats": [
+      {
+        "value": "40+",
+        "label": "Years Combined Team Experience"
+      },
+      {
+        "value": "10-Day",
+        "label": "Talent-Fit Guarantee Highlighted"
+      }
+    ],
+    "achievements": [
+      "Site clearly differentiates AdOps Staffing from generalist recruiters by leading with programmatic and paid social expertise.",
+      "Four distinct service offerings are presented as self-contained landing pages, making it easy for agency buyers to find the right fit quickly.",
+      "A single, consistent call-to-action (Book a Discovery Call) runs through every section of the site."
+    ],
+    "conclusion": "AdOps Staffing's site is built around a clear pitch — fast access to vetted AdOps talent — with a straightforward path from browsing solutions to booking a discovery call.",
+    "faqs": [
+      {
+        "id": "as-faq-1",
+        "question": "What kind of talent does AdOps Staffing place?",
+        "answer": "AdOps Staffing sources pre-vetted professionals with hands-on experience in programmatic trading and paid social advertising for agencies that need to scale quickly."
+      },
+      {
+        "id": "as-faq-2",
+        "question": "How fast can agencies onboard talent?",
+        "answer": "The service is built around fast deployment, backed by a 10-day talent-fit guarantee if a placement isn't the right match."
+      },
+      {
+        "id": "as-faq-3",
+        "question": "What services does AdOps Staffing offer beyond placement?",
+        "answer": "Alongside talent placement, the agency offers seamless workforce integration, a managed hiring process, and ongoing ad operations support for campaigns already in flight."
+      }
+    ]
+  },
+  {
+    "slug": "alsharq-entertainment",
+    "name": "Alsharq Entertainment",
+    "rank": "6",
+    "metric": "Event Categories In One Booking Hub",
+    "summary": "Event Booking & Ticketing For Live Shows In Saudi Arabia",
+    "url": "/case-studies/alsharq-entertainment",
+    "websiteUrl": "https://alsharq-entertainment.com/",
+    "image": {
+      "src": "(resolved via caseStudyImages.js)",
+      "alt": "Alsharq Entertainment website",
+      "width": 348,
+      "height": 398
+    },
+    "industry": "Events & Entertainment",
+    "engagement": "Website Design & Ecommerce Ticketing Setup",
+    "focusArea": "Bilingual UX & Event Discovery For A Saudi Entertainment Brand",
+    "projectOverview": "Alsharq Entertainment is a Jeddah-based event organizer running live music, business, and entertainment events, with an online ticketing storefront for browsing and booking upcoming shows.",
+    "challenge": "Event organizers live or die on how easily people can find and book what's happening next. Alsharq needed a bilingual (Arabic/English) site that could handle a constantly changing events calendar while still giving Saudi audiences a native right-to-left browsing experience.",
+    "strategy": [
+      "Built the events calendar as the central navigation point, with categories spanning business, entertainment, live music, and indoor games so visitors could filter to what interests them.",
+      "Implemented full Arabic/English bilingual support with a dedicated RTL layout toggle, rather than a bolted-on translation.",
+      "Connected ticketing directly to WooCommerce so bookings happen in-line with browsing instead of routing to a separate system."
+    ],
+    "solutions": [
+      "Added an events gallery and 'News & Events' feed to keep the homepage feeling active between major show announcements.",
+      "Set up account and cart functionality so returning attendees can book faster on future events.",
+      "Structured each event listing with venue, date, and time so attendees have everything they need to decide before clicking through to tickets."
+    ],
+    "seoWork": [
+      "Organized events into clear category pages (business, entertainment, live, indoor games, music lessons) to support discovery both through browsing and search.",
+      "Used consistent event metadata (dates, venues, categories) across listings to keep the catalogue structured as new events are added.",
+      "Set up the bilingual URL structure so Arabic and English versions of each page are properly distinguished for search engines."
+    ],
+    "stats": [
+      {
+        "value": "6",
+        "label": "Event Categories Covered"
+      },
+      {
+        "value": "2",
+        "label": "Languages Supported (Arabic & English)"
+      }
+    ],
+    "achievements": [
+      "Delivered a fully bilingual Arabic/English experience with a native RTL layout for Arabic-speaking visitors.",
+      "WooCommerce-powered ticketing lets attendees book directly from the events calendar without leaving the site.",
+      "Event categories span business, entertainment, live music, and indoor games, giving the brand a single hub for a varied events calendar."
+    ],
+    "conclusion": "The site combines an events calendar with WooCommerce-powered ticket sales, giving attendees a single place to discover and book upcoming shows in either Arabic or English.",
+    "faqs": [
+      {
+        "id": "ae-faq-1",
+        "question": "What kind of events does Alsharq Entertainment run?",
+        "answer": "The company organizes live music nights, business events, and entertainment shows, primarily in and around Jeddah, Saudi Arabia."
+      },
+      {
+        "id": "ae-faq-2",
+        "question": "Can tickets be booked online?",
+        "answer": "Yes, the site includes online ticketing and a cart system for booking tickets to upcoming shows."
+      },
+      {
+        "id": "ae-faq-3",
+        "question": "Is the site available in Arabic?",
+        "answer": "Yes, the site offers a full Arabic experience with a right-to-left layout alongside the English version."
+      }
+    ]
+  },
+  {
+    "slug": "churchillretirement",
+    "name": "Churchill Estates Retirement Community",
+    "rank": "1978",
+    "metric": "Serving Eugene Seniors Since Opening",
+    "summary": "Independent Living, Assisted Living & Memory Care In Eugene, Oregon",
+    "url": "/case-studies/churchillretirement",
+    "websiteUrl": "https://churchillretirement.com/",
+    "image": {
+      "src": "(resolved via caseStudyImages.js)",
+      "alt": "Churchill Estates Retirement Community website",
+      "width": 348,
+      "height": 398
+    },
+    "industry": "Senior Living / Healthcare",
+    "engagement": "Website Design & Local Content Strategy",
+    "focusArea": "Trust-Building Content For A Multi-Level Senior Living Campus",
+    "projectOverview": "Churchill Estates has served the Eugene, Oregon community since 1978, offering independent living, assisted living, and memory care on a single campus so residents can move between levels of care without leaving the community.",
+    "challenge": "Families researching senior living are often making a stressful, time-sensitive decision. Churchill Estates needed its site to build trust quickly, explain three distinct levels of care clearly, and make scheduling a tour feel like the obvious next step rather than a big commitment.",
+    "strategy": [
+      "Gave each level of care (independent living, assisted living, memory care) its own dedicated page rather than folding all three into one generic 'services' page.",
+      "Led the homepage with the community's history — open since 1978 — to establish trust before asking for any commitment.",
+      "Used real resident testimonials to give prospective families a genuine sense of day-to-day life at Churchill Estates."
+    ],
+    "solutions": [
+      "Built a persistent 'Schedule a Visit' path reachable from every major section of the site.",
+      "Highlighted specific amenities (chef-prepared meals, housekeeping, laundry, memory support, activities) as individual, scannable sections rather than a single paragraph.",
+      "Added a dedicated Careers page to support ongoing staff hiring alongside the resident-facing content."
+    ],
+    "seoWork": [
+      "Structured independent living, assisted living, and memory care as separate, keyword-distinct landing pages targeting 'Eugene' senior living searches.",
+      "Used clear, descriptive page titles and headings tied to each care type and the Eugene, Oregon location.",
+      "Kept contact information (phone, email, address) consistent and prominent sitewide to support local search relevance."
+    ],
+    "stats": [
+      {
+        "value": "3",
+        "label": "Levels Of Care On One Campus"
+      },
+      {
+        "value": "1978",
+        "label": "Community Established"
+      }
+    ],
+    "achievements": [
+      "Consolidated three levels of senior care — independent living, assisted living, and memory care — into one clearly navigable campus site.",
+      "Anchored the brand's trust story around nearly five decades of continuous operation in the Eugene community.",
+      "Gave every major page a clear, low-friction path to scheduling an in-person tour."
+    ],
+    "conclusion": "The site centers on scheduling an in-person tour, with dedicated pages for each level of care and a focus on the community's decades of local history.",
+    "faqs": [
+      {
+        "id": "ce-faq-1",
+        "question": "What levels of care does Churchill Estates offer?",
+        "answer": "Churchill Estates offers independent living, assisted living, and memory care on one campus in Eugene, Oregon."
+      },
+      {
+        "id": "ce-faq-2",
+        "question": "How long has Churchill Estates been operating?",
+        "answer": "The community first opened in 1978 and has served Eugene-area seniors for nearly five decades."
+      },
+      {
+        "id": "ce-faq-3",
+        "question": "How do families schedule a visit?",
+        "answer": "Tours are available by appointment and can be requested through the site's contact page or by phone."
+      }
+    ]
+  },
+  {
+    "slug": "dghalchilaw",
+    "name": "David Ghalchi Law",
+    "rank": "2",
+    "metric": "Focused Practice Areas: Lemon Law & Personal Injury",
+    "summary": "California Lemon Law & Personal Injury Representation",
+    "url": "/case-studies/dghalchilaw",
+    "websiteUrl": "https://dghalchilaw.com/",
+    "image": {
+      "src": "(resolved via caseStudyImages.js)",
+      "alt": "David Ghalchi Law website",
+      "width": 348,
+      "height": 398
+    },
+    "industry": "Legal Services",
+    "engagement": "Website Design & Practice Area Content",
+    "focusArea": "Practice-Area Clarity For A Niche Consumer Law Firm",
+    "projectOverview": "David Ghalchi Law represents California drivers and consumers in lemon law and personal injury cases, focusing on holding manufacturers and dealerships accountable for defective vehicles and products.",
+    "challenge": "Lemon law is a specialized, often misunderstood area of consumer protection. The firm needed its site to cut through common misconceptions, establish credibility quickly, and make it obvious how to start a consultation for either practice area.",
+    "strategy": [
+      "Led the homepage directly with the firm's specialty — 'Is your car constantly in the repair shop?' — to speak straight to a prospective client's immediate frustration.",
+      "Split the practice into two clear areas, Lemon Law and Personal Injury, each with its own dedicated page.",
+      "Used a bank of real client testimonials to reinforce credibility in a practice area where trust is a major deciding factor."
+    ],
+    "solutions": [
+      "Added a 'Don't Hesitate' section addressing the common client hesitation of waiting too long before contacting a lawyer.",
+      "Built a blog covering practical questions (what qualifies as a lemon, how compensation works) to support both visitors and search visibility.",
+      "Made phone and consultation requests available directly from the homepage rather than requiring navigation to a separate contact page."
+    ],
+    "seoWork": [
+      "Optimized page titles and content around California-specific lemon law and personal injury search terms.",
+      "Structured Lemon Law and Personal Injury as separate, distinct landing pages rather than one combined practice page.",
+      "Published blog content addressing specific consumer questions to build topical depth around the firm's practice areas."
+    ],
+    "stats": [
+      {
+        "value": "2",
+        "label": "Core Practice Areas"
+      },
+      {
+        "value": "10+",
+        "label": "Client Testimonials Featured"
+      }
+    ],
+    "achievements": [
+      "Clearly separated Lemon Law and Personal Injury into their own practice-area pages rather than one generic services page.",
+      "Built a testimonial-driven homepage that speaks directly to the frustration of dealing with a defective vehicle.",
+      "Added ongoing blog content addressing real consumer questions around lemon law and product liability."
+    ],
+    "conclusion": "The site is structured around two core practice areas — lemon law and personal injury — supported by client testimonials and blog content that answers common consumer questions.",
+    "faqs": [
+      {
+        "id": "dg-faq-1",
+        "question": "What does David Ghalchi Law specialize in?",
+        "answer": "The firm focuses on California lemon law cases and personal injury claims, representing clients against vehicle manufacturers and dealerships."
+      },
+      {
+        "id": "dg-faq-2",
+        "question": "Who is this firm for?",
+        "answer": "Drivers dealing with a defective vehicle that's been repeatedly in the shop, and people pursuing personal injury or product liability claims in California."
+      },
+      {
+        "id": "dg-faq-3",
+        "question": "Does the firm publish educational content?",
+        "answer": "Yes, the site includes a blog covering practical questions about lemon law qualification and the claims process."
+      }
+    ]
+  },
+  {
+    "slug": "provihouse",
+    "name": "Providence Assisted Living Solutions",
+    "rank": "8",
+    "metric": "Private Rooms In A Family-Style Home",
+    "summary": "Small, Family-Style Assisted Living In Fulshear, Texas",
+    "url": "/case-studies/provihouse",
+    "websiteUrl": "https://provihouse.com/",
+    "image": {
+      "src": "(resolved via caseStudyImages.js)",
+      "alt": "Providence Assisted Living Solutions website",
+      "width": 348,
+      "height": 398
+    },
+    "industry": "Senior Living / Healthcare",
+    "engagement": "Website Design & Family-Facing Content Strategy",
+    "focusArea": "Warm, Trust-Led Positioning For A Small Assisted Living Home",
+    "projectOverview": "Providence Assisted Living Solutions operates a small, residential-style assisted living home in Fulshear, TX, limited to 8 rooms and 11 residents, offering 24/7 care, chef-prepared meals, and personalized care plans.",
+    "challenge": "Families choosing assisted living are often comparing a small, intimate home like Providence against much larger institutional facilities. The site needed to make Providence's smaller scale feel like the selling point, not a limitation, while still answering practical questions about licensing and day-to-day care.",
+    "strategy": [
+      "Led with the brand's 'Caring with a Heart' positioning and framed the home's small size (8 rooms, 11 residents max) as an intentional, family-style choice.",
+      "Built an interactive care-needs quiz to help families self-identify whether assisted living is the right next step before ever picking up the phone.",
+      "Included licensing details (Type-B Assisted Living, Facility ID and license number) directly on the homepage to address a key trust concern early."
+    ],
+    "solutions": [
+      "Added a detailed FAQ section covering care levels, memory support, pricing structure, and visitation policy.",
+      "Used real photography and resident-perspective quotes to reinforce the 'home, not institution' message.",
+      "Made tour scheduling and a direct phone number available from every major page."
+    ],
+    "seoWork": [
+      "Structured care services, rooms and living options, and FAQs as distinct pages to support both usability and topical search relevance.",
+      "Built out location-specific pages for surrounding Fulshear-area communities the home serves.",
+      "Used descriptive, benefit-led page titles built around 'assisted living near me' and Fulshear-area search intent."
+    ],
+    "stats": [
+      {
+        "value": "8",
+        "label": "Private Rooms"
+      },
+      {
+        "value": "11",
+        "label": "Maximum Residents"
+      }
+    ],
+    "achievements": [
+      "Positioned Providence's small scale (8 rooms, 11 residents) as a deliberate, family-style alternative to larger institutional facilities.",
+      "Published a self-service care-needs quiz that helps families qualify their own next steps before contacting the home.",
+      "Surfaced licensing details prominently to give families a verifiable trust signal early in their research."
+    ],
+    "conclusion": "The site leads with tour scheduling and an online care-needs quiz, positioning Providence as an intimate alternative to larger institutional facilities.",
+    "faqs": [
+      {
+        "id": "pv-faq-1",
+        "question": "What level of care does Providence provide?",
+        "answer": "Personalized assisted living support including help with bathing, dressing, grooming, medication management, mobility, meals, and daily living activities."
+      },
+      {
+        "id": "pv-faq-2",
+        "question": "Does Providence support residents with memory-related challenges?",
+        "answer": "Yes, the team provides personalized supervision and support for residents experiencing forgetfulness, confusion, or other cognitive changes."
+      },
+      {
+        "id": "pv-faq-3",
+        "question": "How many residents does Providence serve?",
+        "answer": "The home is intentionally small, with 8 private rooms and a maximum of 11 residents, to keep the staff-to-resident ratio high."
+      }
+    ]
+  },
+  {
+    "slug": "stonehavensl",
+    "name": "Stonehaven Senior Living",
+    "rank": "224",
+    "metric": "Beds & Units Across Nursing, Assisted Living & Apartments",
+    "summary": "Skilled Nursing, Assisted Living & Independent Apartments In Fresno",
+    "url": "/case-studies/stonehavensl",
+    "websiteUrl": "https://stonehavensl.com/",
+    "image": {
+      "src": "(resolved via caseStudyImages.js)",
+      "alt": "Stonehaven Senior Living website",
+      "width": 348,
+      "height": 398
+    },
+    "industry": "Senior Living / Healthcare",
+    "engagement": "Website Design & Multi-Service Content Structure",
+    "focusArea": "Clear Navigation Across Three Levels Of Senior Care",
+    "projectOverview": "Stonehaven is a 10-acre senior living campus in Fresno, California offering skilled nursing (50 beds), assisted living (114 beds), and independent apartments (60 units) within one community.",
+    "challenge": "With three genuinely different service lines on one campus, Stonehaven's biggest challenge was helping visitors quickly find the right level of care for their specific situation, rather than presenting one undifferentiated 'senior living' offering.",
+    "strategy": [
+      "Split skilled nursing, assisted living, and independent apartments into three clearly labeled sections, each with its own bed/unit count and description.",
+      "Highlighted the campus's physical setting (10 acres, near Fresno Pacific University, public transit adjacent) to support the 'safe, connected location' message.",
+      "Built a direct path from each care-level section into tour scheduling and a 'Now Hiring' careers link."
+    ],
+    "solutions": [
+      "Added a 'Everything You Need, Right Where You Are' amenities section covering meals, housekeeping, activities, and 24-hour staffing in one scannable list.",
+      "Used a bed/unit-count callout for each of the three care settings so families can quickly gauge fit and availability likelihood.",
+      "Embedded a location map and included the property's on-site security and walkability details for families weighing safety."
+    ],
+    "seoWork": [
+      "Structured skilled nursing, assisted living, and independent apartments as distinct sections targeting Fresno-specific senior care search terms.",
+      "Used consistent, benefit-led headings ('A Safe Place Where Seniors Feel Valued') across the site to reinforce a single brand message.",
+      "Kept location and contact details consistent sitewide to strengthen local search relevance for Fresno senior living searches."
+    ],
+    "stats": [
+      {
+        "value": "224",
+        "label": "Total Beds & Units Across The Campus"
+      },
+      {
+        "value": "10-Acre",
+        "label": "Campus Size"
+      }
+    ],
+    "achievements": [
+      "Organized three distinct care settings — skilled nursing, assisted living, and independent apartments — into one clearly navigable campus site.",
+      "Surfaced concrete capacity figures (50 skilled nursing beds, 114 assisted living beds, 60 independent units) to help families gauge fit quickly.",
+      "Positioned the campus's location and security features as part of the trust case for families choosing between communities."
+    ],
+    "conclusion": "The site organizes its three care settings — skilled nursing, assisted living, and independent apartments — around a single campus tour booking flow.",
+    "faqs": [
+      {
+        "id": "sh-faq-1",
+        "question": "What types of care does Stonehaven offer?",
+        "answer": "Stonehaven offers skilled nursing, assisted living, and independent senior apartments across a single 10-acre campus in Fresno."
+      },
+      {
+        "id": "sh-faq-2",
+        "question": "Is Stonehaven affiliated with a larger care network?",
+        "answer": "Yes, Stonehaven operates under Jericho Care."
+      },
+      {
+        "id": "sh-faq-3",
+        "question": "How large is the Stonehaven campus?",
+        "answer": "The community spans 10 landscaped acres and includes 224 total beds and units across its three care settings."
+      }
+    ]
+  },
+  {
+    "slug": "thecouchcounselling",
+    "name": "The Couch Counselling and Support Services",
+    "rank": "7+",
+    "metric": "Therapy Modalities Under One Practice",
+    "summary": "CBT, DBT & NIHB Mental Health Counselling In Brantford, ON",
+    "url": "/case-studies/thecouchcounselling",
+    "websiteUrl": "https://thecouchcounselling.com/",
+    "image": {
+      "src": "(resolved via caseStudyImages.js)",
+      "alt": "The Couch Counselling and Support Services website",
+      "width": 348,
+      "height": 398
+    },
+    "industry": "Mental Health / Counselling Services",
+    "engagement": "Website Design & Service-Led Content Strategy",
+    "focusArea": "Modality & Intake Clarity For A Multi-Therapist Counselling Practice",
+    "projectOverview": "The Couch Counselling and Support Services provides psychotherapy in Brantford, Ontario, including CBT, DBT, trauma-informed and solution-focused therapy, with dedicated NIHB-funded counselling for First Nations and Indigenous clients.",
+    "challenge": "With seven-plus distinct therapy modalities and a specialized NIHB program for First Nations and Indigenous clients, the practice needed a site that could guide very different visitors — from a first-time therapy seeker to an NIHB-eligible client — to the right service without feeling overwhelming.",
+    "strategy": [
+      "Gave each modality (CBT, Trauma-Informed Therapy, DBT, SFT, NIHB, Christian Counselling) its own dedicated service page rather than one long combined list.",
+      "Built a detailed intake form with a 'Desired Service' selector so prospective clients can specify exactly what kind of support they're looking for upfront.",
+      "Gave the NIHB program equal visual weight to the general therapy services, reflecting its importance to the practice's community focus."
+    ],
+    "solutions": [
+      "Listed the surrounding communities served (Paris, Burford, Oakland, St. George, Ohsweken, and others) to support both usability and local relevance.",
+      "Added dedicated pages for NeurOptimal and Sand Tray Therapy, two less commonly offered modalities, to differentiate the practice.",
+      "Included real client testimonials describing specific therapy outcomes to build trust for a decision that's often emotionally difficult to make."
+    ],
+    "seoWork": [
+      "Structured each therapy modality as its own indexable page targeting Brantford-area mental health search terms.",
+      "Built dedicated location pages for Brantford and Ohsweken to support geographically distinct search intent.",
+      "Used consistent, descriptive page titles built around specific therapy types rather than generic 'counselling' terms."
+    ],
+    "stats": [
+      {
+        "value": "7+",
+        "label": "Therapy Modalities Offered"
+      },
+      {
+        "value": "11",
+        "label": "Nearby Communities Served"
+      }
+    ],
+    "achievements": [
+      "Organized seven-plus therapy modalities into clearly separated, easy-to-compare service pages.",
+      "Built a dedicated, equally prominent path for NIHB-funded counselling for First Nations and Indigenous clients.",
+      "Extended the practice's visible service area across 11 surrounding communities beyond Brantford."
+    ],
+    "conclusion": "The site pairs a detailed services breakdown with an online intake form, making it straightforward for new clients to identify the right therapy type and book a session.",
+    "faqs": [
+      {
+        "id": "cc-faq-1",
+        "question": "Does The Couch Counselling serve First Nations clients?",
+        "answer": "Yes, the practice provides NIHB-funded counselling specifically for First Nations and Indigenous clients through the Non-Insured Health Benefits program."
+      },
+      {
+        "id": "cc-faq-2",
+        "question": "What therapy approaches are offered?",
+        "answer": "The team offers CBT, DBT, trauma-informed therapy, solution-focused therapy, Christian counselling, and Sand Tray therapy, among others."
+      },
+      {
+        "id": "cc-faq-3",
+        "question": "What areas does the practice serve?",
+        "answer": "Based in Brantford, ON, the practice also serves nearby communities including Paris, Burford, Oakland, St. George, and Ohsweken."
+      }
+    ]
+  },
+  {
+    "slug": "treppenlift-kaufen-nrw",
+    "name": "Treppenlift Experten NRW",
+    "rank": "100+",
+    "metric": "Stairlifts Installed Across NRW",
+    "summary": "Stairlift Sales, Rental & Financing Across NRW, Germany",
+    "url": "/case-studies/treppenlift-kaufen-nrw",
+    "websiteUrl": "https://treppenlift-kaufen-nrw.de/",
+    "image": {
+      "src": "(resolved via caseStudyImages.js)",
+      "alt": "Treppenlift Experten NRW website",
+      "width": 348,
+      "height": 398
+    },
+    "industry": "Home Accessibility / Mobility Equipment",
+    "engagement": "Website Design & Regional Local SEO Structure",
+    "focusArea": "City-By-City Local Visibility For A Regional Stairlift Retailer",
+    "projectOverview": "Treppenlift Experten NRW sells, rents, and finances new and used stairlifts across North Rhine-Westphalia, offering free on-site consultations and helping customers apply for care-insurance subsidies of up to €4,180.",
+    "challenge": "Stairlift buyers are often researching urgently on behalf of an aging parent, and comparing multiple regional providers. The site needed to build fast trust, make the subsidy process feel manageable, and rank across many individual NRW cities rather than just one regional homepage.",
+    "strategy": [
+      "Built individual city-specific service pages (Dortmund, Köln, Essen, Düsseldorf, Bochum, Bielefeld, Bonn, Münster, and more) instead of one generic regional page.",
+      "Led the homepage with the subsidy angle — up to €4,180 in support — since cost is typically the first objection for stairlift buyers.",
+      "Introduced named regional contacts (David-Wilhelm Steffen nationally, Sofia Steffen for NRW) to make the buying process feel personal rather than corporate."
+    ],
+    "solutions": [
+      "Added a manufacturer-independent positioning to reassure buyers the recommendation isn't tied to pushing one specific stairlift brand.",
+      "Built out buy/rent/finance as three distinct, clearly explained paths rather than assuming every visitor wants to purchase outright.",
+      "Published ongoing blog content covering stairlift costs and city-specific subsidy information to support buyers earlier in their research."
+    ],
+    "seoWork": [
+      "Created dedicated local landing pages for each major NRW city served, each targeting that city's stairlift search terms specifically.",
+      "Used consistent trust signals (installations completed, years of experience, satisfied customers) across every regional page.",
+      "Linked out to sibling regional sites (Herford, Hüllhorst, Bünde, Minden-Lübbecke) to reinforce topical and geographic authority across the wider service area."
+    ],
+    "stats": [
+      {
+        "value": "100+",
+        "label": "Stairlifts Installed"
+      },
+      {
+        "value": "15+",
+        "label": "Years Of Experience"
+      }
+    ],
+    "achievements": [
+      "Built dedicated local landing pages for major NRW cities instead of relying on a single regional homepage.",
+      "Made the €4,180 care-insurance subsidy a central, upfront part of the pitch rather than a buried detail.",
+      "Displayed on-site trust signals including a German Customer Award and manufacturer-independent positioning."
+    ],
+    "conclusion": "The site funnels visitors toward a free local consultation, backed by city-specific service pages across NRW and a dedicated regional point of contact.",
+    "faqs": [
+      {
+        "id": "tl-faq-1",
+        "question": "Can stairlifts be rented instead of purchased?",
+        "answer": "Yes, Treppenlift Experten NRW offers buying, renting, and financing options for stairlifts."
+      },
+      {
+        "id": "tl-faq-2",
+        "question": "Is financial support available?",
+        "answer": "The company helps customers apply for care-insurance subsidies of up to €4,180 per person and handles the paperwork with the Pflegekasse."
+      },
+      {
+        "id": "tl-faq-3",
+        "question": "Which NRW cities does the company serve?",
+        "answer": "The site lists dedicated service pages for cities including Dortmund, Köln, Essen, Düsseldorf, Bochum, Bielefeld, Bonn, and Münster."
       }
     ]
   }

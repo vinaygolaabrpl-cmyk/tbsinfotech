@@ -3,6 +3,7 @@ import SEO from '../../components/common/SEO';
 import PricingMatrix from '../../components/common/PricingMatrix';
 import { openPaypalLink } from '../../utils/openPaypalLink';
 import './PackagesShared.scss';
+import seoPackagesBanner from '../../assets/images/services/service_1_banner_img.jpg.jpeg';
 
 const PLANS = [
   { name: 'Value', price: '$125', billing: 'Per Month', note: 'Up To 10 Keywords', paypalLink: '' },

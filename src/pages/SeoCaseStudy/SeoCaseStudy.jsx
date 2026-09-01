@@ -8,6 +8,7 @@ import FaqAccordion from '../../components/common/FaqAccordion';
 import Loader from '../../components/common/Loader';
 import { useCaseStudies } from '../../features/caseStudies';
 import CaseStudyRail from '../../features/caseStudies/components/CaseStudyRail';
+import caseStudyBanner from '../../assets/images/services/service_1_banner_img.jpg.jpeg';
 
 const BENCHMARKS = [
   { value: '+312%', label: 'Organic Traffic — SaaS Client Baseline' },
@@ -64,7 +65,7 @@ export default function SeoCaseStudy() {
         eyebrow="Case Studies / SEO & GEO Case Studies"
         title="Documented Results: Proven Organic SEO & GEO Growth"
         description="Think Biz Solution Private Limited delivers transparent, measurable organic growth across international markets. Review real campaign performance data showing how our technical site tuning, GEO conversational mapping, and E-E-A-T link strategies drive top rankings, expanded AI engine citations, and higher conversion volumes."
-        image="https://placehold.co/700x460/0b1220/22d3ee?text=Campaign+Performance"
+        image={caseStudyBanner}
         imageAlt="Campaign performance metrics dashboard"
       />
 
@@ -104,7 +105,8 @@ export default function SeoCaseStudy() {
       <section className="section">
         <div className="container">
           <SectionTitle eyebrow="Case Studies" title="Results We Can Put A Number On" />
-          {loading ? <Loader /> : <CaseStudyRail items={caseStudies ?? []} />}
+          {/* {loading ? <Loader /> : <CaseStudyRail items={caseStudies ?? []} />} */}
+          {loading ? <Loader /> : <CaseStudyRail items={caseStudies?.slice(0, 2) ?? []} />}
         </div>
       </section>
 

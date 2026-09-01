@@ -3,6 +3,7 @@ import SEO from '../../components/common/SEO';
 import PricingMatrix from '../../components/common/PricingMatrix';
 import { openPaypalLink } from '../../utils/openPaypalLink';
 import './PackagesShared.scss';
+import smoPackagesBanner from '../../assets/images/services/ourwork_1_banner_img.jpg.jpeg';
 
 const PLANS = [
   { name: 'Bronze', price: '$150', billing: 'Per Month', paypalLink: '' },

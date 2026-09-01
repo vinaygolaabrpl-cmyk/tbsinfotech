@@ -3,6 +3,7 @@ import SEO from '../../components/common/SEO';
 import Card from '../../components/common/Card';
 import Button from '../../components/common/Button';
 import './WebDesigningPackages.scss';
+import webDesigningBanner from '../../assets/images/services/service_4_banner_img.jpg.jpeg';
 
 const PACKAGES = [
   {

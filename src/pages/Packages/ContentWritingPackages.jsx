@@ -2,6 +2,7 @@ import PackageHero from '../../components/common/PackageHero';
 import SEO from '../../components/common/SEO';
 import DataTable from '../../components/common/DataTable';
 import './PackagesShared.scss';
+import contentWritingBanner from '../../assets/images/services/service_1_banner_img.jpg.jpeg';
 
 const TABLE = {
   headers: ['Word Count', 'Website Content Writing', 'Article Copywriting', 'Press Release Writing', 'Blog Writing'],

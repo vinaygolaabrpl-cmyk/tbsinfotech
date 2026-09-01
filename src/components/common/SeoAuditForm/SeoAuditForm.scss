@@ -29,6 +29,24 @@
 
   textarea { resize: vertical; min-height: 90px; }
 
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+  }
+
+  input[aria-invalid="true"],
+  textarea[aria-invalid="true"] {
+    border-color: #ef4444;
+  }
+
+  .field-error {
+    color: #ef4444;
+    font-size: 0.74rem;
+    line-height: 1.4;
+  }
+
   // Honeypot — visually and structurally hidden, but still focusable by
   // bots that don't respect display:none, so it stays in normal flow
   // and is only clipped from view.

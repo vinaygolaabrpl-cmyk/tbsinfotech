@@ -7,6 +7,7 @@ import SystemDiagram from '../../components/common/SystemDiagram';
 import NumberedFeatureGrid from '../../components/common/NumberedFeatureGrid';
 import DataTable from '../../components/common/DataTable';
 import FaqAccordion from '../../components/common/FaqAccordion';
+import contentBlogsBanner from '../../assets/images/services/service_6_banner_img.jpg.jpeg';
 
 const FORMAT_TABLE = {
   headers: ['Content Format', 'Primary Business Goal', 'Target Audience', 'AI Engine & Search Impact'],
@@ -60,7 +61,7 @@ export default function ContentBlogs() {
         eyebrow="Services / High-Intent Authority Content & Blogs"
         title="Search-Optimized Content Creation: Build Lasting Industry Authority"
         description="Think Biz Solution Private Limited produces targeted blog posts, informational articles, and press releases designed to meet Google's E-E-A-T (Experience, Expertise, Authoritativeness, and Trustworthiness) standards. Built for both human readers and AI crawlers, our content converts targeted informational searches into qualified enterprise leads."
-        image="https://placehold.co/700x460/0b1220/22d3ee?text=E-E-A-T+Content"
+        image={contentBlogsBanner}
         imageAlt="E-E-A-T content architecture for search and AI engines"
       />
 

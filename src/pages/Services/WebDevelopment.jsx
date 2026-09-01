@@ -7,6 +7,7 @@ import SystemDiagram from '../../components/common/SystemDiagram';
 import NumberedFeatureGrid from '../../components/common/NumberedFeatureGrid';
 import DataTable from '../../components/common/DataTable';
 import FaqAccordion from '../../components/common/FaqAccordion';
+import webDevBanner from '@/assets/images/services/ourwork_1_banner_img.jpg.jpeg';
 
 const TECH_STACK_BRANCHES = [
   { icon: <FiLayers />, title: 'Enterprise CMS & PHP', items: ['WordPress (Custom)', 'Custom PHP / Laravel'] },
@@ -72,7 +73,7 @@ export default function WebDevelopment() {
         eyebrow="Services / Website Designing & Development"
         title="Performant Custom Web Architecture: Built for Scale & Conversions"
         description="Think Biz Solution Private Limited designs and builds enterprise-grade websites across WordPress, React, Shopify, Wix, Squarespace, and custom PHP environments. Built for rapid load speeds, strict security standards, and seamless conversational AI crawlability, our web solutions transform online visits into validated sales opportunities."
-        image="https://placehold.co/700x460/0b1220/22d3ee?text=Web+Architecture"
+        image={webDevBanner}
         imageAlt="Custom web architecture across WordPress, React and Shopify"
       />
 

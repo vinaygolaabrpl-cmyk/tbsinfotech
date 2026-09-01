@@ -3,6 +3,7 @@ import SEO from '../../components/common/SEO';
 import PricingMatrix from '../../components/common/PricingMatrix';
 import { openPaypalLink } from '../../utils/openPaypalLink';
 import packages from '../../data/packages.json';
+import oneTimeSeoBanner from '../../assets/images/services/service_2_banner_img.jpg.jpeg';
 
 // This page's single plan is the same product as the "One Time SEO
 // Package" entry in packages.json (same name, same $200 price) — reuse

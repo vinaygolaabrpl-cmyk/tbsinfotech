@@ -138,7 +138,7 @@
   }
 
   label {
-    display: flex;
+    display: block;
     flex-direction: column;
     gap: 6px;
     font-size: 0.82rem;
@@ -147,6 +147,21 @@
   }
 
   .req { color: var(--primary); }
+
+  .field-error {
+    display: block;
+    margin-top: 4px;
+    color: #ef4444;
+    font-size: 0.74rem;
+    font-weight: 400;
+    line-height: 1.4;
+  }
+
+  input[aria-invalid="true"],
+  select[aria-invalid="true"],
+  textarea[aria-invalid="true"] {
+    border-color: #ef4444;
+  }
 
   input,
   select,
@@ -192,6 +207,10 @@
 
       &:hover, &:focus-within {
         border-color: var(--primary);
+      }
+
+      &[data-invalid="true"] {
+        border-color: #ef4444;
       }
 
       input[type='file'] {

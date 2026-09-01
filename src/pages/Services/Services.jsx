@@ -8,6 +8,7 @@ import NumberedFeatureGrid from '../../components/common/NumberedFeatureGrid';
 import Loader from '../../components/common/Loader';
 import { useServices } from '../../features/services';
 import ServiceCard from '../../features/services/components/ServiceCard';
+import servicesBanner from '@/assets/images/services/service_banner_img.jpg.jpeg';
 
 const ECOSYSTEM_BRANCHES = [
   {
@@ -60,7 +61,7 @@ export default function Services() {
         eyebrow="Services / Unified Digital Engineering"
         title="Unified Digital Engineering: SEO, GEO, Web Development & Paid Media"
         description="Think Biz Solution Private Limited is a full-service digital agency engineering high-converting web architectures, data-driven paid advertising funnels, and integrated Search Engine Optimization (SEO) + Generative Engine Optimization (GEO) strategies."
-        image="https://placehold.co/700x460/0b1220/22d3ee?text=Digital+Engineering+Dashboard"
+        image={servicesBanner}
         imageAlt="Think Biz digital engineering analytics dashboard"
       />
 

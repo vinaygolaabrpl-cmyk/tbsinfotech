@@ -9,6 +9,7 @@ import DataTable from '../../components/common/DataTable';
 import FaqAccordion from '../../components/common/FaqAccordion';
 import siteConfig from '../../data/siteConfig.json';
 import './About.scss';
+import aboutBanner from '../../assets/images/services/aboutus_banner_img.jpg.jpeg';
 
 const WHY_US = [
   { title: 'Exceptional Digital Presence', desc: 'We believe your online presence should stand out and drive real impact.' },
@@ -85,7 +86,7 @@ export default function About() {
         eyebrow="Corporate Profile / About Us"
         title="About Think Biz Solution Private Limited: Global Digital Agency"
         description="Think Biz Solution Private Limited is a full-service digital agency delivering enterprise web architecture, custom software development, Search Engine Optimization (SEO), Generative Engine Optimization (GEO), and paid acquisition ads. Serving enterprise clients across North America, Europe, APAC, Australia, and the Middle East, we combine technical precision with performance marketing to drive scalable business revenue."
-        image="https://placehold.co/700x460/0b1220/22d3ee?text=Global+Digital+Agency"
+        image={aboutBanner}
         imageAlt="Think Biz Solution global digital agency team"
       />
 

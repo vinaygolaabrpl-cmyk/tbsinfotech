@@ -7,6 +7,7 @@ import SystemDiagram from '../../components/common/SystemDiagram';
 import NumberedFeatureGrid from '../../components/common/NumberedFeatureGrid';
 import DataTable from '../../components/common/DataTable';
 import FaqAccordion from '../../components/common/FaqAccordion';
+import appDevBanner from '../../assets/images/services/service_2_banner_img.jpg.jpeg';
 
 const ENGINE_BRANCHES = [
   { icon: <FiSmartphone />, title: 'Native Development', items: ['iOS: Swift', 'Android: Kotlin', 'Maximum Hardware Access'] },
@@ -64,7 +65,7 @@ export default function AppDevelopment() {
         eyebrow="Services / App Development"
         title="Enterprise Mobile Engineering: Native & Cross-Platform Apps"
         description="Think Biz Solution Private Limited designs, builds, and deploys high-performance mobile applications for iOS and Android. Combining user-centered UX design, native API integrations, and secure cloud backends, we deliver scalable mobile applications engineered for global store distribution."
-        image="https://placehold.co/700x460/0b1220/22d3ee?text=Mobile+App+Engineering"
+        image={appDevBanner}
         imageAlt="Native and cross-platform mobile app engineering"
       />
 

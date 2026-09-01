@@ -3,6 +3,7 @@ import SEO from '../../components/common/SEO';
 import PricingMatrix from '../../components/common/PricingMatrix';
 import { openPaypalLink } from '../../utils/openPaypalLink';
 import './PackagesShared.scss';
+import reputationBanner from '../../assets/images/services/service_6_banner_img.jpg.jpeg';
 
 const PLANS = [
   { name: 'Starter', price: '$150', paypalLink: '' },

@@ -7,6 +7,7 @@ import SystemDiagram from '../../components/common/SystemDiagram';
 import NumberedFeatureGrid from '../../components/common/NumberedFeatureGrid';
 import DataTable from '../../components/common/DataTable';
 import FaqAccordion from '../../components/common/FaqAccordion';
+import smoBanner from '../../assets/images/services/service_4_banner_img.jpg.jpeg';
 
 const ENTITY_BRANCHES = [
   { icon: <FiUsers />, title: 'Social Profiles & Assets' },
@@ -61,7 +62,7 @@ export default function SocialMediaOptimization() {
         eyebrow="Services / Social Media Optimization"
         title="Strategic Social Media Optimization: Off-Page Brand Dominance"
         description="Think Biz Solution Private Limited delivers Social Media Optimization (SMO) campaigns designed to build multi-channel brand authority. We manage social profiles, content production, and community engagement across LinkedIn, X (Twitter), Meta (Facebook/Instagram), YouTube, and Quora to drive user engagement and validate off-page trust signals."
-        image="https://placehold.co/700x460/0b1220/22d3ee?text=Off-Page+Entity+Ecosystem"
+        image={smoBanner}
         imageAlt="Off-page social media entity ecosystem"
       />
 

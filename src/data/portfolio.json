@@ -1,12 +1,65 @@
 [
+  
+  {
+    "slug": "adops-staffing",
+    "name": "AdOps Staffing",
+    "url": "https://adopsstaffing.com/",
+    "category": "Website",
+    "description": "Recruiting agency site connecting agencies with pre-vetted programmatic and paid social AdOps professionals, featuring a managed hiring process and talent-fit guarantee.",
+    "image": {
+      "src": "/images/portfolio/adopsstaffing.jpg.jpeg",
+      "alt": "AdOps Staffing website",
+      "width": 800,
+      "height": 500
+    }
+  },
+  {
+    "slug": "alsharq-entertainment",
+    "name": "Alsharq Entertainment",
+    "url": "https://alsharq-entertainment.com/",
+    "category": "Website",
+    "description": "Jeddah-based event organizer site with show listings, ticket booking, and an event gallery.",
+    "image": {
+      "src": "/images/portfolio/alsharq-entertainment.jpg.jpeg",
+      "alt": "Alsharq Entertainment website",
+      "width": 800,
+      "height": 500
+    }
+  },
+  {
+    "slug": "churchill-estates-retirement",
+    "name": "Churchill Estates Retirement Community",
+    "url": "https://churchillretirement.com/",
+    "category": "Website",
+    "description": "Senior living community site in Eugene, Oregon offering independent living, assisted living, and memory care, with online tour scheduling.",
+    "image": {
+      "src": "/images/portfolio/churchillretirement.jpg.jpeg",
+      "alt": "Churchill Estates Retirement Community website",
+      "width": 800,
+      "height": 500
+    }
+  },
+  {
+    "slug": "dghalchi-law",
+    "name": "David Ghalchi Law",
+    "url": "https://dghalchilaw.com/",
+    "category": "Website",
+    "description": "California personal injury and lemon law firm site with practice area pages, case results, and consultation requests.",
+    "image": {
+      "src": "/images/portfolio/dghalchilaw.jpg.jpeg",
+      "alt": "David Ghalchi Law website",
+      "width": 800,
+      "height": 500
+    }
+  },
   {
     "slug": "dragons-den-chinese-food",
     "name": "Dragon's Den Chinese Food",
     "url": "https://dragonsdenchinesefood.co.uk/",
     "category": "Website",
-    "description": "Restaurant ordering website with menu and online ordering flow.",
+    "description": "Restaurant ordering website for a UK Chinese takeaway, with a full menu and online ordering flow.",
     "image": {
-      "src": "/dev/tbsinfotech/images/portfolio/Rectangle 386.png",
+      "src": "/images/portfolio/dragonsdenchinesefood.jpg.jpeg",
       "alt": "Dragon's Den Chinese Food website",
       "width": 800,
       "height": 500
@@ -14,27 +67,39 @@
     "featured": true
   },
   {
-    "slug": "beepvision",
-    "name": "BeepVision Security",
-    "url": "https://www.beepvision.com/",
+    "slug": "lmao-construction",
+    "name": "LMAO Construction Corp",
+    "url": "https://lmaoconstruction.com/",
     "category": "Website",
-    "description": "Security systems and smart safety solutions brand site.",
+    "description": "Queens, NY contractor and remodeling company site showcasing renovation services and customer testimonials.",
     "image": {
-      "src": "/dev/tbsinfotech/images/portfolio/Rectangle 383.png",
-      "alt": "BeepVision Security website",
+      "src": "/images/portfolio/lmaoconstruction.jpg.jpeg",
+      "alt": "LMAO Construction Corp website",
       "width": 800,
       "height": 500
-    },
-    "featured": true
+    }
+  },
+  {
+    "slug": "maces-malinois",
+    "name": "Mace's Malinois & German Shepherds",
+    "url": "https://www.macesmalinois.com/",
+    "category": "Website",
+    "description": "Pennsylvania dog breeding and training site featuring Belgian Malinois and German Shepherd dogs for families, service, and protection work.",
+    "image": {
+      "src": "/images/portfolio/macesmalinois.jpg.jpeg",
+      "alt": "Mace's Malinois & German Shepherds website",
+      "width": 800,
+      "height": 500
+    }
   },
   {
     "slug": "northcharge",
     "name": "North Charge",
     "url": "https://northcharge.ca/",
     "category": "Website",
-    "description": "EV charging equipment supplier site with product showcase and quote requests.",
+    "description": "EV charging equipment supplier site serving businesses, fleets, and drivers, with a product showcase, shop, and quote requests.",
     "image": {
-      "src": "/dev/tbsinfotech/images/portfolio/Rectangle 384.png",
+      "src": "/images/portfolio/northcharge.jpg.jpeg",
       "alt": "North Charge EV charging website",
       "width": 800,
       "height": 500
@@ -42,119 +107,93 @@
     "featured": true
   },
   {
-    "slug": "at-home-plumbers",
-    "name": "At Home Plumbers",
-    "url": "https://www.at-homeplumbers.co.uk/",
+    "slug": "providence-assisted-living",
+    "name": "Providence Assisted Living Solutions",
+    "url": "https://provihouse.com/",
     "category": "Website",
-    "description": "Boiler supply and installation service site with lead capture.",
+    "description": "Small, family-style assisted living residence in Fulshear, Texas offering 24/7 care, chef-prepared meals, and personalized care plans, with tour scheduling and an online care quiz.",
     "image": {
-      "src": "/dev/tbsinfotech/images/portfolio/Rectangle 385.png",
-      "alt": "At Home Plumbers website",
+      "src": "/images/portfolio/provihouse.jpg.jpeg",
+      "alt": "Providence Assisted Living Solutions website",
+      "width": 800,
+      "height": 500
+    }
+  },
+  {
+    "slug": "stonehaven-senior-living",
+    "name": "Stonehaven Senior Living",
+    "url": "https://stonehavensl.com/",
+    "category": "Website",
+    "description": "10-acre senior living campus in Fresno, California offering skilled nursing, assisted living, and independent apartments, with online tour booking.",
+    "image": {
+      "src": "/images/portfolio/stonehavensl.jpg.jpeg",
+      "alt": "Stonehaven Senior Living website",
+      "width": 800,
+      "height": 500
+    }
+  },
+  {
+    "slug": "beepvision",
+    "name": "BeepVision Security",
+    "url": "https://www.beepvision.com/",
+    "category": "Ecommerce",
+    "description": "Integrated physical and electronic security provider site serving Texas, showcasing home security, surveillance, and smart safety solutions with a quote request flow.",
+    "image": {
+      "src": "/images/portfolio/beepvission.png",
+      "alt": "BeepVision Security website",
       "width": 800,
       "height": 500
     },
     "featured": true
   },
   {
-    "slug": "shaver-lake-village-hotel",
-    "name": "Shaver Lake Village Hotel",
-    "url": "https://www.shaverlakevillagehotel.com/",
+    "slug": "the-couch-counselling",
+    "name": "The Couch Counselling and Support Services",
+    "url": "https://thecouchcounselling.com/",
     "category": "Website",
-    "description": "Hospitality booking site for a mountain-view hotel in California.",
+    "description": "Mental health counselling practice site in Brantford, ON offering CBT, DBT, trauma-informed and NIHB therapy services with online appointment booking.",
     "image": {
-      "src": "https://placehold.co/800x500/111827/22d3ee?text=Shaver+Lake+Hotel",
-      "alt": "Shaver Lake Village Hotel website",
+      "src": "/images/portfolio/thecouchcounselling.jpg.jpeg",
+      "alt": "The Couch Counselling and Support Services website",
       "width": 800,
       "height": 500
     }
   },
   {
-    "slug": "qazi-solicitors",
-    "name": "Qazi Solicitors",
-    "url": "https://qazisolicitors.com/",
+    "slug": "treppenlift-experten-nrw",
+    "name": "Treppenlift Experten NRW",
+    "url": "https://treppenlift-kaufen-nrw.de/",
     "category": "Website",
-    "description": "UK legal services firm site with practice area pages.",
+    "description": "German stairlift retailer site covering new and used stairlift sales, rental, and financing across North Rhine-Westphalia with free on-site consultations.",
     "image": {
-      "src": "https://placehold.co/800x500/111827/22d3ee?text=Qazi+Solicitors",
-      "alt": "Qazi Solicitors website",
+      "src": "/images/portfolio/treppenlift-kaufen-nrw.jpg.jpeg",
+      "alt": "Treppenlift Experten NRW website",
       "width": 800,
       "height": 500
     }
   },
   {
-    "slug": "prestige-experiences",
-    "name": "Prestige Experiences",
-    "url": "https://prestigexperiences.com/",
-    "category": "Ecommerce",
-    "description": "Luxury experience gifting ecommerce storefront.",
-    "image": {
-      "src": "https://placehold.co/800x500/111827/22d3ee?text=Prestige+Experiences",
-      "alt": "Prestige Experiences ecommerce website",
-      "width": 800,
-      "height": 500
-    }
-  },
-  {
-    "slug": "mill-valley-pt",
-    "name": "Mill Valley PT",
-    "url": "https://www.millvalleypt.com/",
+    "slug": "voyages-a-la-mecque",
+    "name": "Voyages à la Mecque",
+    "url": "https://voyagesalamecque.com/",
     "category": "Website",
-    "description": "Physical therapy clinic site with appointment booking.",
+    "description": "French travel agency site specializing in Hajj and Umrah pilgrimage packages to Mecca and Medina.",
     "image": {
-      "src": "https://placehold.co/800x500/111827/22d3ee?text=Mill+Valley+PT",
-      "alt": "Mill Valley PT website",
+      "src": "/images/portfolio/voyagesalamecque.jpg.jpeg",
+      "alt": "Voyages à la Mecque website",
       "width": 800,
       "height": 500
     }
   },
   {
-    "slug": "kitchen-nation",
-    "name": "Kitchen Nation",
-    "url": "https://www.kitchennation.ca/",
-    "category": "Ecommerce",
-    "description": "Kitchenware and home goods ecommerce store.",
-    "image": {
-      "src": "https://placehold.co/800x500/111827/22d3ee?text=Kitchen+Nation",
-      "alt": "Kitchen Nation ecommerce website",
-      "width": 800,
-      "height": 500
-    }
-  },
-  {
-    "slug": "jp-fine-jewelry",
-    "name": "JP Fine Jewelry",
-    "url": "https://jpfinejewelry.com/",
-    "category": "Ecommerce",
-    "description": "Fine jewelry ecommerce storefront with product catalog.",
-    "image": {
-      "src": "https://placehold.co/800x500/111827/22d3ee?text=JP+Fine+Jewelry",
-      "alt": "JP Fine Jewelry ecommerce website",
-      "width": 800,
-      "height": 500
-    }
-  },
-  {
-    "slug": "sedora-spa",
-    "name": "Sedora Spa",
-    "url": "https://www.sedoraspa.com/",
+    "slug": "west-central-development-group",
+    "name": "West Central Community Development Group",
+    "url": "https://wccdg.org/",
     "category": "Website",
-    "description": "Spa and wellness center booking website.",
+    "description": "Nonprofit community development organization site for Albuquerque's West Central corridor, covering neighborhood events, business resources, and civic engagement.",
     "image": {
-      "src": "https://placehold.co/800x500/111827/22d3ee?text=Sedora+Spa",
-      "alt": "Sedora Spa website",
-      "width": 800,
-      "height": 500
-    }
-  },
-  {
-    "slug": "royal-auto-llc",
-    "name": "Royal Auto LLC",
-    "url": "https://www.royalautollc.com/",
-    "category": "Website",
-    "description": "Auto dealership and services web application.",
-    "image": {
-      "src": "https://placehold.co/800x500/111827/22d3ee?text=Royal+Auto+LLC",
-      "alt": "Royal Auto LLC website",
+      "src": "/images/portfolio/wccdg.jpg.jpeg",
+      "alt": "West Central Community Development Group website",
       "width": 800,
       "height": 500
     }

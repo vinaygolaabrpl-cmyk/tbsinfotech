@@ -6,6 +6,7 @@ import BlufCallout from '../../components/common/BlufCallout';
 import SystemDiagram from '../../components/common/SystemDiagram';
 import DataTable from '../../components/common/DataTable';
 import FaqAccordion from '../../components/common/FaqAccordion';
+import seoGeoBanner from '../../assets/images/services/service_3_banner_img.jpg.jpeg';
 
 const VISIBILITY_BRANCHES = [
   { icon: <FiSearch />, title: 'Traditional SEO Layer', items: ['Crawlability & Indexing', 'E-E-A-T Articles', 'Technical Schemas', 'High-Intent Keywords'] },
@@ -66,7 +67,7 @@ export default function SeoGeoServices() {
         eyebrow="Services / SEO + GEO Services"
         title="SEO + GEO Services: Dominate Search Engines & Generative AI"
         description="Think Biz Solution Private Limited delivers unified Search Engine Optimization (SEO) and Generative Engine Optimization (GEO) services engineered to achieve top rankings on traditional search engines while securing authoritative brand citations inside AI platforms like ChatGPT, Gemini, and Perplexity."
-        image="https://placehold.co/700x460/0b1220/22d3ee?text=SEO+%2B+GEO+Visibility"
+        image={seoGeoBanner}
         imageAlt="SEO and Generative Engine Optimization visibility framework"
       />
 

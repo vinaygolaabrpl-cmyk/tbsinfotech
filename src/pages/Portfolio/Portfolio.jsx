@@ -12,6 +12,7 @@ import Loader from '../../components/common/Loader';
 import { usePortfolio } from '../../features/portfolio';
 import PortfolioGrid from '../../features/portfolio/components/PortfolioGrid';
 import './Portfolio.scss';
+import portfolioBanner from '../../assets/images/services/ourwork_2_banner_img.jpg.jpeg';
 
 const BLUEPRINT_BRANCHES = [
   { icon: <FiCloud />, title: 'Enterprise SaaS Portal', items: ['Tech: React / Node', 'Speed: 99/100 Mobile'] },
@@ -72,7 +73,7 @@ export default function Portfolio() {
         eyebrow="Portfolio / Website Portfolio"
         title="Web Development Portfolio: Fast, High-Converting Web Architectures"
         description="Explore Think Biz Solution Private Limited's project portfolio. From custom React SaaS applications to high-volume Shopify stores and custom PHP enterprise portals, our digital builds deliver fast page speed, intuitive UX, and clean, search-optimized code."
-        image="https://placehold.co/700x460/0b1220/22d3ee?text=Portfolio+Blueprints"
+        image={portfolioBanner}
         imageAlt="Website portfolio project blueprints"
         ctaLabel="Discuss A New Build"
       />
