@@ -19,7 +19,7 @@
     font-family: $font-heading;
     font-weight: 800;
     font-size: 1.05rem;
-    flex-shrink: 0;width: max(40%,100px);
+    flex-shrink: 0;width: max(20%,150px);
     @include wide-up { width: 200px; }
     img {
       object-fit: contain;

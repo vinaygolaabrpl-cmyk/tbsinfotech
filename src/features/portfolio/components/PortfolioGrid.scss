@@ -11,4 +11,13 @@
       gap: $space-5;
     }
   }
+
+  // A lone filtered result (e.g. a category with only one entry) would
+  // otherwise stretch to fill the full row width via the auto-fit 1fr
+  // track. Cap it to the same card width used across the grid instead
+  // of letting a single item become oversized.
+  &.single-item {
+    grid-template-columns: minmax(0, 280px);
+    justify-content: start;
+  }
 }

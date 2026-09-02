@@ -1,10 +1,9 @@
 import { useState } from 'react';
-import { FiCheckCircle, FiAlertCircle } from 'react-icons/fi';
+import { FiAlertCircle } from 'react-icons/fi';
 import Button from '../Button';
-import siteConfig from '../../../data/siteConfig.json';
+import { submitForm } from '../../../services/mailApi';
+import { showSuccessAlert } from '../../../utils/swalAlerts';
 import './SeoAuditForm.scss';
-
-const CONTACT_EMAIL = siteConfig.email;
 
 const NAME_REGEX = /^[a-zA-Z\s.'-]+$/;
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -60,6 +59,7 @@ function validateField(name, value, challenge) {
 export default function SeoAuditForm({ title = 'Request Your Free Audit', eyebrow = 'Free SEO Audit', className = '' }) {
   const [status, setStatus] = useState('idle'); // idle | success | error
   const [errorMsg, setErrorMsg] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [challenge, setChallenge] = useState(makeChallenge);
   const [values, setValues] = useState({
     website: '', competitor: '', keywords: '', name: '', phone: '', email: '', skype: '', captcha: ''
@@ -94,13 +94,14 @@ export default function SeoAuditForm({ title = 'Request Your Free Audit', eyebro
     setFieldErrors((prev) => ({ ...prev, [name]: validateField(name, value, challenge) }));
   }
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
     const form = e.currentTarget;
     const data = new FormData(form);
+    const honeypot = data.get('company_website')?.toString().trim();
 
     // Honeypot — real visitors never see or fill this field.
-    if (data.get('company_website')?.toString().trim()) {
+    if (honeypot) {
       setStatus('error');
       setErrorMsg('Something went wrong. Please try again.');
       return;
@@ -132,32 +133,23 @@ export default function SeoAuditForm({ title = 'Request Your Free Audit', eyebro
     const email = values.email.trim();
     const skype = values.skype.trim();
 
-    const lines = [
-      `Website: ${website}`,
-      competitor && `Competitor: ${competitor}`,
-      keywords && `Keywords:\n${keywords}`,
-      '',
-      `Name: ${name}`,
-      `Email: ${email}`,
-      phone && `Phone: ${phone}`,
-      skype && `Skype ID: ${skype}`
-    ].filter(Boolean);
-
-    const mailtoLink = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
-      `Free SEO Audit Request From ${name}`
-    )}&body=${encodeURIComponent(lines.join('\n'))}`;
-
+    setIsSubmitting(true);
     try {
-      window.location.href = mailtoLink;
-      setStatus('success');
+      await submitForm('seo_audit', {
+        website, competitor, keywords, name, phone, email, skype, company_website: honeypot
+      });
+      setStatus('idle');
       setErrorMsg('');
       setValues({ website: '', competitor: '', keywords: '', name: '', phone: '', email: '', skype: '', captcha: '' });
       setFieldErrors({});
       setTouched({});
       resetChallenge();
-    } catch {
+      showSuccessAlert({ text: "Your audit request has been sent. We'll be in touch shortly." });
+    } catch (err) {
       setStatus('error');
-      setErrorMsg('Something went wrong opening your email app. Please email us directly instead.');
+      setErrorMsg(err.message || 'Something went wrong sending your message. Please email us directly instead.');
+    } finally {
+      setIsSubmitting(false);
     }
   }
 
@@ -292,21 +284,13 @@ export default function SeoAuditForm({ title = 'Request Your Free Audit', eyebro
       </div>
 
       <div className="actions">
-        <Button type="submit" size="lg" className="submit">
-          Submit
+        <Button type="submit" size="lg" className="submit" disabled={isSubmitting}>
+          {isSubmitting ? 'Sending…' : 'Submit'}
         </Button>
         <Button type="reset" size="lg" variant="outline" className="reset">
           Reset
         </Button>
       </div>
-
-      {status === 'success' && (
-        <p className="success" role="status">
-          <FiCheckCircle aria-hidden="true" /> Your email app should now be open with your
-          audit request pre-filled — hit send to reach us. Didn&apos;t open?{' '}
-          <a href={`mailto:${CONTACT_EMAIL}`}>Email us directly</a>.
-        </p>
-      )}
     </form>
   );
 }

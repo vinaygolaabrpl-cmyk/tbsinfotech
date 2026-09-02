@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import { FiCheckCircle, FiAlertCircle, FiUpload } from 'react-icons/fi';
+import { FiAlertCircle, FiUpload } from 'react-icons/fi';
 import Button from '../../components/common/Button';
 import siteConfig from '../../data/siteConfig.json';
-
-const APPLICATION_EMAIL = 'vinaygola.abrpl@gmail.com';
+import { submitForm } from '../../services/mailApi';
+import { showSuccessAlert } from '../../utils/swalAlerts';
 
 const NOTICE_PERIODS = [
   'Immediate Joiner',
@@ -26,6 +26,13 @@ const QUALIFICATIONS = [
 
 const MAX_MESSAGE_LEN = 600;
 const MAX_RESUME_BYTES = 5 * 1024 * 1024;
+
+const INITIAL_VALUES = {
+  fullName: '', email: '', phone: '', location: '', totalExperience: '',
+  relevantExperience: '', currentCompany: '', currentDesignation: '',
+  qualification: '', noticePeriod: '', salary: '', linkedin: '', portfolio: '',
+  coverLetter: '', additionalInfo: ''
+};
 
 const NAME_REGEX = /^[a-zA-Z\s.'-]+$/;
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -79,57 +86,16 @@ function validateResume(file) {
   return '';
 }
 
-/**
- * Builds a `mailto:` link from the application details. mailto cannot carry
- * a file attachment, so the resume file name is included in the body and
- * the applicant is told, before and after submitting, to attach it manually
- * once their mail client opens.
- */
-function buildMailtoLink(fields, resumeFileName) {
-  const lines = [
-    `Position Applied For: ${fields.position}`,
-    `Full Name: ${fields.fullName}`,
-    `Email Address: ${fields.email}`,
-    `Phone Number: ${fields.phone}`,
-    `Current Location: ${fields.location}`,
-    `Total Experience: ${fields.totalExperience}`,
-    fields.relevantExperience && `Relevant Experience: ${fields.relevantExperience}`,
-    fields.currentCompany && `Current / Previous Company: ${fields.currentCompany}`,
-    fields.currentDesignation && `Current Designation: ${fields.currentDesignation}`,
-    `Highest Qualification: ${fields.qualification}`,
-    `Notice Period: ${fields.noticePeriod}`,
-    fields.salary && `Current / Expected Salary: ${fields.salary}`,
-    fields.linkedin && `LinkedIn Profile: ${fields.linkedin}`,
-    fields.portfolio && `Portfolio / Website: ${fields.portfolio}`,
-    '',
-    fields.coverLetter && `Cover Letter / Message:\n${fields.coverLetter}`,
-    fields.additionalInfo && `\nAdditional Information:\n${fields.additionalInfo}`,
-    '',
-    resumeFileName
-      ? `Resume File: ${resumeFileName} (please attach this file before sending — mailto links cannot carry attachments automatically)`
-      : 'Resume File: not attached'
-  ].filter(Boolean);
-
-  const subject = `Job Application — ${fields.position} — ${fields.fullName}`;
-  const body = lines.join('\n');
-
-  return `mailto:${APPLICATION_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-}
-
 const REQUIRED_FIELDS = ['fullName', 'email', 'phone', 'location', 'totalExperience', 'qualification', 'noticePeriod'];
 const OPTIONAL_VALIDATED_FIELDS = ['linkedin', 'portfolio'];
 
 export default function ApplicationForm({ position, onSubmitted }) {
   const [status, setStatus] = useState('idle'); // idle | success | error
   const [errorMsg, setErrorMsg] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [resumeName, setResumeName] = useState('');
   const [resumeFile, setResumeFile] = useState(null);
-  const [values, setValues] = useState({
-    fullName: '', email: '', phone: '', location: '', totalExperience: '',
-    relevantExperience: '', currentCompany: '', currentDesignation: '',
-    qualification: '', noticePeriod: '', salary: '', linkedin: '', portfolio: '',
-    coverLetter: '', additionalInfo: ''
-  });
+  const [values, setValues] = useState(INITIAL_VALUES);
   const [fieldErrors, setFieldErrors] = useState({});
   const [touched, setTouched] = useState({});
 
@@ -155,7 +121,7 @@ export default function ApplicationForm({ position, onSubmitted }) {
     setFieldErrors((prev) => ({ ...prev, resume: validateResume(file) }));
   }
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
 
     const nextErrors = {};
@@ -197,34 +163,28 @@ export default function ApplicationForm({ position, onSubmitted }) {
       additionalInfo: values.additionalInfo.trim()
     };
 
-    const mailtoLink = buildMailtoLink(fields, resumeFile.name);
-
+    setIsSubmitting(true);
     try {
-      window.location.href = mailtoLink;
-      setStatus('success');
+      await submitForm('application', { ...fields, resume: resumeFile });
+      const submittedResumeName = resumeName;
+      setStatus('idle');
       setErrorMsg('');
+      setValues(INITIAL_VALUES);
+      setFieldErrors({});
+      setTouched({});
+      setResumeFile(null);
+      setResumeName('');
       onSubmitted?.();
-    } catch {
+      showSuccessAlert({
+        title: 'Application received!',
+        text: `Thanks for applying to ${siteConfig.name}. Your details${submittedResumeName ? ` and resume (${submittedResumeName})` : ''} have been sent to our hiring team.`
+      });
+    } catch (err) {
       setStatus('error');
-      setErrorMsg('Something went wrong opening your email app. Please email us directly instead.');
+      setErrorMsg(err.message || 'Something went wrong sending your application. Please email us directly instead.');
+    } finally {
+      setIsSubmitting(false);
     }
-  }
-
-  if (status === 'success') {
-    return (
-      <div className="application-form__feedback success" role="status">
-        <FiCheckCircle />
-        <div>
-          <strong>Almost done!</strong>
-          <p>
-            Your email app should now be open with your application pre-filled for{' '}
-            <strong>{siteConfig.name}</strong>. Please attach your resume file
-            {resumeName ? ` (${resumeName})` : ''} and hit send. If nothing opened, email your
-            details directly to <a href={`mailto:${APPLICATION_EMAIL}`}>{APPLICATION_EMAIL}</a>.
-          </p>
-        </div>
-      </div>
-    );
   }
 
   return (
@@ -460,13 +420,11 @@ export default function ApplicationForm({ position, onSubmitted }) {
       </label>
 
       <p className="application-form__note">
-        Submitting opens your default email app with these details pre-filled, addressed to our
-        hiring team — mailto links can't attach files automatically, so please attach your resume
-        before hitting send.
+        Submitting sends these details, along with your resume, directly to our hiring team.
       </p>
 
-      <Button type="submit" size="lg" className="application-form__submit">
-        Submit Application
+      <Button type="submit" size="lg" className="application-form__submit" disabled={isSubmitting}>
+        {isSubmitting ? 'Submitting…' : 'Submit Application'}
       </Button>
     </form>
   );

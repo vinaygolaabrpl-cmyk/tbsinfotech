@@ -2,6 +2,13 @@
 @use '../../../styles/base/mixins' as *;
 
 .navbar {
+  @include desktop-up {
+    // Anchors the mega menu panel to the whole nav row instead of the
+    // individual trigger, so it stays centered and never spills past
+    // the viewport regardless of which item is open.
+    position: relative;
+  }
+
   .burger {
     position: relative;
     display: flex;
@@ -139,19 +146,23 @@
       @include desktop-up {
         position: absolute;
         top: calc(100% + #{$space-3});
-        left: 0;
+        left: 50%;
+        transform: translateX(-50%) translateY(6px);
         z-index: $z-header;
-        min-width: 300px;
-        max-height: 70vh;
-        overflow-y: auto;
+        display: grid;
+        grid-template-columns: repeat(var(--menu-cols, 1), minmax(200px, 1fr));
+        gap: $space-2 $space-3;
+        width: max-content;
+        max-width: min(92vw, 760px);
+        max-height: none;
+        overflow: visible;
         background: var(--card-bg);
         border: 1px solid var(--border);
-        border-radius: $radius-md;
+        border-radius: $radius-lg;
         box-shadow: var(--shadow);
-        padding: $space-2;
+        padding: $space-4;
         opacity: 0;
         visibility: hidden;
-        transform: translateY(6px);
         transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
       }
     }
@@ -161,8 +172,8 @@
       overflow-y: auto;
 
       @include desktop-up {
-        max-height: 70vh;
-        overflow-y: auto;
+        max-height: none;
+        overflow: visible;
       }
     }
 
@@ -171,11 +182,11 @@
     }
 
     @include desktop-up {
-      &:hover .submenu{
-        // ,&:focus-within .submenu 
+      &:hover .submenu {
+        // ,&:focus-within .submenu
         opacity: 1;
         visibility: visible;
-        transform: translateY(0);
+        transform: translateX(-50%) translateY(0);
       }
 
       &:hover .submenuToggle .chevron,
@@ -185,23 +196,49 @@
     }
 
     .submenuLink {
-      display: block;
+      display: flex;
+      align-items: center;
+      gap: $space-2;
       padding: $space-2 $space-3;
       font-size: 0.88rem;
       color: var(--text-muted);
       border-radius: $radius-sm;
+      border: 1px solid transparent;
       transition: $transition-fast;
+
+      @include desktop-up {
+        border-color: var(--border);
+        background: var(--card-bg-2);
+      }
 
       &:hover,
       &:focus-visible,
       &.active {
         color: var(--primary);
         background: var(--primary-soft);
+        border-color: var(--primary-line);
       }
 
       @include mobile {
         padding-left: $space-5;
       }
+    }
+
+    .submenuIcon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      flex-shrink: 0;
+      border-radius: $radius-sm;
+      background: var(--primary-soft);
+      color: var(--primary);
+      font-size: 1rem;
+    }
+
+    .submenuText {
+      line-height: 1.3;
     }
   }
 }

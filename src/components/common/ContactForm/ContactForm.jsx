@@ -1,7 +1,8 @@
 import { useState } from 'react';
-import { FiCheckCircle, FiAlertCircle } from 'react-icons/fi';
+import { FiAlertCircle } from 'react-icons/fi';
 import Button from '../Button';
-import siteConfig from '../../../data/siteConfig.json';
+import { submitForm } from '../../../services/mailApi';
+import { showSuccessAlert } from '../../../utils/swalAlerts';
 import './ContactForm.scss';
 
 export const HELP_OPTIONS = [
@@ -11,8 +12,6 @@ export const HELP_OPTIONS = [
   'Branding',
   'Something Else'
 ];
-
-const CONTACT_EMAIL = siteConfig.email;
 
 const NAME_REGEX = /^[a-zA-Z\s.'-]+$/;
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -51,6 +50,7 @@ function validateField(name, value) {
 export default function ContactForm({ title = 'What Do You Need Help With?', eyebrow = 'Contact', className = '' }) {
   const [status, setStatus] = useState('idle'); // idle | success | error
   const [errorMsg, setErrorMsg] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [values, setValues] = useState({ name: '', email: '', phone: '', service: '', message: '' });
   const [fieldErrors, setFieldErrors] = useState({});
   const [touched, setTouched] = useState({});
@@ -69,7 +69,7 @@ export default function ContactForm({ title = 'What Do You Need Help With?', eye
     setFieldErrors((prev) => ({ ...prev, [name]: validateField(name, value) }));
   }
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
 
     const nextErrors = {
@@ -94,29 +94,20 @@ export default function ContactForm({ title = 'What Do You Need Help With?', eye
     const service = values.service.trim();
     const message = values.message.trim();
 
-    const lines = [
-      `Name: ${name}`,
-      `Email: ${email}`,
-      phone && `Phone: ${phone}`,
-      service && `Service Needed: ${service}`,
-      '',
-      message ? `Message:\n${message}` : ''
-    ].filter(Boolean);
-
-    const mailtoLink = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
-      `Website Enquiry From ${name}`
-    )}&body=${encodeURIComponent(lines.join('\n'))}`;
-
+    setIsSubmitting(true);
     try {
-      window.location.href = mailtoLink;
-      setStatus('success');
+      await submitForm('contact', { name, email, phone, service, message });
+      setStatus('idle');
       setErrorMsg('');
       setValues({ name: '', email: '', phone: '', service: '', message: '' });
       setFieldErrors({});
       setTouched({});
-    } catch {
+      showSuccessAlert({ text: "Your message has been sent. We'll get back to you shortly." });
+    } catch (err) {
       setStatus('error');
-      setErrorMsg('Something went wrong opening your email app. Please email us directly instead.');
+      setErrorMsg(err.message || 'Something went wrong sending your message. Please email us directly instead.');
+    } finally {
+      setIsSubmitting(false);
     }
   }
 
@@ -203,17 +194,9 @@ export default function ContactForm({ title = 'What Do You Need Help With?', eye
         {fieldErrors.message && <span className="field-error">{fieldErrors.message}</span>}
       </div>
 
-      <Button type="submit" size="lg" className="submit">
-        Submit <span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-move-right-icon lucide-move-right"><path d="M18 8L22 12L18 16"/><path d="M2 12H22"/></svg></span>
+      <Button type="submit" size="lg" className="submit" disabled={isSubmitting}>
+        {isSubmitting ? 'Sending…' : 'Submit'} <span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-move-right-icon lucide-move-right"><path d="M18 8L22 12L18 16"/><path d="M2 12H22"/></svg></span>
       </Button>
-
-      {status === 'success' && (
-        <p className="success" role="status">
-          <FiCheckCircle aria-hidden="true" /> Your email app should now be open with your
-          message pre-filled — hit send to reach us. Didn&apos;t open?{' '}
-          <a href={`mailto:${CONTACT_EMAIL}`}>Email us directly</a>.
-        </p>
-      )}
     </form>
   );
 }
