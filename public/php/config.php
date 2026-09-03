@@ -25,4 +25,9 @@ return [
     // account itself is the safest default.
     'from_email' => 'rahul@absoluteranking.com',
     'from_name'  => 'TBS Infotech Website',
+    // Google reCAPTCHA v2 secret key — from https://www.google.com/recaptcha/admin,
+    // the same site registration that the frontend's VITE_RECAPTCHA_SITE_KEY
+    // (in .env) belongs to. Leave blank to disable server-side verification
+    // (e.g. local dev without a key configured).
+    'recaptcha_secret' => '',
 ];

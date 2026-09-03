@@ -2,15 +2,17 @@ import PackageHero from '../../components/common/PackageHero';
 import SEO from '../../components/common/SEO';
 import PricingMatrix from '../../components/common/PricingMatrix';
 import { openPaypalLink } from '../../utils/openPaypalLink';
+import { useCurrency } from '../../hooks/useCurrency';
+import { getPrice, formatPrice } from '../../config/pricing';
 import './PackagesShared.scss';
 import seoPackagesBanner from '../../assets/images/services/service_1_banner_img.jpg.jpeg';
 
 const PLANS = [
-  { name: 'Value', price: '$125', billing: 'Per Month', note: 'Up To 10 Keywords', paypalLink: '' },
-  { name: 'Bronze', price: '$225', billing: 'Per Month', note: 'Up To 25 Keywords', paypalLink: '' },
-  { name: 'Silver', price: '$400', billing: 'Per Month', note: 'Up To 50 Keywords', popular: true, paypalLink: '' },
-  { name: 'Gold', price: '$700', billing: 'Per Month', note: 'Up To 100 Keywords', paypalLink: '' },
-  { name: 'Platinum', price: '$1050', billing: 'Per Month', note: 'Up To 150 Keywords', paypalLink: '' }
+  { name: 'Value', priceKey: 'seoPackages.value', billing: 'Per Month', note: 'Up To 10 Keywords', paypalLink: '' },
+  { name: 'Bronze', priceKey: 'seoPackages.bronze', billing: 'Per Month', note: 'Up To 25 Keywords', paypalLink: '' },
+  { name: 'Silver', priceKey: 'seoPackages.silver', billing: 'Per Month', note: 'Up To 50 Keywords', popular: true, paypalLink: '' },
+  { name: 'Gold', priceKey: 'seoPackages.gold', billing: 'Per Month', note: 'Up To 100 Keywords', paypalLink: '' },
+  { name: 'Platinum', priceKey: 'seoPackages.platinum', billing: 'Per Month', note: 'Up To 150 Keywords', paypalLink: '' }
 ];
 
 const GROUPS = [
@@ -136,6 +138,9 @@ const NOTES = [
 ];
 
 export default function SeoPackages() {
+  const { currency } = useCurrency();
+  const plans = PLANS.map((p) => ({ ...p, price: formatPrice(getPrice(p.priceKey, currency), currency) }));
+
   return (
     <div className="seo-packages-page">
       <SEO
@@ -150,7 +155,7 @@ export default function SeoPackages() {
           <h2 className="pickTitle" data-aos="fade-up">Pick <span className="gradient">Your</span> Package</h2>
           <PricingMatrix
             planColumnLabel="Pick Your Package Keywords Plan Activities"
-            plans={PLANS}
+            plans={plans}
             groups={GROUPS}
             onCta={(plan) => openPaypalLink(plan.paypalLink)}
           />

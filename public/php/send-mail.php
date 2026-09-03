@@ -36,6 +36,46 @@ function field(string $name): string
     return isset($_POST[$name]) ? trim((string) $_POST[$name]) : '';
 }
 
+/**
+ * Verifies a Google reCAPTCHA v2 token server-side against Google's
+ * siteverify endpoint. Returns true (and skips the network call
+ * entirely) when no secret key is configured yet, so the site keeps
+ * working before reCAPTCHA is set up. Never throws — any network or
+ * response problem is treated as a failed verification.
+ */
+function verifyRecaptcha(string $token, string $secret): bool
+{
+    if ($secret === '') {
+        return true; // Not configured yet — don't block form submissions.
+    }
+    if ($token === '') {
+        return false;
+    }
+
+    $payload = http_build_query([
+        'secret'   => $secret,
+        'response' => $token,
+        'remoteip' => $_SERVER['REMOTE_ADDR'] ?? '',
+    ]);
+
+    $context = stream_context_create([
+        'http' => [
+            'method'  => 'POST',
+            'header'  => "Content-Type: application/x-www-form-urlencoded\r\n",
+            'content' => $payload,
+            'timeout' => 5,
+        ],
+    ]);
+
+    $result = @file_get_contents('https://www.google.com/recaptcha/api/siteverify', false, $context);
+    if ($result === false) {
+        return false;
+    }
+
+    $decoded = json_decode($result, true);
+    return is_array($decoded) && ($decoded['success'] ?? false) === true;
+}
+
 /** Build a readable plain-text email body from ordered [label, value] pairs. */
 function buildBody(array $lines): string
 {
@@ -67,6 +107,10 @@ switch ($formType) {
         $phone = field('phone');
         $service = field('service');
         $message = field('message');
+
+        if (!verifyRecaptcha(field('recaptcha_token'), $config['recaptcha_secret'] ?? '')) {
+            respond(422, false, 'reCAPTCHA verification failed. Please try again.');
+        }
 
         if ($name === '' || $email === '' || !preg_match($emailRegex, $email)) {
             respond(422, false, 'Please provide a valid name and email address.');
@@ -100,6 +144,10 @@ switch ($formType) {
         $phone = field('phone');
         $email = field('email');
         $skype = field('skype');
+
+        if (!verifyRecaptcha(field('recaptcha_token'), $config['recaptcha_secret'] ?? '')) {
+            respond(422, false, 'reCAPTCHA verification failed. Please try again.');
+        }
 
         if ($website === '' || $name === '' || $email === '' || !preg_match($emailRegex, $email)) {
             respond(422, false, 'Please provide a valid website, name and email address.');
@@ -138,6 +186,10 @@ switch ($formType) {
         $portfolio = field('portfolio');
         $coverLetter = field('coverLetter');
         $additionalInfo = field('additionalInfo');
+
+        if (!verifyRecaptcha(field('recaptcha_token'), $config['recaptcha_secret'] ?? '')) {
+            respond(422, false, 'reCAPTCHA verification failed. Please try again.');
+        }
 
         if (
             $fullName === '' || $email === '' || !preg_match($emailRegex, $email)

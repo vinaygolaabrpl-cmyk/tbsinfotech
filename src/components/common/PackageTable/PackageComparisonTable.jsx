@@ -1,3 +1,5 @@
+import { useCurrency } from '../../../hooks/useCurrency';
+import { formatPrice } from '../../../config/pricing';
 import './PackageComparisonTable.scss';
 
 /**
@@ -5,7 +7,9 @@ import './PackageComparisonTable.scss';
  * stacked-card view on mobile (pure CSS switch via media query).
  */
 export default function PackageComparisonTable({ packages }) {
+  const { currency } = useCurrency();
   const allFeatures = Array.from(new Set(packages.flatMap((p) => p.features)));
+  const priceFor = (p) => (currency === 'INR' ? p.priceInr : p.price);
 
   return (
     <div className="package-table">
@@ -16,7 +20,7 @@ export default function PackageComparisonTable({ packages }) {
             {packages.map((p) => (
               <th key={p.slug}>
                 {p.name}
-                <span className="price">${p.price}</span>
+                <span className="price">{formatPrice(priceFor(p), currency)}</span>
               </th>
             ))}
           </tr>
@@ -36,7 +40,7 @@ export default function PackageComparisonTable({ packages }) {
       <div className="stacked">
         {packages.map((p) => (
           <div key={p.slug} className="stackCard">
-            <h4>{p.name} <span>${p.price}</span></h4>
+            <h4>{p.name} <span>{formatPrice(priceFor(p), currency)}</span></h4>
             <ul>
               {p.features.map((f) => (
                 <li key={f}><Check /> {f}</li>

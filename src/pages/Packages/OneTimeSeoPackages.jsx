@@ -2,14 +2,22 @@ import PackageHero from '../../components/common/PackageHero';
 import SEO from '../../components/common/SEO';
 import PricingMatrix from '../../components/common/PricingMatrix';
 import { openPaypalLink } from '../../utils/openPaypalLink';
+import { useCurrency } from '../../hooks/useCurrency';
+import { formatPrice } from '../../config/pricing';
 import packages from '../../data/packages.json';
 import oneTimeSeoBanner from '../../assets/images/services/service_2_banner_img.jpg.jpeg';
 
 // This page's single plan is the same product as the "One Time SEO
-// Package" entry in packages.json (same name, same $200 price) — reuse
-// its manually configured paypalLink rather than duplicating the field.
+// Package" entry in packages.json (same name, same USD/INR prices) —
+// reuse its manually configured paypalLink and price fields rather than
+// duplicating them.
 const onePkg = packages.find((p) => p.slug === 'one-time-seo-package');
-const PLANS = [{ name: 'One Time SEO Package', price: '$200 USD', paypalLink: onePkg?.paypalLink ?? '' }];
+const PLANS = [{
+  name: 'One Time SEO Package',
+  priceUsd: onePkg?.price,
+  priceInr: onePkg?.priceInr,
+  paypalLink: onePkg?.paypalLink ?? ''
+}];
 
 const GROUPS = [
   {
@@ -60,6 +68,15 @@ const GROUPS = [
 ];
 
 export default function OneTimeSeoPackages() {
+  const { currency } = useCurrency();
+  const plans = PLANS.map((p) => {
+    const rawPrice = currency === 'INR' ? p.priceInr : p.priceUsd;
+    return {
+      ...p,
+      price: `${formatPrice(rawPrice, currency)}${currency === 'INR' ? '' : ' USD'}`
+    };
+  });
+
   return (
     <div className="one-time-seo-page">
       <SEO
@@ -73,7 +90,7 @@ export default function OneTimeSeoPackages() {
         <div className="container">
           <PricingMatrix
             planColumnLabel="On-Page Optimization"
-            plans={PLANS}
+            plans={plans}
             groups={GROUPS}
             ctaLabel="Request A Quote"
             onCta={(plan) => openPaypalLink(plan.paypalLink)}

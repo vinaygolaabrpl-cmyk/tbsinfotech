@@ -15,7 +15,8 @@
       "Google My Business Optimization",
       "Quality Backlinks",
       "Bi-Weekly Performance & Ranking Reports"
-    ]
+    ],
+    "priceInr": 25500
   },
   {
     "slug": "silver",
@@ -34,7 +35,8 @@
       "Authority Content Assets",
       "Niche Digital PR & Backlinks",
       "Bi-Weekly Performance & Ranking Reports"
-    ]
+    ],
+    "priceInr": 51000
   },
   {
     "slug": "gold",
@@ -51,7 +53,8 @@
       "High-Impact Content Assets",
       "High-Authority Digital PR & Link Acquisition",
       "Bi-Weekly Performance & Ranking Reports"
-    ]
+    ],
+    "priceInr": 76500
   },
   {
     "slug": "one-time-seo-package",
@@ -76,6 +79,7 @@
       "SSL Certificate Setup (HTTPS)",
       "Page Speed & Core Web Vitals Optimization",
       "Monthly One Time Report"
-    ]
+    ],
+    "priceInr": 17000
   }
 ]

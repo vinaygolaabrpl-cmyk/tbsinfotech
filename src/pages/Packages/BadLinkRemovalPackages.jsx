@@ -1,12 +1,14 @@
 import PackageHero from '../../components/common/PackageHero';
 import SEO from '../../components/common/SEO';
 import Card from '../../components/common/Card';
+import { useCurrency } from '../../hooks/useCurrency';
+import { getPrice, formatPrice } from '../../config/pricing';
 import './BadLinkRemovalPackages.scss';
 import badLinkBanner from '../../assets/images/services/service_6_banner_img.jpg.jpeg';
 
 const PRICE_ROWS = [
-  { label: 'Up to 500 links', price: '$200' },
-  { label: 'Up to 1000 links', price: '$400' }
+  { label: 'Up to 500 links', priceKey: 'badLinkRemoval.upTo500' },
+  { label: 'Up to 1000 links', priceKey: 'badLinkRemoval.upTo1000' }
 ];
 
 const PROCESS_STEPS = [
@@ -33,6 +35,8 @@ const ANALYSIS_SUB_STEPS = [
 ];
 
 export default function BadLinkRemovalPackages() {
+  const { currency } = useCurrency();
+
   return (
     <div className="bad-link-removal-page">
       <SEO
@@ -76,7 +80,7 @@ export default function BadLinkRemovalPackages() {
               {PRICE_ROWS.map((r) => (
                 <div className="priceRow" key={r.label}>
                   <span>{r.label} –</span>
-                  <strong>{r.price}</strong>
+                  <strong>{formatPrice(getPrice(r.priceKey, currency), currency)}</strong>
                 </div>
               ))}
 

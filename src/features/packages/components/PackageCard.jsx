@@ -1,7 +1,13 @@
 import { Link } from 'react-router-dom';
+import { useCurrency } from '../../../hooks/useCurrency';
+import { formatPriceParts } from '../../../config/pricing';
 import './PackageCard.scss';
 
 export default function PackageCard({ pkg, index = 0 }) {
+  const { currency } = useCurrency();
+  const rawPrice = currency === 'INR' ? pkg.priceInr : pkg.price;
+  const { symbol, amount } = formatPriceParts(rawPrice, currency);
+
   return (
     <article
       className={`package-card ${pkg.highlighted ? 'highlighted' : ''}`}
@@ -14,8 +20,8 @@ export default function PackageCard({ pkg, index = 0 }) {
       <p className="tagline">{pkg.tagline}</p>
 
       <div className="price">
-        <span className="currency">$</span>
-        {pkg.price}
+        <span className="currency">{symbol}</span>
+        {amount}
         <span className="billing">/ {pkg.billing}</span>
       </div>
 

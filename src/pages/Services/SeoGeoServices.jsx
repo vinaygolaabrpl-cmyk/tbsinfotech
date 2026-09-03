@@ -6,6 +6,8 @@ import BlufCallout from '../../components/common/BlufCallout';
 import SystemDiagram from '../../components/common/SystemDiagram';
 import DataTable from '../../components/common/DataTable';
 import FaqAccordion from '../../components/common/FaqAccordion';
+import { useCurrency } from '../../hooks/useCurrency';
+import { getPrice, formatPrice } from '../../config/pricing';
 import seoGeoBanner from '../../assets/images/services/service_3_banner_img.jpg.jpeg';
 
 const VISIBILITY_BRANCHES = [
@@ -13,8 +15,14 @@ const VISIBILITY_BRANCHES = [
   { icon: <FiCpu />, title: 'GEO & AI Engine Layer', items: ['Direct-Answer Formatting', 'AI Benchmark & Share', 'Vector & Semantic Mapping', 'LLM Citation & Outlets'] }
 ];
 
+const PACKAGE_TABLE_HEADER_PRICES = [
+  { label: 'Bronze Package', priceKey: 'seoGeoServices.bronze' },
+  { label: 'Silver Package', priceKey: 'seoGeoServices.silver' },
+  { label: 'Gold Package', priceKey: 'seoGeoServices.gold' }
+];
+
 const PACKAGE_TABLE = {
-  headers: ['Feature / Deliverable', 'Bronze Package ($300/mo)', 'Silver Package ($600/mo)', 'Gold Package ($900/mo)'],
+  headers: ['Feature / Deliverable', 'Bronze Package', 'Silver Package', 'Gold Package'],
   rows: [
     { label: 'Technical, SEO & GEO Web Audit', values: ['Yes', 'Yes', 'Yes'] },
     { label: 'Initial Backlink & Toxicity Review', values: ['Yes', 'Yes', 'Yes'] },
@@ -55,6 +63,12 @@ const FAQS = [
 ];
 
 export default function SeoGeoServices() {
+  const { currency } = useCurrency();
+  const packageTableHeaders = [
+    PACKAGE_TABLE.headers[0],
+    ...PACKAGE_TABLE_HEADER_PRICES.map((h) => `${h.label} (${formatPrice(getPrice(h.priceKey, currency), currency)}/mo)`)
+  ];
+
   return (
     <div className="seo-geo-page">
       <SEO
@@ -94,7 +108,7 @@ export default function SeoGeoServices() {
             title="How Do Our SEO + GEO Packages Compare?"
             subtitle="Our monthly service packages provide targeted optimizations aligned directly with your market competition and expansion goals."
           />
-          <DataTable headers={PACKAGE_TABLE.headers} rows={PACKAGE_TABLE.rows} />
+          <DataTable headers={packageTableHeaders} rows={PACKAGE_TABLE.rows} />
         </div>
       </section>
 

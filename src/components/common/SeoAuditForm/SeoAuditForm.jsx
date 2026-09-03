@@ -1,22 +1,18 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { FiAlertCircle } from 'react-icons/fi';
 import Button from '../Button';
+import Recaptcha from '../Recaptcha';
 import { submitForm } from '../../../services/mailApi';
 import { showSuccessAlert } from '../../../utils/swalAlerts';
 import './SeoAuditForm.scss';
 
 const NAME_REGEX = /^[a-zA-Z\s.'-]+$/;
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const PHONE_REGEX = /^[+]?[\d\s()-]{7,20}$/;
+const PHONE_REGEX = /^[+]?[\d\s()-]{7,15}$/;
 const URL_REGEX = /^(https?:\/\/)?([\w-]+\.)+[\w-]{2,}(\/[^\s]*)?$/i;
+const RECAPTCHA_ENABLED = Boolean(import.meta.env.VITE_RECAPTCHA_SITE_KEY);
 
-function makeChallenge() {
-  const a = Math.floor(Math.random() * 8) + 1;
-  const b = Math.floor(Math.random() * 8) + 1;
-  return { a, b, answer: a + b };
-}
-
-function validateField(name, value, challenge) {
+function validateField(name, value) {
   const v = value.trim();
   switch (name) {
     case 'website':
@@ -33,11 +29,8 @@ function validateField(name, value, challenge) {
       if (!EMAIL_REGEX.test(v)) return 'Please enter a valid email address.';
       return '';
     case 'phone':
-      if (v && !PHONE_REGEX.test(v)) return 'Please enter a valid phone number.';
-      return '';
-    case 'captcha':
-      if (!v) return 'Please answer the spam check.';
-      if (Number(v) !== challenge.answer) return 'That answer isn\u2019t quite right.';
+      if (!v) return 'Please enter your phone number.';
+      if (!PHONE_REGEX.test(v)) return 'Please enter a valid phone number.';
       return '';
     default:
       return '';
@@ -51,47 +44,44 @@ function validateField(name, value, challenge) {
  * fields — target site, competitor, keywords, Skype ID — a growth
  * strategist needs to scope the audit before the call.
  *
- * Spam protection is dependency-free by design (no reCAPTCHA key is
- * configured for this project): a hidden honeypot field catches simple
- * bots, and a lightweight arithmetic challenge blocks scripted submissions
- * without adding a third-party library.
+ * Spam protection combines a hidden honeypot field (catches simple bots)
+ * with the shared Google reCAPTCHA v2 checkbox (blocks scripted
+ * submissions), verified again server-side in send-mail.php.
  */
 export default function SeoAuditForm({ title = 'Request Your Free Audit', eyebrow = 'Free SEO Audit', className = '' }) {
   const [status, setStatus] = useState('idle'); // idle | success | error
   const [errorMsg, setErrorMsg] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [challenge, setChallenge] = useState(makeChallenge);
   const [values, setValues] = useState({
-    website: '', competitor: '', keywords: '', name: '', phone: '', email: '', skype: '', captcha: ''
+    website: '', competitor: '', keywords: '', name: '', phone: '', email: '', skype: ''
   });
   const [fieldErrors, setFieldErrors] = useState({});
   const [touched, setTouched] = useState({});
-
-  function resetChallenge() {
-    setChallenge(makeChallenge());
-  }
+  const [recaptchaToken, setRecaptchaToken] = useState(null);
+  const recaptchaRef = useRef(null);
 
   function handleReset() {
     setStatus('idle');
     setErrorMsg('');
-    setValues({ website: '', competitor: '', keywords: '', name: '', phone: '', email: '', skype: '', captcha: '' });
+    setValues({ website: '', competitor: '', keywords: '', name: '', phone: '', email: '', skype: '' });
     setFieldErrors({});
     setTouched({});
-    resetChallenge();
+    setRecaptchaToken(null);
+    recaptchaRef.current?.reset();
   }
 
   function handleChange(e) {
     const { name, value } = e.target;
     setValues((prev) => ({ ...prev, [name]: value }));
     if (touched[name]) {
-      setFieldErrors((prev) => ({ ...prev, [name]: validateField(name, value, challenge) }));
+      setFieldErrors((prev) => ({ ...prev, [name]: validateField(name, value) }));
     }
   }
 
   function handleBlur(e) {
     const { name, value } = e.target;
     setTouched((prev) => ({ ...prev, [name]: true }));
-    setFieldErrors((prev) => ({ ...prev, [name]: validateField(name, value, challenge) }));
+    setFieldErrors((prev) => ({ ...prev, [name]: validateField(name, value) }));
   }
 
   async function handleSubmit(e) {
@@ -108,20 +98,24 @@ export default function SeoAuditForm({ title = 'Request Your Free Audit', eyebro
     }
 
     const nextErrors = {
-      website: validateField('website', values.website, challenge),
-      name: validateField('name', values.name, challenge),
-      email: validateField('email', values.email, challenge),
-      phone: validateField('phone', values.phone, challenge),
-      captcha: validateField('captcha', values.captcha, challenge)
+      website: validateField('website', values.website),
+      name: validateField('name', values.name),
+      email: validateField('email', values.email),
+      phone: validateField('phone', values.phone)
     };
     setFieldErrors(nextErrors);
-    setTouched({ website: true, name: true, email: true, phone: true, captcha: true });
+    setTouched({ website: true, name: true, email: true, phone: true });
 
     const hasErrors = Object.values(nextErrors).some(Boolean);
     if (hasErrors) {
       setStatus('error');
       setErrorMsg('Please fix the highlighted fields below.');
-      if (nextErrors.captcha) resetChallenge();
+      return;
+    }
+
+    if (RECAPTCHA_ENABLED && !recaptchaToken) {
+      setStatus('error');
+      setErrorMsg('Please complete the reCAPTCHA check.');
       return;
     }
 
@@ -136,18 +130,21 @@ export default function SeoAuditForm({ title = 'Request Your Free Audit', eyebro
     setIsSubmitting(true);
     try {
       await submitForm('seo_audit', {
-        website, competitor, keywords, name, phone, email, skype, company_website: honeypot
+        website, competitor, keywords, name, phone, email, skype, company_website: honeypot, recaptcha_token: recaptchaToken
       });
       setStatus('idle');
       setErrorMsg('');
-      setValues({ website: '', competitor: '', keywords: '', name: '', phone: '', email: '', skype: '', captcha: '' });
+      setValues({ website: '', competitor: '', keywords: '', name: '', phone: '', email: '', skype: '' });
       setFieldErrors({});
       setTouched({});
-      resetChallenge();
+      setRecaptchaToken(null);
+      recaptchaRef.current?.reset();
       showSuccessAlert({ text: "Your audit request has been sent. We'll be in touch shortly." });
     } catch (err) {
       setStatus('error');
       setErrorMsg(err.message || 'Something went wrong sending your message. Please email us directly instead.');
+      setRecaptchaToken(null);
+      recaptchaRef.current?.reset();
     } finally {
       setIsSubmitting(false);
     }
@@ -228,8 +225,9 @@ export default function SeoAuditForm({ title = 'Request Your Free Audit', eyebro
           <input
             type="tel"
             name="phone"
-            placeholder="Phone :"
+            placeholder="Phone :*"
             aria-label="Phone number"
+            aria-required="true"
             aria-invalid={Boolean(fieldErrors.phone)}
             value={values.phone}
             onChange={handleChange}
@@ -265,23 +263,7 @@ export default function SeoAuditForm({ title = 'Request Your Free Audit', eyebro
         </div>
       </div>
 
-      <div className="captcha-row">
-        <span className="captcha-question">Spam check: what is {challenge.a} + {challenge.b}?</span>
-        <div className="field">
-          <input
-            type="text"
-            name="captcha"
-            inputMode="numeric"
-            placeholder="Enter Captcha Code"
-            aria-label={`Spam check, what is ${challenge.a} plus ${challenge.b}`}
-            aria-invalid={Boolean(fieldErrors.captcha)}
-            value={values.captcha}
-            onChange={handleChange}
-            onBlur={handleBlur}
-          />
-          {fieldErrors.captcha && <span className="field-error">{fieldErrors.captcha}</span>}
-        </div>
-      </div>
+      <Recaptcha ref={recaptchaRef} onChange={setRecaptchaToken} />
 
       <div className="actions">
         <Button type="submit" size="lg" className="submit" disabled={isSubmitting}>

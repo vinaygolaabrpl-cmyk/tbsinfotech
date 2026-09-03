@@ -1,9 +1,12 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { FiAlertCircle, FiUpload } from 'react-icons/fi';
 import Button from '../../components/common/Button';
+import Recaptcha from '../../components/common/Recaptcha';
 import siteConfig from '../../data/siteConfig.json';
 import { submitForm } from '../../services/mailApi';
 import { showSuccessAlert } from '../../utils/swalAlerts';
+
+const RECAPTCHA_ENABLED = Boolean(import.meta.env.VITE_RECAPTCHA_SITE_KEY);
 
 const NOTICE_PERIODS = [
   'Immediate Joiner',
@@ -36,7 +39,7 @@ const INITIAL_VALUES = {
 
 const NAME_REGEX = /^[a-zA-Z\s.'-]+$/;
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const PHONE_REGEX = /^[+]?[\d\s()-]{7,20}$/;
+const PHONE_REGEX = /^[+]?[\d\s()-]{7,15}$/;
 const URL_REGEX = /^(https?:\/\/)?([\w-]+\.)+[\w-]{2,}(\/[^\s]*)?$/i;
 
 function validateField(name, value) {
@@ -98,6 +101,8 @@ export default function ApplicationForm({ position, onSubmitted }) {
   const [values, setValues] = useState(INITIAL_VALUES);
   const [fieldErrors, setFieldErrors] = useState({});
   const [touched, setTouched] = useState({});
+  const [recaptchaToken, setRecaptchaToken] = useState(null);
+  const recaptchaRef = useRef(null);
 
   function handleChange(e) {
     const { name, value } = e.target;
@@ -144,6 +149,12 @@ export default function ApplicationForm({ position, onSubmitted }) {
       return;
     }
 
+    if (RECAPTCHA_ENABLED && !recaptchaToken) {
+      setStatus('error');
+      setErrorMsg('Please complete the reCAPTCHA check.');
+      return;
+    }
+
     const fields = {
       position,
       fullName: values.fullName.trim(),
@@ -160,7 +171,8 @@ export default function ApplicationForm({ position, onSubmitted }) {
       linkedin: values.linkedin.trim(),
       portfolio: values.portfolio.trim(),
       coverLetter: values.coverLetter.trim(),
-      additionalInfo: values.additionalInfo.trim()
+      additionalInfo: values.additionalInfo.trim(),
+      recaptcha_token: recaptchaToken
     };
 
     setIsSubmitting(true);
@@ -174,6 +186,8 @@ export default function ApplicationForm({ position, onSubmitted }) {
       setTouched({});
       setResumeFile(null);
       setResumeName('');
+      setRecaptchaToken(null);
+      recaptchaRef.current?.reset();
       onSubmitted?.();
       showSuccessAlert({
         title: 'Application received!',
@@ -182,6 +196,8 @@ export default function ApplicationForm({ position, onSubmitted }) {
     } catch (err) {
       setStatus('error');
       setErrorMsg(err.message || 'Something went wrong sending your application. Please email us directly instead.');
+      setRecaptchaToken(null);
+      recaptchaRef.current?.reset();
     } finally {
       setIsSubmitting(false);
     }
@@ -422,6 +438,8 @@ export default function ApplicationForm({ position, onSubmitted }) {
       <p className="application-form__note">
         Submitting sends these details, along with your resume, directly to our hiring team.
       </p>
+
+      <Recaptcha ref={recaptchaRef} onChange={setRecaptchaToken} />
 
       <Button type="submit" size="lg" className="application-form__submit" disabled={isSubmitting}>
         {isSubmitting ? 'Submitting…' : 'Submit Application'}

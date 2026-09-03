@@ -2,39 +2,43 @@ import PackageHero from '../../components/common/PackageHero';
 import SEO from '../../components/common/SEO';
 import Card from '../../components/common/Card';
 import Button from '../../components/common/Button';
+import { useCurrency } from '../../hooks/useCurrency';
+import { getPrice, formatPrice } from '../../config/pricing';
 import './WebDesigningPackages.scss';
 import webDesigningBanner from '../../assets/images/services/service_4_banner_img.jpg.jpeg';
 
 const PACKAGES = [
   {
     name: 'Customized Package',
-    price: 'Ask',
+    priceLabel: 'Ask',
     desc: 'We also provide tailored website development services, specific to your business needs. You just tell us your requirement and we will develop.'
   },
   {
     name: 'Web Shop Package',
-    price: '$2200',
+    priceKey: 'webDesigning.webShop',
     desc: 'Entry level Shopping Cart will allow you to start selling your business online and manage small changes on your website yourself.'
   },
   {
     name: 'Go-Pro Package',
-    price: '$1500',
+    priceKey: 'webDesigning.goPro',
     desc: 'Build a professional website to show your services and products online and enhance your company image amongst your client base. This will allow you to have a strong digital presence.'
   },
   {
     name: 'Biz Start-up Package',
-    price: '$950',
+    priceKey: 'webDesigning.bizStartup',
     desc: 'This will allow you to show your company brochure online in a very presentable manner. All we need from you is text for pages, images you want to put on the site.'
   },
   {
     name: 'Budget Package',
-    price: '$450',
+    priceKey: 'webDesigning.budget',
     desc: 'With Included: Simple yet Professional Designs, which will give your company a perfect platform to commence your online business.',
     boldLead: 'With Included:'
   }
 ];
 
 export default function WebDesigningPackages() {
+  const { currency } = useCurrency();
+
   return (
     <div className="web-designing-packages-page">
       <SEO
@@ -62,7 +66,9 @@ export default function WebDesigningPackages() {
           <div className="grid-auto packageGrid">
             {PACKAGES.map((pkg, i) => (
               <Card key={pkg.name} data-aos="fade-up" data-aos-delay={i * 60} className="webPkgCard">
-                <span className="priceTag">Best Price ${pkg.price}</span>
+                <span className="priceTag">
+                  Best Price {pkg.priceKey ? formatPrice(getPrice(pkg.priceKey, currency), currency) : pkg.priceLabel}
+                </span>
                 <h3>{pkg.name}</h3>
                 <p>{pkg.boldLead ? <><strong>{pkg.boldLead}</strong> {pkg.desc.replace(pkg.boldLead, '')}</> : pkg.desc}</p>
                 <Button to="/contact" variant="primary">Click Here</Button>

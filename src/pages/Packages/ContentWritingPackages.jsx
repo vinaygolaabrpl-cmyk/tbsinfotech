@@ -1,19 +1,27 @@
 import PackageHero from '../../components/common/PackageHero';
 import SEO from '../../components/common/SEO';
 import DataTable from '../../components/common/DataTable';
+import { useCurrency } from '../../hooks/useCurrency';
+import { getPrice, formatPrice } from '../../config/pricing';
 import './PackagesShared.scss';
 import contentWritingBanner from '../../assets/images/services/service_1_banner_img.jpg.jpeg';
 
 const TABLE = {
   headers: ['Word Count', 'Website Content Writing', 'Article Copywriting', 'Press Release Writing', 'Blog Writing'],
   rows: [
-    { label: '200 Words', values: ['$10', '$7', '$8', '$6'] },
-    { label: '400 Words', values: ['$20', '$15', '$16', '$13'] },
-    { label: '600 Words', values: ['$28', '$20', '$22', '$18'] }
+    { label: '200 Words', priceKeys: ['contentWriting.website200', 'contentWriting.article200', 'contentWriting.pressRelease200', 'contentWriting.blog200'] },
+    { label: '400 Words', priceKeys: ['contentWriting.website400', 'contentWriting.article400', 'contentWriting.pressRelease400', 'contentWriting.blog400'] },
+    { label: '600 Words', priceKeys: ['contentWriting.website600', 'contentWriting.article600', 'contentWriting.pressRelease600', 'contentWriting.blog600'] }
   ]
 };
 
 export default function ContentWritingPackages() {
+  const { currency } = useCurrency();
+  const rows = TABLE.rows.map((row) => ({
+    ...row,
+    values: row.priceKeys.map((key) => formatPrice(getPrice(key, currency), currency))
+  }));
+
   return (
     <div className="content-writing-packages-page">
       <SEO
@@ -26,7 +34,7 @@ export default function ContentWritingPackages() {
       <section className="section">
         <div className="container">
           <h2 className="pickTitle" data-aos="fade-up">Content <span className="gradient">Writing</span> Packages</h2>
-          <DataTable headers={TABLE.headers} rows={TABLE.rows} />
+          <DataTable headers={TABLE.headers} rows={rows} />
         </div>
       </section>
     </div>

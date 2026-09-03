@@ -2,13 +2,15 @@ import PackageHero from '../../components/common/PackageHero';
 import SEO from '../../components/common/SEO';
 import PricingMatrix from '../../components/common/PricingMatrix';
 import { openPaypalLink } from '../../utils/openPaypalLink';
+import { useCurrency } from '../../hooks/useCurrency';
+import { getPrice, formatPrice } from '../../config/pricing';
 import './PackagesShared.scss';
 import localSeoBanner from '../../assets/images/services/service_2_banner_img.jpg.jpeg';
 
 const PLANS = [
-  { name: 'Bronze', price: '$150', billing: 'Per Month', paypalLink: '' },
-  { name: 'Silver', price: '$225', billing: 'Per Month', popular: true, paypalLink: '' },
-  { name: 'Gold', price: '$350', billing: 'Per Month', paypalLink: '' }
+  { name: 'Bronze', priceKey: 'localSeoPackages.bronze', billing: 'Per Month', paypalLink: '' },
+  { name: 'Silver', priceKey: 'localSeoPackages.silver', billing: 'Per Month', popular: true, paypalLink: '' },
+  { name: 'Gold', priceKey: 'localSeoPackages.gold', billing: 'Per Month', paypalLink: '' }
 ];
 
 const GROUPS = [
@@ -104,6 +106,9 @@ const GROUPS = [
 ];
 
 export default function LocalSeoPackages() {
+  const { currency } = useCurrency();
+  const plans = PLANS.map((p) => ({ ...p, price: formatPrice(getPrice(p.priceKey, currency), currency) }));
+
   return (
     <div className="local-seo-packages-page">
       <SEO
@@ -118,7 +123,7 @@ export default function LocalSeoPackages() {
           <h2 className="pickTitle" data-aos="fade-up">Local SEO <span className="gradient">Optimization</span> Package</h2>
           <PricingMatrix
             planColumnLabel="Pick Monthly Package"
-            plans={PLANS}
+            plans={plans}
             groups={GROUPS}
             ctaLabel="Order Now!"
             onCta={(plan) => openPaypalLink(plan.paypalLink)}

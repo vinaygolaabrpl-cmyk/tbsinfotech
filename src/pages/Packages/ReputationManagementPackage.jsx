@@ -2,14 +2,16 @@ import PackageHero from '../../components/common/PackageHero';
 import SEO from '../../components/common/SEO';
 import PricingMatrix from '../../components/common/PricingMatrix';
 import { openPaypalLink } from '../../utils/openPaypalLink';
+import { useCurrency } from '../../hooks/useCurrency';
+import { getPrice, formatPrice } from '../../config/pricing';
 import './PackagesShared.scss';
 import reputationBanner from '../../assets/images/services/service_6_banner_img.jpg.jpeg';
 
 const PLANS = [
-  { name: 'Starter', price: '$150', paypalLink: '' },
-  { name: 'Value', price: '$200', paypalLink: '' },
-  { name: 'Premium', price: '$350', popular: true, paypalLink: '' },
-  { name: 'Strategic', price: '$550', paypalLink: '' }
+  { name: 'Starter', priceKey: 'reputationManagement.starter', paypalLink: '' },
+  { name: 'Value', priceKey: 'reputationManagement.value', paypalLink: '' },
+  { name: 'Premium', priceKey: 'reputationManagement.premium', popular: true, paypalLink: '' },
+  { name: 'Strategic', priceKey: 'reputationManagement.strategic', paypalLink: '' }
 ];
 
 const GROUPS = [
@@ -71,6 +73,9 @@ const GROUPS = [
 ];
 
 export default function ReputationManagementPackage() {
+  const { currency } = useCurrency();
+  const plans = PLANS.map((p) => ({ ...p, price: formatPrice(getPrice(p.priceKey, currency), currency) }));
+
   return (
     <div className="reputation-management-page">
       <SEO
@@ -84,7 +89,7 @@ export default function ReputationManagementPackage() {
         <div className="container">
           <h2 className="pickTitle" data-aos="fade-up">Reputation <span className="gradient">Management</span> Package</h2>
           <PricingMatrix
-            plans={PLANS}
+            plans={plans}
             groups={GROUPS}
             ctaLabel="Order Now!"
             onCta={(plan) => openPaypalLink(plan.paypalLink)}

@@ -2,13 +2,15 @@ import PackageHero from '../../components/common/PackageHero';
 import SEO from '../../components/common/SEO';
 import SectionTitle from '../../components/common/SectionTitle';
 import TierCards from '../../components/common/TierCards';
+import { useCurrency } from '../../hooks/useCurrency';
+import { getPrice, formatPrice } from '../../config/pricing';
 import './PackagesShared.scss';
 import ppcBanner from '../../assets/images/services/service_3_banner_img.jpg.jpeg';
 
 const TIERS = [
   {
     name: 'Bronze',
-    price: '$250',
+    priceKey: 'ppcPackages.bronze',
     billing: 'Month',
     features: [
       { label: 'Suggested Number of Keywords 50', included: true },
@@ -31,7 +33,7 @@ const TIERS = [
   },
   {
     name: 'Silver',
-    price: '$450',
+    priceKey: 'ppcPackages.silver',
     billing: 'Month',
     popular: true,
     features: [
@@ -55,7 +57,7 @@ const TIERS = [
   },
   {
     name: 'Gold',
-    price: '$650',
+    priceKey: 'ppcPackages.gold',
     billing: 'Month',
     features: [
       { label: 'Suggested Number of Keywords Unlimited', included: true },
@@ -79,6 +81,9 @@ const TIERS = [
 ];
 
 export default function PpcPackages() {
+  const { currency } = useCurrency();
+  const tiers = TIERS.map((t) => ({ ...t, price: formatPrice(getPrice(t.priceKey, currency), currency) }));
+
   return (
     <div className="ppc-packages-page">
       <SEO
@@ -91,7 +96,7 @@ export default function PpcPackages() {
       <section className="section">
         <div className="container">
           <SectionTitle title="PPC Packages" />
-          <TierCards tiers={TIERS} ctaLabel="Contact Us" ctaTo="/contact" />
+          <TierCards tiers={tiers} ctaLabel="Contact Us" ctaTo="/contact" />
         </div>
       </section>
     </div>

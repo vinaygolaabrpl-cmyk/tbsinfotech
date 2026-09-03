@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { FiAlertCircle } from 'react-icons/fi';
 import Button from '../Button';
+import Recaptcha from '../Recaptcha';
 import { submitForm } from '../../../services/mailApi';
 import { showSuccessAlert } from '../../../utils/swalAlerts';
 import './ContactForm.scss';
@@ -15,7 +16,8 @@ export const HELP_OPTIONS = [
 
 const NAME_REGEX = /^[a-zA-Z\s.'-]+$/;
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const PHONE_REGEX = /^[+]?[\d\s()-]{7,20}$/;
+const PHONE_REGEX = /^[+]?[\d\s()-]{7,15}$/;
+const RECAPTCHA_ENABLED = Boolean(import.meta.env.VITE_RECAPTCHA_SITE_KEY);
 
 function validateField(name, value) {
   const v = value.trim();
@@ -30,6 +32,7 @@ function validateField(name, value) {
       if (!EMAIL_REGEX.test(v)) return 'Please enter a valid email address.';
       return '';
     case 'phone':
+      if (!v) return 'Please enter your phone number.';
       if (v && !PHONE_REGEX.test(v)) return 'Please enter a valid phone number.';
       return '';
     case 'message':
@@ -50,10 +53,13 @@ function validateField(name, value) {
 export default function ContactForm({ title = 'What Do You Need Help With?', eyebrow = 'Contact', className = '' }) {
   const [status, setStatus] = useState('idle'); // idle | success | error
   const [errorMsg, setErrorMsg] = useState('');
+  const [captchaErr, setCaptchaErr] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [values, setValues] = useState({ name: '', email: '', phone: '', service: '', message: '' });
   const [fieldErrors, setFieldErrors] = useState({});
   const [touched, setTouched] = useState({});
+  const [recaptchaToken, setRecaptchaToken] = useState(null);
+  const recaptchaRef = useRef(null);
 
   function handleChange(e) {
     const { name, value } = e.target;
@@ -88,6 +94,13 @@ export default function ContactForm({ title = 'What Do You Need Help With?', eye
       return;
     }
 
+    if (RECAPTCHA_ENABLED && !recaptchaToken) {
+      setStatus('error');
+      setErrorMsg('Please complete the reCAPTCHA check.');
+      setCaptchaErr('Please complete the reCAPTCHA check.');
+      return;
+    }
+
     const name = values.name.trim();
     const email = values.email.trim();
     const phone = values.phone.trim();
@@ -96,16 +109,20 @@ export default function ContactForm({ title = 'What Do You Need Help With?', eye
 
     setIsSubmitting(true);
     try {
-      await submitForm('contact', { name, email, phone, service, message });
+      await submitForm('contact', { name, email, phone, service, message, recaptcha_token: recaptchaToken });
       setStatus('idle');
       setErrorMsg('');
       setValues({ name: '', email: '', phone: '', service: '', message: '' });
       setFieldErrors({});
       setTouched({});
+      setRecaptchaToken(null);
+      recaptchaRef.current?.reset();
       showSuccessAlert({ text: "Your message has been sent. We'll get back to you shortly." });
     } catch (err) {
       setStatus('error');
       setErrorMsg(err.message || 'Something went wrong sending your message. Please email us directly instead.');
+      setRecaptchaToken(null);
+      recaptchaRef.current?.reset();
     } finally {
       setIsSubmitting(false);
     }
@@ -193,9 +210,12 @@ export default function ContactForm({ title = 'What Do You Need Help With?', eye
         />
         {fieldErrors.message && <span className="field-error">{fieldErrors.message}</span>}
       </div>
+      
+      <Recaptcha ref={recaptchaRef} onChange={setRecaptchaToken} />
+      {/* <span class="field-error">{captchaErr}</span> */}
 
       <Button type="submit" size="lg" className="submit" disabled={isSubmitting}>
-        {isSubmitting ? 'Sending…' : 'Submit'} <span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-move-right-icon lucide-move-right"><path d="M18 8L22 12L18 16"/><path d="M2 12H22"/></svg></span>
+        {isSubmitting ? 'Sending…' : 'Submit'} <span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-move-right-icon lucide-move-right"><path d="M18 8L22 12L18 16" /><path d="M2 12H22" /></svg></span>
       </Button>
     </form>
   );

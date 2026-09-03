@@ -2,14 +2,16 @@ import PackageHero from '../../components/common/PackageHero';
 import SEO from '../../components/common/SEO';
 import PricingMatrix from '../../components/common/PricingMatrix';
 import { openPaypalLink } from '../../utils/openPaypalLink';
+import { useCurrency } from '../../hooks/useCurrency';
+import { getPrice, formatPrice } from '../../config/pricing';
 import './PackagesShared.scss';
 import smoPackagesBanner from '../../assets/images/services/ourwork_1_banner_img.jpg.jpeg';
 
 const PLANS = [
-  { name: 'Bronze', price: '$150', billing: 'Per Month', paypalLink: '' },
-  { name: 'Silver', price: '$250', billing: 'Per Month', popular: true, paypalLink: '' },
-  { name: 'Gold', price: '$350', billing: 'Per Month', paypalLink: '' },
-  { name: 'Platinum', price: '$450', billing: 'Per Month', paypalLink: '' }
+  { name: 'Bronze', priceKey: 'smoPackages.bronze', billing: 'Per Month', paypalLink: '' },
+  { name: 'Silver', priceKey: 'smoPackages.silver', billing: 'Per Month', popular: true, paypalLink: '' },
+  { name: 'Gold', priceKey: 'smoPackages.gold', billing: 'Per Month', paypalLink: '' },
+  { name: 'Platinum', priceKey: 'smoPackages.platinum', billing: 'Per Month', paypalLink: '' }
 ];
 
 const GROUPS = [
@@ -131,6 +133,9 @@ const GROUPS = [
 ];
 
 export default function SmoPackages() {
+  const { currency } = useCurrency();
+  const plans = PLANS.map((p) => ({ ...p, price: formatPrice(getPrice(p.priceKey, currency), currency) }));
+
   return (
     <div className="smo-packages-page">
       <SEO
@@ -145,7 +150,7 @@ export default function SmoPackages() {
           <h2 className="pickTitle" data-aos="fade-up">Social Media <span className="gradient">Optimization</span> Packages</h2>
           <PricingMatrix
             planColumnLabel="Activities"
-            plans={PLANS}
+            plans={plans}
             groups={GROUPS}
             ctaLabel="Order Now!"
             onCta={(plan) => openPaypalLink(plan.paypalLink)}
