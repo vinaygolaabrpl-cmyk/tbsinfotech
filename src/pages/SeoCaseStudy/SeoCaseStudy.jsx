@@ -105,8 +105,8 @@ export default function SeoCaseStudy() {
       <section className="section">
         <div className="container">
           <SectionTitle eyebrow="Case Studies" title="Results We Can Put A Number On" />
-          {/* {loading ? <Loader /> : <CaseStudyRail items={caseStudies ?? []} />} */}
-          {loading ? <Loader /> : <CaseStudyRail items={caseStudies?.slice(0, 2) ?? []} />}
+          {loading ? <Loader /> : <CaseStudyRail items={caseStudies ?? []} />}
+          {/* {loading ? <Loader /> : <CaseStudyRail items={caseStudies?.slice(0, 2) ?? []} />} */}
         </div>
       </section>
 

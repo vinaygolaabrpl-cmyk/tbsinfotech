@@ -62,8 +62,7 @@ export default function AppRoutes() {
 
         <Route path="/packages" element={<Packages />} />
 
-        {/* Dedicated package category pages — before the generic
-            "/packages/:slug" catch-all below. */}
+        {/* Dedicated package category pages — before the generic "/packages/:slug" catch-all below. */}
         <Route path="/packages/seo-packages" element={<SeoPackages />} />
         <Route path="/packages/aeo-seo-packages" element={<AeoSeoPackages />} />
         <Route path="/packages/one-time-seo-packages" element={<OneTimeSeoPackages />} />

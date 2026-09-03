@@ -1,5 +1,4 @@
 [
-  
   {
     "slug": "adops-staffing",
     "name": "AdOps Staffing",
@@ -27,14 +26,14 @@
     }
   },
   {
-    "slug": "churchill-estates-retirement",
-    "name": "Churchill Estates Retirement Community",
-    "url": "https://churchillretirement.com/",
+    "slug": "the-couch-counselling",
+    "name": "The Couch Counselling and Support Services",
+    "url": "https://thecouchcounselling.com/",
     "category": "Website",
-    "description": "Senior living community site in Eugene, Oregon offering independent living, assisted living, and memory care, with online tour scheduling.",
+    "description": "Mental health counselling practice site in Brantford, ON offering CBT, DBT, trauma-informed and NIHB therapy services with online appointment booking.",
     "image": {
-      "src": "/images/portfolio/churchillretirement.jpg.jpeg",
-      "alt": "Churchill Estates Retirement Community website",
+      "src": "/images/portfolio/thecouchcounselling.jpg.jpeg",
+      "alt": "The Couch Counselling and Support Services website",
       "width": 800,
       "height": 500
     }
@@ -147,14 +146,14 @@
     "featured": true
   },
   {
-    "slug": "the-couch-counselling",
-    "name": "The Couch Counselling and Support Services",
-    "url": "https://thecouchcounselling.com/",
+    "slug": "churchill-estates-retirement",
+    "name": "Churchill Estates Retirement Community",
+    "url": "https://churchillretirement.com/",
     "category": "Website",
-    "description": "Mental health counselling practice site in Brantford, ON offering CBT, DBT, trauma-informed and NIHB therapy services with online appointment booking.",
+    "description": "Senior living community site in Eugene, Oregon offering independent living, assisted living, and memory care, with online tour scheduling.",
     "image": {
-      "src": "/images/portfolio/thecouchcounselling.jpg.jpeg",
-      "alt": "The Couch Counselling and Support Services website",
+      "src": "/images/portfolio/churchillretirement.jpg.jpeg",
+      "alt": "Churchill Estates Retirement Community website",
       "width": 800,
       "height": 500
     }

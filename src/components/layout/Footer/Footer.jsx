@@ -20,7 +20,7 @@ const companyLinks = [
   { label: "Career", to: "/career" },
   { label: 'Packages', to: '/packages' },
   { label: 'Portfolio', to: '/portfolio' },
-  { label: 'ROI Calculator', to: '/contact' },
+  { label: 'Contact Us', to: '/contact' },
   { label: 'Free SEO Audit', to: '/free-seo-audit' },
   { label: 'Blog', to: '/blog' },
   { label: 'FAQ', to: '/faq' }

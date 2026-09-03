@@ -18,13 +18,11 @@
     color: var(--text-muted);
     transition: $transition-fast;
 
-    &:hover { border-color: var(--primary); color: var(--primary); }
+    &:hover { border-color: var(--primary);  }
   }
 
   .filterActive {
-    background: var(--primary);
-    border-color: var(--primary);
-    color: var(--on-primary);
+    border-color: var(--primary); color: var(--primary);
   }
 
   .portfolioMoreLink {
